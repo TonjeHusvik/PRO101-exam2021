@@ -10,9 +10,9 @@ MainModule.getAllMains().forEach( main => {
     <a href="../html/${main.page}"
         <article class="column is-5 m-6 ">
 
-            <div class=" has-text-centered card">
+            <div class=" has-text-centered card is-size-1">
                 <section class="card-content">
-                    <h3 >${main.title}</h3>
+                    <h3">${main.title}</h3>
                 </section>
                 <section class=" image is-3by2 card-image">
                     <img src="../images/${main.image}" >
