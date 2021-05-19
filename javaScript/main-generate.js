@@ -6,16 +6,20 @@ let htmlTxt = "";
 
 MainModule.getAllMains().forEach( main => {
     htmlTxt +=`
-        <article class="column is-6">
-            <div class="has-text-centered card">
+
+    <a href="../html/${main.page}"
+        <article class="column is-5 m-6 ">
+
+            <div class=" has-text-centered card">
                 <section class="card-content">
                     <h3 >${main.title}</h3>
                 </section>
-                <section class="card-image">
-                    <img src="../images/${main.image}" width="200px">
+                <section class=" image is-3by2 card-image">
+                    <img src="../images/${main.image}" >
                 </section>
-            </div>
+            </div> 
         </article>
+    </a>    
     `;
 
 } );
