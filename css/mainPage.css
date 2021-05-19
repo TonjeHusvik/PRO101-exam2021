@@ -1,0 +1,14 @@
+#logo{
+    background-color:#FF7F50;
+    text-align: center;
+}
+
+#logo-name{
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    font-size:60px;
+}
+
+.inline-block{
+    display: inline-block;
+}
