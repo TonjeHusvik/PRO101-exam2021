@@ -8,9 +8,9 @@ MainModule.getAllMains().forEach( main => {
     htmlTxt +=`
 
     <a href="../html/${main.page}"
-        <article class="column is-5 m-6 ">
+        <article class="column is-3 mt-6">
 
-            <div class=" has-text-centered card is-size-1">
+            <div class="column-left has-text-centered card is-size-1">
                 <section class="card-content">
                     <h3">${main.title}</h3>
                 </section>
