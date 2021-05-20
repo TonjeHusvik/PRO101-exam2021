@@ -2,7 +2,7 @@ const saleModule = (function(){ // IIFE
 
     const sales = [
         {table: "Omsetning", info:"hehe"},
-        {table: "Omsetning av retter",info:"hehe" }
+        {table: "Omsetning av retter", info:"hehe" }
     ];
 
     const getAllSales = () => sales;
@@ -12,3 +12,4 @@ const saleModule = (function(){ // IIFE
 }()); // end of saleModule
 
 export default saleModule;
+

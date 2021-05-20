@@ -26,27 +26,48 @@
     
     <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
         <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item">
-              Forside
-            </a>
-            <a class="navbar-item">
-              Restauranter
-            </a>
-            <a class="navbar-item">
-              Ansatte
-            </a>
-            <a class="navbar-item">
-              Meny
-            </a>
-          </div>
+            <div class="navbar-start">
+                <a class="navbar-item">
+                    Forside
+                </a>
+                <a class="navbar-item">
+                    Restauranter
+                </a>
+                <a class="navbar-item">
+                    Ansatte
+                </a>
+                <a class="navbar-item">
+                    Meny
+                </a>
+            </div>
         </div>
-      </nav>
+    </nav>
+    <div class="buttons">
+        <button onclick="myFunction()">Omsetning</button>
+        <button onclick="myFunction()">Omsetning - retter</button>
+    </div>
+   
+    <script>
+        if (condition) {
+            
+        } else {
+            
+        }
+        function myFunction() {
+            document.getElementById("sale-section2").innerHTML = "OMSETNING - RETTER HER";
+        }
+        function myFunction() {
+            document.getElementById("sale-section1").innerHTML = "OMSETNING HER";
+        }
+    </script>
 
     <div class="container">
         <main>
-            <section id="sale-section" class="columns is-multiline">
-
+            <section id="sale-section1" class="columns is-multiline">
+                HEI
+            </section>
+            <section id="sale-section2" class="columns is-multiline">
+                HALLO
             </section>
         </main>
     </div>
