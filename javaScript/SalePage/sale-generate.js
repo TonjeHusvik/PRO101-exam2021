@@ -17,3 +17,4 @@ saleModule.getAllSales().forEach(sales => {
 });
 
 saleSection.innerHTML = htmlTxt;
+

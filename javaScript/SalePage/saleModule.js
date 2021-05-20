@@ -12,3 +12,4 @@ const saleModule = (function(){ // IIFE
 }()); // end of saleModule
 
 export default saleModule;
+
