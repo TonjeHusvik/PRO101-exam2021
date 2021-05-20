@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/mainPage.css">
+    <link rel="stylesheet" href="../css/employeePage.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
     <script defer type="module" src="../javaScript/EmployeePage/employee-generate.js"></script>
     <title>Hovedside</title>
 </head>
+
 <body>
+    <!--Logo-->
         <div id="logo" class="p-5 container has-text-centered mb-6">
             <div class="inline-block">
                 <img src="../images/pizza-transparent3.png" width="50px">
@@ -23,12 +25,117 @@
                 <img src="../images/pizza-transparent3.png" width="50px">
             </div>
         </div>
+
+    <!--Navigation-->    
+        <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+            <div id="navbarBasicExample" class="navbar-menu">
+              <div class="navbar-start">
+                <a class="navbar-item">
+                  Forside
+                </a>
+                <a class="navbar-item">
+                  Restauranter
+                </a>
+                <a class="navbar-item">
+                  Ansatte
+                </a>
+                <a class="navbar-item">
+                  Meny
+                </a>
+              </div>
+            </div>
+          </nav>
+
+
+    <!--Main-->
     <div class="container ">
         <main>
+        <!--Dropdown mney-->
+        <div class='container'>
+            <div class='columns is-centered'>
+              <div class='column'>
+                <div class="dropdown is-active">
+                  <div class="dropdown-trigger">
+                    <button class="button" 
+                            aria-haspopup="true"
+                            aria-controls="dropdown-menu">
+                      <span>Sorter</span>
+                      <span class="icon is-small">
+                        <i class="fas fa-angle-down" 
+                           aria-hidden="true"></i>
+                      </span>
+                    </button>
+                  </div>
+                  <!--Valgene som dukker opp når man trykker på dropdown-menyen-->
+                  <div class="dropdown-menu" 
+                       id="dropdown-menu" 
+                       role="menu">
+                    <div class="dropdown-content">
+                      <a href="#" class="dropdown-item">
+                        Alder
+                      </a>
+          
+                      <a href="#" class="dropdown-item">
+                        Restaurant
+                      </a>
+          
+                      <a href="#" class="dropdown-item">
+                        A-Å
+                      </a>
+          
+                      <a href="#" class="dropdown-item">
+                        Å-A
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="level-right" id="search">
+            <div class="level-item">
+              <p class="subtitle is-6">
+                <strong>Søk etter ansatt</strong> 
+              </p>
+            </div>
+            <div class="level-item">
+              <div class="field has-addons">
+                <p class="control">
+                  <input class="input" type="text" placeholder="Etternavn">
+                </p>
+                <p class="control">
+                  <button class="button">
+                    Søk
+                  </button>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--Valgte å ha scriptet her for bedre oversikt over koden-->
+          <script>
+            const dropdown =
+                  document.querySelector('.dropdown');
+            const active =
+                  document.querySelector('.is-active')
+            document.body.addEventListener('click', function () {
+              if (active) {
+                dropdown.classList.remove('is-active')
+              }
+            })
+            dropdown.addEventListener('click', function (event) {
+              event.stopPropagation();
+              this.classList.toggle('is-active');
+            });
+          </script>
+
+        <!--Innholdet-->
+        
             <section id="employee-section" class="columns is-multiline">
                
             </section>
         </main>
+  
     </div>
 
     <footer>
