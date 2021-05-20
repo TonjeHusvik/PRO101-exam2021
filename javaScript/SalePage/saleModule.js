@@ -1,8 +1,8 @@
 const saleModule = (function(){ // IIFE
 
     const sales = [
-        {table: "Omsetning", info:"hehe"},
-        {table: "Omsetning av retter", info:"hehe" }
+        {table: "test", info:"hehe"},
+        {table: "test", info:"hehe" }
     ];
 
     const getAllSales = () => sales;
