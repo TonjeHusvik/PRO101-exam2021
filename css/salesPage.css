@@ -1,0 +1,24 @@
+#logo{
+    background-color: chocolate;
+    border-radius: 5px;
+}
+
+#logo-name{
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    font-size:60px;
+}
+
+.inline-block{
+    display: inline-block;
+}
+
+.navbar{
+    text-align: center;
+    margin: auto;
+    width: 91%;
+}
+.navbar-start{
+    text-align: center;
+    margin: auto;
+}
