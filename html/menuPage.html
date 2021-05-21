@@ -4,9 +4,145 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/restaurantsPage.css">
+    <link rel="stylesheet" href="../css/menuPage.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    
+    <script defer type="module" src="../javaScript/MenuPage/menu-generate.js"></script>
+    <script defer type="module" src="../javaScript/MenuPage/maindish-generate.js"></script>
+    <script defer type="module" src="../javaScript/MenuPage/drinks-generate.js"></script>
+    <script defer type="module" src="../javaScript/MenuPage/sides-generate.js"></script>
+    <script defer type="module" src="../javaScript/MenuPage/dessert-generate.js"></script>
+    <title>Meny</title>
 </head>
 <body>
-    <h3>heiiiiiiiiiiiii</h3>
+    <!--Forside logo -->
+    <div id="logo" class="p-5 container has-text-centered mb-6">
+        <div class="inline-block">
+            <img src="../images/pizza-transparent3.png" width="50px">
+        </div>
+        <div class="inline-block text-align-center">
+            <h1 id="logo-name">Gyldne Pizza</h1>
+        </div>
+        <div class="inline-block">
+            <img src="../images/pizza-transparent3.png" width="50px">
+        </div>
+    </div>
+
+    <!--Side navigasjonsbar-->
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item">
+                    Forside
+                </a>
+                <a class="navbar-item">
+                    Restauranter
+                </a>
+                <a class="navbar-item">
+                    Ansatte
+                </a>
+                <a class="navbar-item">
+                    Salg
+                </a>
+            </div>
+        </div>
+    </nav>
+   <!-- Meny tabs -->
+    <div class="tabs is-centered is-large">
+        <ul>
+            <li  data-target="drinks">
+                <a>Drikke</a>
+            </li>
+            <li class="is-active" data-target="main-course">
+                <a>Hovedretter</a>
+            </li>
+            <li data-target="side-dishes">
+                <a>Forretter</a>
+            </li>
+            <li data-target="dessert">
+                <a>Desserter</a>
+            </li>
+        </ul>
+    </div>
+    <div class="px-2" id="tab-content">
+        <div id="drinks" class="is-hidden">
+            
+            <div class="container">
+                <main class="columns">
+                    <section  class="column is-half is-offset-one-quarter">
+                        <h3 class="has-text-centered title">Drikke</h3>
+                        <section id="drinks-section">
+
+                        </section>
+                    </section>
+                    
+                    
+                </main>
+            </div>
+
+            
+        </div>
+        <div id="main-course" >
+            
+            <div class="container">
+                <main class="columns">
+                    <section  class="column is-6">
+                        <h3 class="has-text-centered title">Pizza</h3>
+                        <section id="pizza-section">
+
+                        </section>
+                    </section>
+                    <section  class="column is-6">
+                        <h3 class="has-text-centered title">Hovedretter</h3>
+                        <section id="maindish-section">
+
+                        </section>
+                    </section>
+                    
+                </main>
+            </div>
+            
+        </div>
+        <div id="side-dishes" class="is-hidden">
+            <div class="container">
+                <main class="columns">
+                    <section  class="column is-half is-offset-one-quarter">
+                        <h3 class="has-text-centered title">Forretter/sides</h3>
+                        <section id="sides-section">
+
+                        </section>
+                    </section>
+                    
+                    
+                </main>
+            </div>
+        </div>
+        <div id="dessert" class="is-hidden">
+            <div class="container">
+                <main class="columns">
+                    <section  class="column is-half is-offset-one-quarter">
+                        <h3 class="has-text-centered title">Desserter</h3>
+                        <section id="dessert-section">
+
+                        </section>
+                    </section>
+                    
+                    
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <script src="../javaScript/MenuPage/tabsContent.js"></script> <!--Lenke til tabs js-->
+    
+
+
+<footer>
+
+</footer>
+
+
 </body>
 </html>
