@@ -9,10 +9,11 @@ const EmployeeModule =(function(){
         {firstName: "Sonja", lastName: "Finne", phone: "45034054", age:"43 år", email: "SonjaF@live.com", work: "Dagligleder", workProsent: "100%", workPlace: "Karl Johan", startDate: "30.03.2020", employeeID: 68},
         {firstName: "Britt", lastName: "Borresen", phone: "48756093", age: "20 år", email: "BrittB@gmail.jr", work: "Deltidsansatt", workProsent: "10%", workPlace: "Torshov", startDate: "03.10.2019", employeeID: 33},
         {firstName: "Jacob", lastName: "Salg", phone: "76309876", age:"28 år", email: "JSa@hotmailen.so", work: "Dagligleder", workProsent: "100%", workPlace: "Torshov", startDate: "04.10.2019", employeeID: 34},
-        {firstName: "Hanne", lastName: "Davidsen", phone: "375624378", age:"30 år", email: "handav@tulle.no",work: "Dagligleder", workProsent: "100%", workPlace: "Majostuen", startDate: "02.10.2019", employeeID: 32},
+        {firstName: "Hanne", lastName: "Davidsen", phone: "375624378", age:"30 år", email: "handav@tulle.no",work: "Dagligleder", workProsent: "100%", workPlace: "Majorstuen", startDate: "02.10.2019", employeeID: 32},
         {firstName: "Emi", lastName: "Sogn", phone: "09865784", age:"53 år", email: "EmS@tulle.no", work: "Fulltidsansatt", workProsent: "100%", workPlace: "Majorstuen", startDate: "03.12.2019", employeeID: 54}
     ];
 
+    
 
     const getAllEmployees = () => employees;
 

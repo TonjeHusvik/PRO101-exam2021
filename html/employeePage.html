@@ -50,10 +50,14 @@
     <!--Main-->
     <div class="container ">
         <main>
-        <!--Dropdown mney-->
-        <div class='container'>
-            <div class='columns is-centered'>
-              <div class='column'>
+        <!--Sortering meny-->
+
+        <div class="level-left">
+
+          <!--Dropdown meny-->
+          <div class="level-item">
+            <div class="columns is-centered">
+              <div class="column">
                 <div class="dropdown is-active">
                   <div class="dropdown-trigger">
                     <button class="button" 
@@ -71,11 +75,9 @@
                        id="dropdown-menu" 
                        role="menu">
                     <div class="dropdown-content">
-                      <a href="#" class="dropdown-item">
-                        Alder
-                      </a>
+                      <input id="age-dropdown" type="button" value="Alder">
           
-                      <a href="#" class="dropdown-item">
+                      <a href="../html/mainPage.html" class="dropdown-item" >
                         Restaurant
                       </a>
           
@@ -93,26 +95,35 @@
             </div>
           </div>
 
-          <div class="level-right" id="search">
-            <div class="level-item">
-              <p class="subtitle is-6">
-                <strong>Søk etter ansatt</strong> 
-              </p>
-            </div>
-            <div class="level-item">
-              <div class="field has-addons">
-                <p class="control">
-                  <input class="input" type="text" placeholder="Etternavn">
+          <!--Søke meny-->
+          <div class="level-item">
+            <div class="level-right" id="search">
+              <div class="level-item">
+                <p class="subtitle is-6">
+                  <strong>Søk etter ansatt</strong> 
                 </p>
-                <p class="control">
-                  <button class="button">
-                    Søk
-                  </button>
-                </p>
+              </div>
+              <div class="level-item">
+                <div class="field has-addons">
+                  <p class="control">
+                    <input class="input" type="text" placeholder="Etternavn">
+                  </p>
+                  <p class="control">
+                    <button class="button">
+                      Søk
+                    </button>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-          <!--Valgte å ha scriptet her for bedre oversikt over koden-->
+        </div>
+
+            
+
+        <!--Søke meny-->
+          
+          <!--Valgte å ha scriptet her for bedre oversikt over koden. Husk å legg denne koden inn i generate-->
           <script>
             const dropdown =
                   document.querySelector('.dropdown');
@@ -130,10 +141,99 @@
           </script>
 
         <!--Innholdet-->
-        
             <section id="employee-section" class="columns is-multiline">
                
             </section>
+
+        <!--Knapp--> 
+            <!--Fjern ansatt knapp-->
+            <div class="level-left">
+              <div class="level-item">
+                <p>
+                  <button id="delete-employee-btn" class="button is-danger is-medium modal-button" data-target="modal-ter" aria-haspopup="true">
+                    Fjern ansatt
+                  </button>
+                </p>
+              </div>
+
+              <!--Rediger ansattknapp-->
+              <div class="level-item">
+                <p>
+                  <button id="edit-employee-btn" class="button is-danger is-medium modal-button" data-target="modal-ter"  aria-haspopup="true">
+                    Rediger ansatt
+                  </button>
+                </p>
+              </div>
+
+              <!--Legg inn ny ansatt-->
+              <div class="level-item">
+                <p>
+                  <button id="add-employee-btn" class="button is-danger is-medium modal-button" data-target="modal-ter" aria-haspopup="true">
+                    Legg til ansatt
+                  </button>
+                </p>
+              </div>
+            </div>
+
+            
+
+        <!--Modal-->
+          <!--Fjerne ansatt-->
+            <div class="modal">
+              <div class="modal-background"></div>
+              <div class="modal-content has-background-white py-5 px-5">
+                <h3 class="title mb-6"> Slette en ansatt</h3>
+                <div class="level-left">
+                  <div class="level-item">
+                    <p>Legg inn ansatt ID  </p>
+                  </div>
+                  <div class="level-item">
+                    <input type="text" placeholder="Ansatt ID">
+                  </div>
+                </div>
+                <div class="level-left">
+                  <div class="level-item">
+                    <button id="delete-employee-btn-modal" class="button is-link-light is-small">
+                      Fjern ansatt
+                    </button>
+                  </div>
+                  <div class="level-item">
+                    <button id="stop-delete-employee-btn-modal" class="button is-link-light is-small modal-button" data-target="modal-ter">
+                      Avbryt
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          <!--Rediger ansatt-->
+          <div class="modal is-active">
+            <div class="modal-background"></div>
+            <div class="modal-content has-background-white py-5 px-5">
+              <h3 class="title mb-6"> Rediger ansatt</h3>
+              <div class="level-left">
+                <div class="level-item">
+                  <p>Legg inn ansatt ID</p>
+                </div>
+                <div class="level-item">
+                  <input type="text" placeholder="Ansatt ID">
+                </div>
+              </div>
+              <div class="level-left">
+                <div class="level-item">
+                  <button id="edit-employee-btn-modal" class="button is-link-light is-small">
+                    Rediger ansatt
+                  </button>
+                </div>
+                <div class="level-item">
+                  <button id="stop-edit-employee-btn-modal" class="button is-link-light is-small modal-button" data-target="modal-ter">
+                    Avbryt
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </main>
   
     </div>
