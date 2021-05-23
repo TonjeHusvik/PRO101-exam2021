@@ -12,3 +12,19 @@
 .inline-block{
     display: inline-block;
 }
+
+#main-navbar{
+    text-align: center;
+    margin: auto;
+}
+
+.navbar-start{
+    text-align: center;
+    margin: auto;
+}
+.navbar-item{
+    text-align: center;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
