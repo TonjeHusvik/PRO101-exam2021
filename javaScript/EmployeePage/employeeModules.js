@@ -17,9 +17,34 @@ const EmployeeModule =(function(){
 
     const getAllEmployees = () => employees;
 
+    const getByLastname = ( lastName ) => employees.filter(employee =>
+        employee.lastName.toLowerCase() === lastName.toLowerCase() );
 
+    const getSortingOslo = () => employees.filter(employee =>
+       employee.workPlace == "Oslo s"
+        );
 
-    return{getAllEmployees}
+    const getSortingKarlJohan = () => employees.filter(employee =>
+        employee.workPlace == "Karl Johan"
+        );
+
+    const getSortingTorshov = () => employees.filter(employee =>
+        employee.workPlace == "Torshov"
+        );
+
+    const getSortingMajorstuen = () => employees.filter(employee =>
+        employee.workPlace == "Majorstuen"
+        );
+
+    
+    return{
+        getAllEmployees,
+        getByLastname,
+        getSortingOslo,
+        getSortingKarlJohan,
+        getSortingTorshov,
+        getSortingMajorstuen
+    }
 
    
 }() );

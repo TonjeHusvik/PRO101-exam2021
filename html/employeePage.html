@@ -58,7 +58,7 @@
           <div class="level-item">
             <div class="columns is-centered">
               <div class="column">
-                <div class="dropdown is-active">
+                <div class="dropdown">
                   <div class="dropdown-trigger">
                     <button class="button" 
                             aria-haspopup="true"
@@ -75,18 +75,21 @@
                        id="dropdown-menu" 
                        role="menu">
                     <div class="dropdown-content">
-                      <input id="age-dropdown" type="button" value="Alder">
-          
-                      <a href="../html/mainPage.html" class="dropdown-item" >
-                        Restaurant
+                    
+                      <a href="#" class="dropdown-item" id="sort-by-oslo-btn">
+                        Oslo
                       </a>
           
-                      <a href="#" class="dropdown-item">
-                        A-Å
+                      <a href="#" class="dropdown-item" id="sort-by-karl-johan-btn">
+                        Karl Johan
                       </a>
           
-                      <a href="#" class="dropdown-item">
-                        Å-A
+                      <a href="#" class="dropdown-item" id="sort-by-torshov-btn">
+                        Torshov
+                      </a>
+
+                      <a href="#" class="dropdown-item" id="sort-by-majorstuen-btn">
+                        Majorstuen
                       </a>
                     </div>
                   </div>
@@ -97,25 +100,11 @@
 
           <!--Søke meny-->
           <div class="level-item">
-            <div class="level-right" id="search">
-              <div class="level-item">
-                <p class="subtitle is-6">
-                  <strong>Søk etter ansatt</strong> 
-                </p>
-              </div>
-              <div class="level-item">
-                <div class="field has-addons">
-                  <p class="control">
-                    <input class="input" type="text" placeholder="Etternavn">
-                  </p>
-                  <p class="control">
-                    <button class="button">
-                      Søk
-                    </button>
-                  </p>
-                </div>
-              </div>
-            </div>
+            <label class="label">Søk etter ansatt</label>
+          </div>
+          <div class="level-item">
+              <input id="search-txt" class="input" type="text" placeholder="Etternavn">
+              <button id="search-lastname-btn" class="button">Søk</button>
           </div>
         </div>
 
@@ -179,7 +168,7 @@
 
         <!--Modal-->
           <!--Fjerne ansatt-->
-            <div class="modal">
+            <div class="modal" id="deleteModal">
               <div class="modal-background"></div>
               <div class="modal-content has-background-white py-5 px-5">
                 <h3 class="title mb-6"> Slette en ansatt</h3>
@@ -207,7 +196,7 @@
             </div>
 
           <!--Rediger ansatt-->
-          <div class="modal">
+          <div class="modal" id="editModal">
             <div class="modal-background"></div>
             <div class="modal-content has-background-white py-5 px-5">
               <h3 class="title mb-6"> Rediger ansatt</h3>
@@ -227,6 +216,106 @@
                 </div>
                 <div class="level-item">
                   <button id="stop-edit-employee-btn-modal" class="button is-link-light is-small modal-button" data-target="modal-ter">
+                    Avbryt
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Legge til ansatt-->
+          <div class="modal" id="addModal">
+            <div class="modal-background"></div>
+            <div class="modal-content has-background-white py-5 px-5">
+              <h3 class="title mb-6"> Legg til ansatt</h3>
+              <div class="level-left">
+                <div class="level-item">
+                  <p>Fornavn</p>
+                </div>
+                <div class="level-item">
+                  <input type="text" placeholder="Fornavn">
+                </div>
+              </div>
+              <div class="level-left">
+                <div class="level-item">
+                  <p>Etternavn</p>
+                </div>
+                <div class="level-item">
+                  <input type="text" placeholder="Etternavn">
+                </div>
+              </div>
+              <div class="level-left">
+                <div class="level-item">
+                  <p>Tlf nr</p>
+                </div>
+                <div class="level-item">
+                  <input type="text" placeholder="Tlf nr">
+                </div>
+              </div>
+              <div class="level-left">
+                <div class="level-item">
+                  <p>E-post</p>
+                </div>
+                <div class="level-item">
+                  <input type="text" placeholder="E-post">
+                </div>
+              </div>
+              <div class="level-left">
+                <div class="level-item">
+                  <p>Personnr</p>
+                </div>
+                <div class="level-item">
+                  <input type="text" placeholder="Personnr">
+                </div>
+              </div>
+              <div class="level-left">
+                <div class="level-item">
+                  <p>Stilling</p>
+                </div>
+                <div class="level-item">
+                  <input type="text" placeholder="Stilling">
+                </div>
+              </div>
+              <div class="level-left">
+                <div class="level-item">
+                  <p>Arbeidssted</p>
+                </div>
+                <div class="level-item">
+                  <input type="text" placeholder="Arbeidssted">
+                </div>
+              </div>
+              <div class="level-left">
+                <div class="level-item">
+                  <p>Stillingsprosent</p>
+                </div>
+                <div class="level-item">
+                  <input type="text" placeholder="Stillingsprosent">
+                </div>
+              </div>
+              <div class="level-left">
+                <div class="level-item">
+                  <p>Startdato</p>
+                </div>
+                <div class="level-item">
+                  <input type="text" placeholder="Startdato">
+                </div>
+              </div>
+              <div class="level-left">
+                <div class="level-item">
+                  <p>AnsattID</p>
+                </div>
+                <div class="level-item">
+                  <input type="text" placeholder="AnsattID">
+                </div>
+              </div>
+              <div class="level-left">
+                <div class="level-item">
+                  <button id="add-employee-btn-modal" class="button is-link-light is-small">
+                    Legg til
+                  </button>
+                </div>
+                <div class="level-item">
+                  <button id="stop-add-employee-btn-modal" class="button is-link-light is-small modal-button" data-target="modal-ter">
                     Avbryt
                   </button>
                 </div>
