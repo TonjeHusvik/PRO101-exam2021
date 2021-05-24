@@ -72,27 +72,27 @@
                     </div>
                     <div class="dropdown-menu" id="dropdown-menu" role="menu">
                       <div class="dropdown-content">
-                        <a href="#" class="dropdown-item">
+                        <a class="dropdown-item">
                             <label class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" name="store" value="Oslo S">
                                 Oslo s
                             </label>
                         </a>
                         <a class="dropdown-item">
                             <label class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" name="store" value="Karl Johan">
                                 Karl Johan
                             </label>
                         </a>
-                        <a href="#" class="dropdown-item">
+                        <a class="dropdown-item">
                             <label class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" name="store" value="Majorstuen">
                                 Majorstuen
                             </label>
                         </a>
-                        <a href="#" class="dropdown-item">
+                        <a class="dropdown-item">
                             <label class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" name="store" value="Torshov">
                                 Torshov
                             </label>
                         </a>
@@ -112,25 +112,22 @@
                     <div class="dropdown-menu" id="dropdown-menu" role="menu">
                       <div class="dropdown-content">
                         <a href="#" class="dropdown-item">
-                          2021
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                2021
+                            </label>
                         </a>
                         <a class="dropdown-item">
-                          2020
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                2020
+                            </label>
                         </a>
                         <a href="#" class="dropdown-item">
-                          2019
-                        </a>
-                        <a href="#" class="dropdown-item">
-                          2018
-                        </a>
-                        <a href="#" class="dropdown-item">
-                          2017
-                        </a>
-                        <a href="#" class="dropdown-item">
-                          2016
-                        </a>
-                        <a href="#" class="dropdown-item">
-                          2015
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                2019
+                            </label>
                         </a>
                       </div>
                     </div>
@@ -148,40 +145,76 @@
                     <div class="dropdown-menu" id="dropdown-menu" role="menu">
                       <div class="dropdown-content">
                         <a href="#" class="dropdown-item">
-                          Januar
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                Januar
+                            </label>
                         </a>
                         <a class="dropdown-item">
-                          Februar
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                Februar
+                            </label>
                         </a>
                         <a href="#" class="dropdown-item">
-                          Mars
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                Mars
+                            </label>
                         </a>
                         <a href="#" class="dropdown-item">
-                          April
+                          <label class="checkbox">
+                            <input type="checkbox">
+                            April
+                        </label>
                         </a>
                         <a href="#" class="dropdown-item">
-                          Mai
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                Mai
+                            </label>
                         </a>
                         <a href="#" class="dropdown-item">
-                          Juni
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                Juni
+                            </label>
                         </a>
                         <a href="#" class="dropdown-item">
-                          Juli
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                Juli
+                            </label>
                         </a>
                         <a href="#" class="dropdown-item">
-                          August
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                August
+                            </label>
                         </a>
                         <a href="#" class="dropdown-item">
-                          September
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                September
+                            </label>
                         </a>
                         <a href="#" class="dropdown-item">
-                          Oktober
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                Oktober
+                            </label>
                         </a>
                         <a href="#" class="dropdown-item">
-                          November
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                November
+                            </label>
                         </a>
                         <a href="#" class="dropdown-item">
-                          Desember
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                Desember
+                            </label>
                         </a>
                       </div>
                     </div>
@@ -199,10 +232,16 @@
                     <div class="dropdown-menu" id="dropdown-menu" role="menu">
                       <div class="dropdown-content">
                         <a href="#" class="dropdown-item">
-                          Brutto
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                Brutto
+                            </label>
                         </a>
                         <a class="dropdown-item">
-                          Netto
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                Netto
+                            </label>
                         </a>
                       </div>
                     </div>
@@ -214,25 +253,22 @@
     <div class="px-2" id="tab-content">
         <div id="sale-details">
             <!-- Omsetning -->
-            <h3 class="is-size-5 title">Omsetning</h3>
             <div class="has-text-right">
                 <button class="button is-small">Legg til omsetning</button>
                 <button class="button is-small">Rediger omsetning</button>
             </div>
-
             <!-- container -->
-    <div class="container">
-        <main>
-            <section id="sale-section" class="columns is-multiline">
-                
-            </section>
-        </main>
-    </div>
-            <button class="button">Sammenlign</button>
+            <div class="container">
+                <main>
+                    <section id="sale-section" class="columns is-multiline">
+                        
+                    </section>
+                </main>
+            </div>
+            <button class="button" id="btn">Sammenlign</button>
         </div>
         <div id="sale-dishes-details" class="is-hidden">
             <!-- Omsetning - retter -->
-            <h3 class="is-size-5 title">Omsetning av retter</h3>
             <div class="has-text-right">
                 <button class="button is-small">Legg til omsetning</button>
                 <button class="button is-small">Rediger omsetning</button>
@@ -432,8 +468,6 @@
             <button class="button">Sammenlign</button>
         </div>
     </div>
-
-
 
 </body>
 </html>

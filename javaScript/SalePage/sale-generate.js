@@ -60,6 +60,26 @@ document.addEventListener('click', ()=>{
     menu3.classList.remove('is-active');
 })
 
+//checkbox'er i dropdown
+function getSelectedValues(name) {
+    const checkBoxes = document.querySelectorAll(`input[name="${name}"]:checked`);
+    let values = [];
+    checkBoxes.forEach((checkbox) => {
+        values.push(checkbox.value);
+    });
+    return values;
+}
+
+var checkedIndex = sales.indexOf(checkbox.value);
+const btn = document.querySelector('#btn');
+btn.addEventListener('click', () => {
+    if(checkedIndex === checkBoxes){
+    alert(getSelectedValues(`${sales.store}`));
+}});
+
+
+
+
 //tabs
 const tabs = document.querySelectorAll('.tabs li');
 const tabContentBoxes = document.querySelectorAll('#tab-content > div');
