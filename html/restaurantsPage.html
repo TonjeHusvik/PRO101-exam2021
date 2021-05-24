@@ -12,7 +12,10 @@
 </head>
 <body>
 
-    <div id="logo" class="mb-6 container ">
+    
+
+    <!-- HEADER -->
+    <div id="logo" class="mb-1 container">
         <div class="inline-block">
             <img src="../images/pizza-transparent3.png" width="50px">
         </div>
@@ -24,6 +27,77 @@
         </div>
     </div>
 
+    <!-- MAIN MENU -->    
+    <nav id="main-navbar" class="navbar is-dark mt-0 container" role="navigation" aria-label="main navigation">
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="mainPage.html">
+              Forside
+            </a>
+            <a class="navbar-item" href="restaurantsPage.html">
+              Restauranter
+            </a>
+            <a class="navbar-item" href="employeePage.html">
+              Ansatte
+            </a>
+            <a class="navbar-item" href="menuPage.html">
+              Meny
+            </a>
+            <a class="navbar-item" href="salesPage.html">
+                Salg
+              </a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- EDIT/ADD/REMOVE MENU -->  
+      <nav class="navbar container is-light" role="navigation" aria-label="main navigation">
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-end">
+            <div class="navbar-item mr-1">
+              <div class="buttons">
+                <a class="button is-light">
+                    Rediger
+                </a>
+                <a class="button is-light">
+                    Fjern
+                </a>
+                <a class="button is-primary popup-btn">
+                    <strong>Legg til</strong>
+                  </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- modal popup for add-button -->
+      <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">LEGG TIL RESTAURANT</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+
+            <section class="modal-card-body">
+                <label>Addresse</label><br><input><br><br>
+                <label>Leder: </label><br><input><br><br>
+                <label>Telefon: </label><br><input><br><br>
+                <label>Mail: </label><br><input><br><br>
+                <label>Åpningstider: </label><br><input><br><br>
+                <label>Antall ansatte: </label><br><input><br><br>
+                <label>Etablert: </label><br><input><br>
+            </section>
+
+            <footer class="modal-card-foot">
+                    <button class="button is-success">Save changes</button>
+                    <button class="button modal-cancel-btn">Cancel</button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- RESTAURANTS COLUMNS -->
     <div class="mt-6 container">
         <main>
             <section id="restaurants-section" class="columns is-multiline">
@@ -32,5 +106,170 @@
         </main>
     </div>
 
+
+    <!-- RESTAURANTS COLUMNS -->
+    <div class="mt-6 container">
+        <main>
+            <section class="columns is-multiline">
+                <!-- RESTAURANT CARDS 1 -->
+                <article class="column">
+                    <div class="card">
+                        <section class="card-image">
+                            <img src="../images/restaurants/majorstua-restaurant.png">
+                        </section>
+                        <section class="card-content">
+                            <a class="popup-btn">MAJORSTUA</a>
+                        </section>
+                    </div>
+                </article>
+                
+                <!-- MODAL POPUP 1 -->
+                <div class="modal">
+                    <div class="modal-background"></div>
+                    <div class="modal-card">
+                        <header class="modal-card-head">
+                            <p class="modal-card-title">MAJORSTUA</p>
+                            <button class="delete" aria-label="close"></button>
+                        </header>
+            
+                        <section class="modal-card-body">
+                            <p>Address: ${restaurants.address}</p>
+                            <p>Leader: ${restaurants.leader}</p>
+                            <p>Phone: ${restaurants.phone}</p>
+                            <p>Mail: ${restaurants.mail}</p>
+                            <p>Opening times: ${restaurants.openingtimes}</p>
+                            <p>Employees: ${restaurants.emplyees}</p>
+                            <p>Established: ${restaurants.established}</p>
+                        </section>
+            
+                        <footer class="modal-card-foot">
+                                <button class="button is-success">Save changes</button>
+                                <button class="button modal-cancel-btn">Cancel</button>
+                        </footer>
+                    </div>
+                </div>
+
+                <!-- RESTAURANT CARDS 2 -->
+                <article class="column">
+                    <div class="card">
+                        <section class="card-image">
+                            <img src="../images/restaurants/oslos-restaurant.png">
+                        </section>
+                        <section class="card-content">
+                            <a class="popup-btn">OSLO S</a>
+                        </section>
+                    </div>
+                </article>
+                
+                <!-- MODAL POPUP 2 -->
+                <div class="modal">
+                    <div class="modal-background"></div>
+                    <div class="modal-card">
+                        <header class="modal-card-head">
+                            <p class="modal-card-title">OSLO S</p>
+                            <button class="delete" aria-label="close"></button>
+                        </header>
+            
+                        <section class="modal-card-body">
+                            <p>Address: ${restaurants.address}</p>
+                            <p>Leader: ${restaurants.leader}</p>
+                            <p>Phone: ${restaurants.phone}</p>
+                            <p>Mail: ${restaurants.mail}</p>
+                            <p>Opening times: ${restaurants.openingtimes}</p>
+                            <p>Employees: ${restaurants.emplyees}</p>
+                            <p>Established: ${restaurants.established}</p>
+                        </section>
+            
+                        <footer class="modal-card-foot">
+                                <button class="button is-success">Save changes</button>
+                                <button class="button modal-cancel-btn">Cancel</button>
+                        </footer>
+                    </div>
+                </div>
+
+                <!-- RESTAURANT CARDS 3 -->
+                <article class="column">
+                    <div class="card">
+                        <section class="card-image">
+                            <img src="../images/restaurants/torshov-restaurant.png">
+                        </section>
+                        <section class="card-content">
+                            <a class="popup-btn">TORSHOV</a>
+                        </section>
+                    </div>
+                </article>
+                
+                <!-- MODAL POPUP 3 -->
+                <div class="modal">
+                    <div class="modal-background"></div>
+                    <div class="modal-card">
+                        <header class="modal-card-head">
+                            <p class="modal-card-title">OSLO S</p>
+                            <button class="delete" aria-label="close"></button>
+                        </header>
+            
+                        <section class="modal-card-body">
+                            <p>Address: ${restaurants.address}</p>
+                            <p>Leader: ${restaurants.leader}</p>
+                            <p>Phone: ${restaurants.phone}</p>
+                            <p>Mail: ${restaurants.mail}</p>
+                            <p>Opening times: ${restaurants.openingtimes}</p>
+                            <p>Employees: ${restaurants.emplyees}</p>
+                            <p>Established: ${restaurants.established}</p>
+                        </section>
+            
+                        <footer class="modal-card-foot">
+                                <button class="button is-success">Save changes</button>
+                                <button class="button modal-cancel-btn">Cancel</button>
+                        </footer>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+        
+
+    <!-- SCRIPT -->
+    <script type="text/javascript">
+        const popupViews = document.querySelectorAll('.modal');
+        const popuppBtns = document.querySelectorAll('.popup-btn');
+        const closeBtns = document.querySelectorAll('.delete, .modal-cancel-btn');
+        const modalBg = document.querySelectorAll('.modal-background');
+
+        // OPEN POPUP
+        var popup = function(popupClick){
+            popupViews[popupClick].classList.add('is-active');
+        }
+
+        popuppBtns.forEach((popupBtn, i) => {
+            popupBtn.addEventListener('click', () => {
+                popup(i);
+            });
+        });
+
+        // CLOSE POPUP
+        // close when clicking the button
+        closeBtns.forEach((closeBtn) => {
+            closeBtn.addEventListener('click', () => {
+                popupViews.forEach((popupView) => {
+                    popupView.classList.remove('is-active');
+                });
+            });
+        });
+
+        // close when clicking outside the box/on the background
+        modalBg.forEach((modalB) => {
+            modalB.addEventListener('click', () => {
+                popupViews.forEach((popupView) => {
+                    popupView.classList.remove('is-active');
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
+
+
