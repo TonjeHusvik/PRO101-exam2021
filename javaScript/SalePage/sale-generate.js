@@ -9,8 +9,8 @@ saleModule.getAllSales().forEach(sales => {
             <div class="card">
                 </section>
                 <section class="card-content">
-                    <h3>${sales.table}</h3>
-                    <p>${sales.info}</p>
+                    <h3>${sales.store}</h3>
+                    <p>${sales.year}, ${sales.month}, ${sales.brutto}, ${sales.netto} </p>
                 </section>
             </div>
         </article>
