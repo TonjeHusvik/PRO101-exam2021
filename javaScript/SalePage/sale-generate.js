@@ -2,8 +2,9 @@ import saleModule from './saleModule.js'
 
 const saleSection = document.querySelector("#sale-section");
 
-let htmlTxt = "";
-saleModule.getAllSales().forEach(sales => {
+const showAll = () => {
+    let htmlTxt = "";
+    saleModule.getAllSales().forEach(sales => {
     htmlTxt += `
         <article class="column">
             <div class="card">
@@ -18,6 +19,87 @@ saleModule.getAllSales().forEach(sales => {
 });
 
 saleSection.innerHTML = htmlTxt;
+}
+
+const getAllOsloS = () => {
+    let htmlTxt = "";
+    saleModule.getOsloS().forEach(sales => {
+    htmlTxt += `
+        <article class="column">
+            <div class="card">
+                </section>
+                <section class="card-content">
+                    <h3>${sales.store}</h3>
+                    <p>${sales.year}, ${sales.month}, ${sales.brutto}, ${sales.netto} </p>
+                </section>
+            </div>
+        </article>
+    `;
+});
+
+saleSection.innerHTML = htmlTxt;
+}
+
+const getAllKarlJohan = () => {
+    let htmlTxt = "";
+    saleModule.getKarlJohan().forEach(sales => {
+    htmlTxt += `
+        <article class="column">
+            <div class="card">
+                </section>
+                <section class="card-content">
+                    <h3>${sales.store}</h3>
+                    <p>${sales.year}, ${sales.month}, ${sales.brutto}, ${sales.netto} </p>
+                </section>
+            </div>
+        </article>
+    `;
+});
+
+saleSection.innerHTML = htmlTxt;
+}
+
+const getAllMajorstuen = () => {
+    let htmlTxt = "";
+    saleModule.getMajorstuen().forEach(sales => {
+    htmlTxt += `
+        <article class="column">
+            <div class="card">
+                </section>
+                <section class="card-content">
+                    <h3>${sales.store}</h3>
+                    <p>${sales.year}, ${sales.month}, ${sales.brutto}, ${sales.netto} </p>
+                </section>
+            </div>
+        </article>
+    `;
+});
+
+saleSection.innerHTML = htmlTxt;
+}
+
+const getAllTorshov = () => {
+    let htmlTxt = "";
+    saleModule.getTorshov().forEach(sales => {
+    htmlTxt += `
+        <article class="column">
+            <div class="card">
+                </section>
+                <section class="card-content">
+                    <h3>${sales.store}</h3>
+                    <p>${sales.year}, ${sales.month}, ${sales.brutto}, ${sales.netto} </p>
+                </section>
+            </div>
+        </article>
+    `;
+});
+
+saleSection.innerHTML = htmlTxt;
+}
+
+
+
+
 
 //dropdown Butikk
 const menu = document.getElementById('dropdown');
@@ -60,25 +142,40 @@ document.addEventListener('click', ()=>{
     menu3.classList.remove('is-active');
 })
 
-//checkbox'er i dropdown
+
+//checkbox'er i dropdown (fungerer ikke på den måten jeg vil den skal gjøre)
+/*
 function getSelectedValues(name) {
-    const checkBoxes = document.querySelectorAll(`input[name="${name}"]:checked`);
+    const checkBoxes = document.querySelectorAll('.dropdown input:checked');
     let values = [];
     checkBoxes.forEach((checkbox) => {
         values.push(checkbox.value);
     });
     return values;
 }
-
-var checkedIndex = sales.indexOf(checkbox.value);
 const btn = document.querySelector('#btn');
-btn.addEventListener('click', () => {
-    if(checkedIndex === checkBoxes){
-    alert(getSelectedValues(`${sales.store}`));
-}});
+btn.addEventListener('click', (event) => {
+    alert(getSelectedValues('color'));
+});
 
 
+function getSelectedValues() {
+    const checkBoxes = document.getElementById(`input[type=${checkbox}]:checked`);
+    let values = [];
+    checkBoxes.forEach((checkbox) => {
+        values.push(checkbox.value);
+    });
+    return values;
+}*/
 
+const compareBtn = document.querySelector('#compare-btn');
+compareBtn.addEventListener('click', getAllKarlJohan);
+
+//compareBtn.addEventListener('click', getAllOsloS);
+/*
+if(checkbox.value.contain(values)){
+    return getSelectedValues;
+}*/
 
 //tabs
 const tabs = document.querySelectorAll('.tabs li');

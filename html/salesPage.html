@@ -12,7 +12,7 @@
 </head>
 <body>
 
-    <div id="logo" class="p-5 container has-text-centered mb-6"> 
+    <div id="logo" class="p-5 container has-text-centered"> 
         <div class="inline-block">
             <img src="../images/pizza-transparent3.png" width="50px">
         </div>
@@ -28,16 +28,16 @@
     <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item" href="http://127.0.0.1:5500/html/mainPage.html">
+                <a class="navbar-item" href="http://127.0.0.1:5501/html/mainPage.html">
                     Forside
                 </a>
-                <a class="navbar-item" href="http://127.0.0.1:5500/html/restaurantsPage.html">
+                <a class="navbar-item" href="http://127.0.0.1:5501/html/restaurantsPage.html">
                     Restauranter
                 </a>
-                <a class="navbar-item" href="http://127.0.0.1:5500/html/employeePage.html">
+                <a class="navbar-item" href="http://127.0.0.1:5501/html/employeePage.html">
                     Ansatte
                 </a>
-                <a class="navbar-item" href="http://127.0.0.1:5500/html/menuPage.html">
+                <a class="navbar-item" href="http://127.0.0.1:5501/html/menuPage.html">
                     Meny
                 </a>
             </div>
@@ -55,15 +55,18 @@
             </li>
         </ul>
     </div>
-
-    <!-- DROPDOWN-MENY -->
+    
+    <div class="px-2" id="tab-content">
+        <div id="sale-details">
+            <!-- Omsetning -->
+            <!-- DROPDOWN-MENY -->
     <div class="container">
         <div class="columns">
-            <div class="column is-6">
+            <div class="column is-7">
                 <!-- BUTIKK -->
                 <div class="dropdown" id="dropdown">
                     <div class="dropdown-trigger">
-                      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                      <button class="button is-small" aria-haspopup="true" aria-controls="dropdown-menu">
                         <span>Butikk</span>
                         <span class="icon is-small">
                           <i class="fas fa-angle-down" aria-hidden="true"></i>
@@ -102,7 +105,7 @@
                 <!-- ÅR -->
                 <div class="dropdown" id="dropdown1">
                     <div class="dropdown-trigger">
-                      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                      <button class="button is-small" aria-haspopup="true" aria-controls="dropdown-menu">
                         <span>År</span>
                         <span class="icon is-small">
                           <i class="fas fa-angle-down" aria-hidden="true"></i>
@@ -135,7 +138,7 @@
                 <!-- MÅNED -->
                 <div class="dropdown" id="dropdown2">
                     <div class="dropdown-trigger">
-                      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                      <button class="button is-small" aria-haspopup="true" aria-controls="dropdown-menu">
                         <span>Måned</span>
                         <span class="icon is-small">
                           <i class="fas fa-angle-down" aria-hidden="true"></i>
@@ -222,7 +225,7 @@
                 <!-- OMSETNING -->
                 <div class="dropdown" id="dropdown3">
                     <div class="dropdown-trigger">
-                      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                      <button class="button is-small" aria-haspopup="true" aria-controls="dropdown-menu">
                         <span>Omsetning</span>
                         <span class="icon is-small">
                           <i class="fas fa-angle-down" aria-hidden="true"></i>
@@ -246,13 +249,10 @@
                       </div>
                     </div>
                 </div>
+                <button class="button is-small is-light" id="compare-btn">Sammenlign</button>
             </div>
         </div>
     </div>
-    
-    <div class="px-2" id="tab-content">
-        <div id="sale-details">
-            <!-- Omsetning -->
             <div class="has-text-right">
                 <button class="button is-small">Legg til omsetning</button>
                 <button class="button is-small">Rediger omsetning</button>
@@ -265,10 +265,176 @@
                     </section>
                 </main>
             </div>
-            <button class="button" id="btn">Sammenlign</button>
         </div>
         <div id="sale-dishes-details" class="is-hidden">
             <!-- Omsetning - retter -->
+            <!-- DROPDOWN-MENY -->
+    <div class="container">
+        <div class="columns">
+            <div class="column is-7">
+                <!-- BUTIKK -->
+                <div class="dropdown" id="dropdown">
+                    <div class="dropdown-trigger">
+                      <button class="button is-small" aria-haspopup="true" aria-controls="dropdown-menu">
+                        <span>Butikk</span>
+                        <span class="icon is-small">
+                          <i class="fas fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                      <div class="dropdown-content">
+                        <a class="dropdown-item">
+                            <label class="checkbox">
+                                <input type="checkbox" name="store" value="Oslo S">
+                                Oslo s
+                            </label>
+                        </a>
+                        <a class="dropdown-item">
+                            <label class="checkbox">
+                                <input type="checkbox" name="store" value="Karl Johan">
+                                Karl Johan
+                            </label>
+                        </a>
+                        <a class="dropdown-item">
+                            <label class="checkbox">
+                                <input type="checkbox" name="store" value="Majorstuen">
+                                Majorstuen
+                            </label>
+                        </a>
+                        <a class="dropdown-item">
+                            <label class="checkbox">
+                                <input type="checkbox" name="store" value="Torshov">
+                                Torshov
+                            </label>
+                        </a>
+                      </div>
+                    </div>
+                </div>
+                <!-- ÅR -->
+                <div class="dropdown" id="dropdown1">
+                    <div class="dropdown-trigger">
+                      <button class="button is-small" aria-haspopup="true" aria-controls="dropdown-menu">
+                        <span>År</span>
+                        <span class="icon is-small">
+                          <i class="fas fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                      <div class="dropdown-content">
+                        <a href="#" class="dropdown-item">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                2021
+                            </label>
+                        </a>
+                        <a class="dropdown-item">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                2020
+                            </label>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                2019
+                            </label>
+                        </a>
+                      </div>
+                    </div>
+                </div>
+                <!-- MÅNED -->
+                <div class="dropdown" id="dropdown2">
+                    <div class="dropdown-trigger">
+                      <button class="button is-small" aria-haspopup="true" aria-controls="dropdown-menu">
+                        <span>Måned</span>
+                        <span class="icon is-small">
+                          <i class="fas fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                      <div class="dropdown-content">
+                        <a href="#" class="dropdown-item">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                Januar
+                            </label>
+                        </a>
+                        <a class="dropdown-item">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                Februar
+                            </label>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                Mars
+                            </label>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                          <label class="checkbox">
+                            <input type="checkbox">
+                            April
+                        </label>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                Mai
+                            </label>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                Juni
+                            </label>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                Juli
+                            </label>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                August
+                            </label>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                September
+                            </label>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                Oktober
+                            </label>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                November
+                            </label>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                Desember
+                            </label>
+                        </a>
+                      </div>
+                    </div>
+                </div>
+                <button class="button is-small is-light" id="compare-btn">Trykk her!</button>
+            </div>
+        </div>
+    </div>
             <div class="has-text-right">
                 <button class="button is-small">Legg til omsetning</button>
                 <button class="button is-small">Rediger omsetning</button>
