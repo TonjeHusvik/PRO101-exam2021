@@ -290,28 +290,65 @@
                 </tfoot>
             </table>
         </div>
+        <!-- EN TAB MED UTRETNING AV GJENNOMSNITT SALG HER -->
+        <div class="kommer-snart"></div>
     </div>
-    <!--MODAL-->
-    <div class="modal">
+
+
+    <!-- MODAL - LEGG TIL OMSETNING -->
+    <div class="modal" id="add-sale">
         <div class="modal-background"></div>
         <div class="modal-card">
-          <header class="modal-card-head">
-            <p class="modal-card-title">Legg til omsetning</p>
-            <button class="delete" aria-label="close"></button>
-          </header>
-          <section class="modal-card-body">
-            <label>Restaurant:</label><input><br><br>
-                <label>År: </label><input><br><br>
-                <label>Måned: </label><input><br><br>
-                <label>Brutto: </label><input><br><br>
-                <label>Netto: </label><input><br><br>
-          </section>
-          <footer class="modal-card-foot">
-            <button class="button new-window-modal">Lagre</button>
-            <button class="button modal-cancel-btn">Avbryt</button>
-          </footer>
+            <header class="modal-card-head">
+                <p class="modal-card-title">LEGG TIL OMSETNING</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <label>Restaurant:</label><input><br><br>
+                    <label>År: </label><input><br><br>
+                    <label>Måned: </label><input><br><br>
+                    <label>Brutto: </label><input><br><br>
+                    <label>Netto: </label><input><br><br>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button new-window-modal">Lagre</button>
+                <button class="button modal-cancel-btn">Avbryt</button>
+            </footer>
         </div>
-      </div>
-
+    </div>
+    <!-- MODAL - BEKREFT -->
+    <div class="modal" id="are-you-sure" >
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">*RestaurantNavn*</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <p>Er du sikker på at du vil gjøre denne endringen? </p>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button new-window-modal">Godkjenn</button>
+                <button class="button modal-cancel-btn">Avbryt</button>
+            </footer>
+        </div>
+    </div>
+    <!-- MODAL - BEKREFTELSE -->
+    <div class="modal" id="are-you-sure" >
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">HANDLING BEKREFTET</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <p>Ett nytt salg er nå lagt inn</p>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button new-window-modal">OK</button>
+                <button class="button modal-cancel-btn">Ok</button>
+            </footer>
+        </div>
+    </div>
 </body>
 </html>
