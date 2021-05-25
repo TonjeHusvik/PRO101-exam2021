@@ -188,7 +188,7 @@ if(checkbox.value.contain(values)){
 }*/
 
 const compareBtn = document.querySelector('#compare-btn');
-compareBtn.addEventListener('click', getAllOsloS, getAllKarlJohan);
+compareBtn.addEventListener('click', getAllKarlJohan || getAllOsloS);
 
 
 //tabs

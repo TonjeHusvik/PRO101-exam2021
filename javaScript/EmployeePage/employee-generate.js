@@ -192,6 +192,9 @@ const deleteBtn = document.querySelector("#delete-employee-btn");
 const deleteModal = document.querySelector("#deleteModal");
 const stopDelteEmployeeBtn = document.querySelector("#stop-delete-employee-btn-modal");
 const deleteEmployeeBtnModalApprov = document.querySelector("#delete-employee-btn-modal-approv");
+const stopDeleteEmployeeBtnModalStop = document.querySelector("#stop-delete-employee-btn-modal-stop");
+const deleteModalInformationConfirmation = document.querySelector("#delete-modal-information-confirmation");
+const deleteModalFinish = document.querySelector("#delete-modal-finish");
 
 deleteBtn.addEventListener('click', () =>{
     deleteModal.classList.add('is-active')
@@ -210,11 +213,32 @@ deleteEmployeeBtnModal.addEventListener('click', () =>{
 
 deleteEmployeeBtnModalApprov.addEventListener('click', () =>{
     deleteModalInformation.classList.remove('is-active');
+    deleteModalInformationConfirmation.classList.add('is-active');
 })
+
+deleteModalFinish.addEventListener('click', () =>{
+    deleteModalInformationConfirmation.classList.remove('is-active');
+})
+
+stopDeleteEmployeeBtnModalStop.addEventListener('click', () =>{
+    deleteModalInformation.classList.remove('is-active');
+})
+
+
 /**Rediger ansatt knapp */
 const editEmployeeBtn = document.querySelector("#edit-employee-btn");
 const editModal = document.querySelector("#editModal");
 const stopEditEmployeeBtnModal = document.querySelector("#stop-edit-employee-btn-modal");
+const editEmployeeBtnModal = document.querySelector("#edit-employee-btn-modal");
+const editModalEdit = document.querySelector("#edit-modal-edit");
+const editEmployeeBtnModalEdit = document.querySelector("#edit-employee-btn-modal-edit");
+const stopEditEmployeeBtnModalEdit = document.querySelector("#stop-edit-employee-btn-modal-edit");
+const editModalApprov = document.querySelector("#edit-modal-approv");
+const editEmployeeBtnModalApprov = document.querySelector("#edit-employee-btn-modal-approv");
+const editModalInformationConfirmation = document.querySelector("#edit-modal-information-confirmation");
+const stopEditEmployeeBtnModalStop = document.querySelector("#stop-edit-employee-btn-modal-stop");
+const editModalFinish = document.querySelector("#edit-modal-finish");
+
 
 editEmployeeBtn.addEventListener('click', () =>{
     editModal.classList.add('is-active')
@@ -224,21 +248,68 @@ stopEditEmployeeBtnModal.addEventListener('click', () =>{
     editModal.classList.remove('is-active');
 })
 
+editEmployeeBtnModal.addEventListener('click', () =>{
+    editModal.classList.remove('is-active');
+    editModalEdit.classList.add('is-active');
+})
 
+editEmployeeBtnModalEdit.addEventListener('click', () =>{
+    editModalEdit.classList.remove('is-active');
+    editModalApprov.classList.add('is-active');
+})
+
+stopEditEmployeeBtnModalEdit.addEventListener('click', () =>{
+    editModalEdit.classList.remove('is-active');
+})
+
+editEmployeeBtnModalApprov.addEventListener('click', () =>{
+    editModalApprov.classList.remove('is-active');
+    editModalInformationConfirmation.classList.add('is-active');
+})
+
+stopEditEmployeeBtnModalStop.addEventListener('click', () =>{
+    editModalApprov.classList.remove('is-active');
+})
+
+editModalFinish.addEventListener('click', () =>{
+    editModalInformationConfirmation.classList.remove('is-active');
+})
 /** Legge til ansatt knapp */
 
 const addEmployeeBtn = document.querySelector("#add-employee-btn");
 const addModal = document.querySelector("#addModal")
+const addEmployeeBtnModal = document.querySelector("#add-employee-btn-modal");
 const stopAddEmployeeBtnModal = document.querySelector("#stop-add-employee-btn-modal");
+const addModalApprov = document.querySelector("#add-modal-approv");
+const addEmployeeBtnModalApprov = document.querySelector("#add-employee-btn-modal-approv");
+const addModalInformationConfirmation = document.querySelector("#add-modal-information-confirmation");
+const stopAddEmployeeBtnModalStop = document.querySelector("#stop-add-employee-btn-modal-stop");
+const addModalFinish = document.querySelector("#add-modal-finish");
+
 
 addEmployeeBtn.addEventListener('click', () =>{
     addModal.classList.add('is-active');
+})
+
+addEmployeeBtnModal.addEventListener('click', () =>{
+    addModal.classList.remove('is-active');
+    addModalApprov.classList.add('is-active');
 })
 
 stopAddEmployeeBtnModal.addEventListener('click', () =>{
     addModal.classList.remove('is-active');
 })
 
+addEmployeeBtnModalApprov.addEventListener('click', () =>{
+    addModalApprov.classList.remove('is-active');
+    addModalInformationConfirmation.classList.add('is-active');
+})
 
+stopAddEmployeeBtnModalStop.addEventListener('click', () =>{
+    addModalApprov.classList.remove('is-active');
+})
 
+addModalFinish.addEventListener('click', () =>{
+    addModalInformationConfirmation.classList.remove('is-active');
+})
 
