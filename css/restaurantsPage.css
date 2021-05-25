@@ -1,12 +1,15 @@
 #logo{
-    background-color:#FF7F50;
+    background-color:#fecc30;
     text-align: center;
+    padding: 25px;
 }
 
 #logo-name{
     text-align: center;
     font-family:'Courier New', Courier, monospace;
+    font-weight: 900;
     font-size:60px;
+    color: #fff;
 }
 
 .inline-block{
@@ -26,5 +29,9 @@
     text-align: center;
     margin-left: 35px;
     margin-right: 35px;
+}
+
+.button .is-primary{
+    background-color: #fecc30;
 }
 
