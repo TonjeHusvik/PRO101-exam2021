@@ -10,6 +10,7 @@ DrinksModule.getAllDrinks().forEach( drinksmenu => {
         <div class="card">
             <section class="card-content">
                 <p>${drinksmenu.title}, ${drinksmenu.pliten}, ${drinksmenu.pstor}</p>
+                <button>Delete</button>
             </section>
         </div>
     </article>
