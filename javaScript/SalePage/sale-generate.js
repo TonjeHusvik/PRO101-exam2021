@@ -1,11 +1,15 @@
 import saleModule from './saleModule.js'
 
+//HTML
 const saleSection = document.querySelector("#sale-section");
 const searchTxtStore = document.querySelector("#search-txt-store");
 const searchTxtYear = document.querySelector("#search-txt-year");
 const searchTxtMonth = document.querySelector("#search-txt-month");
-const searchTxtSale = document.querySelector("#search-txt-sale");
+const searchStoresBtn = document.querySelector('#search-stores-btn');
+const searchYearBtn = document.querySelector('#search-year-btn');
+const searchMonthBtn = document.querySelector('#search-month-btn');
 
+//Viser alle restauranter + årstall + måneder
 const showAll = () => {
     let htmlTxt = "";
     saleModule.getAllSales().forEach(sales => {
@@ -21,10 +25,10 @@ const showAll = () => {
         </article>
     `;
 });
-
 saleSection.innerHTML = htmlTxt;
 }
 
+//Viser kun restauranter
 const getAllStores = () => {
     let htmlTxt = "";
     saleModule.getStores(searchTxtStore.value).forEach(sales => {
@@ -40,10 +44,10 @@ const getAllStores = () => {
         </article>
     `;
 });
-
 saleSection.innerHTML = htmlTxt;
 }
 
+//Viser kun årstall
 const getAllYear = () => {
     let htmlTxt = "";
     saleModule.getYear(searchTxtYear.value).forEach(sales => {
@@ -59,10 +63,10 @@ const getAllYear = () => {
         </article>
     `;
 });
-
 saleSection.innerHTML = htmlTxt;
 }
 
+//Viser kun måneder
 const getAllMonth = () => {
     let htmlTxt = "";
     saleModule.getMonth(searchTxtMonth.value).forEach(sales => {
@@ -78,31 +82,13 @@ const getAllMonth = () => {
         </article>
     `;
 });
-
 saleSection.innerHTML = htmlTxt;
 }
 
-
-/*
-//input + buttons
-function getCertainStore(){
-    sales.forEach(store => {
-        if(getAllStores === getAllKarlJohan){
-
-        }
-    })
-    return getAllStores;
-}*/
-
-const searchStoresBtn = document.querySelector('#search-stores-btn');
+//omsetningsdel - knapper med søk
 searchStoresBtn.addEventListener('click', getAllStores);
-
-const searchYearBtn = document.querySelector('#search-year-btn');
 searchYearBtn.addEventListener('click', getAllYear);
-
-const searchMonthBtn = document.querySelector('#search-month-btn');
 searchMonthBtn.addEventListener('click', getAllMonth);
-
 showAll();
 
 
@@ -130,8 +116,7 @@ tabs.forEach((tab) => {
 const openModal = document.querySelectorAll('.modal');
 const modalBtn = document.querySelectorAll('.open-modal-btn');
 const closeModal = document.querySelectorAll('.delete, .modal-cancel-btn');
-const modalBackG = document.querySelectorAll('.modal-background');
-const modalNewWindow = document.querySelectorAll('.new-window-modal');
+
 
 // open popup
 var popup = function(popupClick){
@@ -155,6 +140,7 @@ closeModal.forEach((closeBtn) => {
 });
 
 // close when clicking outside the box/on the background
+const modalBackG = document.querySelectorAll('.modal-background');
 modalBackG.forEach((modalB) => {
     modalB.addEventListener('click', () => {
         openModal.forEach((popupView) => {
