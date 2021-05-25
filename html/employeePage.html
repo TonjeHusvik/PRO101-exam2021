@@ -190,12 +190,57 @@
                 </div>
                 <div class="level-left">
                   <div class="level-item">
-                    <button id="delete-employee-btn-modal" class="button is-link-light is-small">
+                    <button id="delete-employee-btn-modal" class="button is-link-light is-small modal-button" data-target="modal-ter" aria-haspopup="true">
                       Fjern ansatt
                     </button>
                   </div>
                   <div class="level-item">
                     <button id="stop-delete-employee-btn-modal" class="button is-link-light is-small modal-button" data-target="modal-ter">
+                      Avbryt
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bruker bekrefter å fjerne dennne ansatte-->
+            <div class="modal" id="delete-modal-information">
+              <div class="modal-background"></div>
+              <div class="modal-content has-background-white py-5 px-5">
+                <h3 class="title mb-6"> Slette en ansatt</h3>
+                <div class="level-left">
+                  <div class="level-item">
+                    <p>Sikker?</p>
+                  </div>
+                </div>
+                <div class="level-left">
+                  <div class="level-item">
+                    <button id="delete-employee-btn-modal-approv" class="button is-link-light is-small modal-button" data-target="modal-ter">
+                      Godkjen
+                    </button>
+                  </div>
+                  <div class="level-item">
+                    <button id="stop-delete-employee-btn-modal-stop" class="button is-link-light is-small modal-button" data-target="modal-ter">
+                      Avbryt
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Får bekreftelse av at den er slettet-->
+            <div class="modal" id="delete-modal-information-confirmation">
+              <div class="modal-background"></div>
+              <div class="modal-content has-background-white py-5 px-5">
+                <h3 class="title mb-6"> Slette en ansatt</h3>
+                <div class="level-left">
+                  <div class="level-item">
+                    <p>Godkjent</p>
+                  </div>
+                </div>
+                <div class="level-left">
+                  <div class="level-item">
+                    <button id="delete-modal-finish" class="button is-link-light is-small modal-button" data-target="modal-ter">
                       Avbryt
                     </button>
                   </div>
@@ -230,6 +275,153 @@
               </div>
             </div>
           </div>
+
+          <!--Bruker får opp den ansatte som skal redigeres-->
+          <div class="modal" id="edit-modal-edit">
+            <div class="modal-background"></div>
+            <div class="modal-content has-background-white py-5 px-5">
+              <h3 class="title mb-6"> Rediger ansatt</h3>
+              <div class="level-left">
+                <div class="level-item">
+                  <p>Fornavn</p>
+                </div>
+                <div class="level-item">
+                  <input type="text" placeholder="Fornavn">
+                </div>
+              </div>
+              <div class="level-left">
+                <div class="level-item">
+                  <p>Etternavn</p>
+                </div>
+                <div class="level-item">
+                  <input type="text" placeholder="Etternavn">
+                </div>
+              </div>
+              <div class="level-left">
+                <div class="level-item">
+                  <p>Tlf nr</p>
+                </div>
+                <div class="level-item">
+                  <input type="text" placeholder="Tlf nr">
+                </div>
+              </div>
+              <div class="level-left">
+                <div class="level-item">
+                  <p>E-post</p>
+                </div>
+                <div class="level-item">
+                  <input type="text" placeholder="E-post">
+                </div>
+              </div>
+              <div class="level-left">
+                <div class="level-item">
+                  <p>Personnr</p>
+                </div>
+                <div class="level-item">
+                  <input type="text" placeholder="Personnr">
+                </div>
+              </div>
+              <div class="level-left">
+                <div class="level-item">
+                  <p>Stilling</p>
+                </div>
+                <div class="level-item">
+                  <input type="text" placeholder="Stilling">
+                </div>
+              </div>
+              <div class="level-left">
+                <div class="level-item">
+                  <p>Arbeidssted</p>
+                </div>
+                <div class="level-item">
+                  <input type="text" placeholder="Arbeidssted">
+                </div>
+              </div>
+              <div class="level-left">
+                <div class="level-item">
+                  <p>Stillingsprosent</p>
+                </div>
+                <div class="level-item">
+                  <input type="text" placeholder="Stillingsprosent">
+                </div>
+              </div>
+              <div class="level-left">
+                <div class="level-item">
+                  <p>Startdato</p>
+                </div>
+                <div class="level-item">
+                  <input type="text" placeholder="Startdato">
+                </div>
+              </div>
+              <div class="level-left">
+                <div class="level-item">
+                  <p>AnsattID</p>
+                </div>
+                <div class="level-item">
+                  <input type="text" placeholder="AnsattID">
+                </div>
+              </div>
+              <div class="level-left">
+                <div class="level-item">
+                  <button id="edit-employee-btn-modal-edit" class="button is-link-light is-small">
+                    Rediger
+                  </button>
+                </div>
+                <div class="level-item">
+                  <button id="stop-edit-employee-btn-modal-edit" class="button is-link-light is-small modal-button" data-target="modal-ter">
+                    Avbryt
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Det nye redigerte kommer opp slik at brukeren kan sjekke at alt er riktig-->
+          <div class="modal" id="edit-modal-approv">
+            <div class="modal-background"></div>
+            <div class="modal-content has-background-white py-5 px-5">
+              <h3 class="title mb-6"> Rediger</h3>
+              <div class="level-left">
+                <div class="level-item">
+                  <p>Sikker?</p>
+                </div>
+              </div>
+              <div class="level-left">
+                <div class="level-item">
+                  <button id="edit-employee-btn-modal-approv" class="button is-link-light is-small modal-button" data-target="modal-ter">
+                    Godkjen
+                  </button>
+                </div>
+                <div class="level-item">
+                  <button id="stop-edit-employee-btn-modal-stop" class="button is-link-light is-small modal-button" data-target="modal-ter">
+                    Avbryt
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Brukeren får godkjennelse at den er redigert samt den nye redigeringen-->
+          <div class="modal" id="edit-modal-information-confirmation">
+            <div class="modal-background"></div>
+            <div class="modal-content has-background-white py-5 px-5">
+              <h3 class="title mb-6"> Rediger ansatt</h3>
+              <div class="level-left">
+                <div class="level-item">
+                  <p>Godkjent</p>
+                </div>
+              </div>
+              <div class="level-left">
+                <div class="level-item">
+                  <button id="edit-modal-finish" class="button is-link-light is-small modal-button" data-target="modal-ter">
+                    Avbryt
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
 
           <!--Legge til ansatt-->
           <div class="modal" id="addModal">
@@ -324,6 +516,51 @@
                 </div>
                 <div class="level-item">
                   <button id="stop-add-employee-btn-modal" class="button is-link-light is-small modal-button" data-target="modal-ter">
+                    Avbryt
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Godkjenning fra bruker om å legge inn-->
+          <div class="modal" id="add-modal-approv">
+            <div class="modal-background"></div>
+            <div class="modal-content has-background-white py-5 px-5">
+              <h3 class="title mb-6"> Legg til ansatt</h3>
+              <div class="level-left">
+                <div class="level-item">
+                  <p>Sikker?</p>
+                </div>
+              </div>
+              <div class="level-left">
+                <div class="level-item">
+                  <button id="add-employee-btn-modal-approv" class="button is-link-light is-small modal-button" data-target="modal-ter">
+                    Godkjen
+                  </button>
+                </div>
+                <div class="level-item">
+                  <button id="stop-add-employee-btn-modal-stop" class="button is-link-light is-small modal-button" data-target="modal-ter">
+                    Avbryt
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Godkjennelse dukker opp-->
+          <div class="modal" id="add-modal-information-confirmation">
+            <div class="modal-background"></div>
+            <div class="modal-content has-background-white py-5 px-5">
+              <h3 class="title mb-6"> Rediger ansatt</h3>
+              <div class="level-left">
+                <div class="level-item">
+                  <p>Godkjent</p>
+                </div>
+              </div>
+              <div class="level-left">
+                <div class="level-item">
+                  <button id="add-modal-finish" class="button is-link-light is-small modal-button" data-target="modal-ter">
                     Avbryt
                   </button>
                 </div>
