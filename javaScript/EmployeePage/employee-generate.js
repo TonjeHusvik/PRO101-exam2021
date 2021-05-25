@@ -7,7 +7,9 @@ const sortByOsloBtn = document.querySelector("#sort-by-oslo-btn");
 const sortByKarlJohanBtn = document.querySelector("#sort-by-karl-johan-btn");
 const sortByTorshovBtn = document.querySelector("#sort-by-torshov-btn");
 const sortByMajorstuenBtn = document.querySelector("#sort-by-majorstuen-btn");
-
+const searchTxtId = document.querySelector("#search-txt-id");
+const searchEmployeeIdBtn = document.querySelector("#search-employee-id-btn");
+const deleteEmployeeBtnModal = document.querySelector("#delete-employee-btn-modal");
 
 const showAll= () => {
 
@@ -57,6 +59,28 @@ const searchByLastname = () => {
     employeeSection.innerHTML = htmlTxt;
 }
 
+const searchByEmployeeID = () =>{
+    let htmlTxt = "";
+
+    EmployeeModule.getByEmployeeID(searchTxtId.value).forEach(employee =>{
+        htmlTxt +=`
+        <article class="column is-4">
+        <div class="card">
+            <section class="card-content">
+                <h3 class="is-size-4">${employee.firstName} ${employee.lastName}</h3>
+                <p>${employee.phone}, ${employee.email}, ${employee.age}</p>
+                <p>${employee.workPlace}, ${employee.work}, ${employee.workProsent}, AnsattID: ${employee.employeeID}</p> 
+                <p>Start dato: ${employee.startDate}</p>
+            </section>
+        </div>
+    </article>
+        `;
+    })
+
+    employeeSection.innerHTML = htmlTxt;
+}
+
+/**Sorterer etter Oslo s  */
 const sortByOslo = () => {
 
     let htmlTxt = "";
@@ -80,6 +104,7 @@ const sortByOslo = () => {
     employeeSection.innerHTML = htmlTxt;
 }
 
+/**Sorterer etter Karl Johan */
 const sortByKarlJohan = () => {
 
     let htmlTxt ="";
@@ -102,6 +127,7 @@ const sortByKarlJohan = () => {
     employeeSection.innerHTML = htmlTxt;
 }
 
+/**Sorterer etter Torshov */
 const sortByTorshov = () => {
 
     let htmlTxt = "";
@@ -125,6 +151,7 @@ const sortByTorshov = () => {
 
 }
 
+/**Sorterer etter Majorstuen */
 const sortByMajorstuen = () => {
 
     let htmlTxt = "";
@@ -146,12 +173,14 @@ const sortByMajorstuen = () => {
     employeeSection.innerHTML = htmlTxt;
 }
 
+showAll();
+searchLastnameBtn.addEventListener("click", searchByLastname);
+searchEmployeeIdBtn.addEventListener("click", searchByEmployeeID);
+
 sortByMajorstuenBtn.addEventListener("click", sortByMajorstuen);
 sortByTorshovBtn.addEventListener("click", sortByTorshov);
 sortByKarlJohanBtn.addEventListener("click", sortByKarlJohan);
 sortByOsloBtn.addEventListener("click", sortByOslo);
-showAll();
-searchLastnameBtn.addEventListener("click", searchByLastname);
 
 //modal
 
