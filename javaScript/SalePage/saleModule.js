@@ -110,52 +110,16 @@ const saleModule = (function(){ // IIFE
     
     const getAllSales = () => sales;
 
-    const getOsloS = () => sales.filter(sale => sale.store === "Oslo S");
-    const getKarlJohan = () => sales.filter(sale => sale.store === "Karl Johan");
-    const getMajorstuen = () => sales.filter(sale => sale.store === "Majorstuen");
-    const getTorshov = () => sales.filter(sale => sale.store === "Torshov");
+    const getStores= ( store ) => sales.filter(sale => sale.store.toLowerCase() === store.toLowerCase());
+    const getYear = ( year ) => sales.filter(sale => sale.year.toLowerCase() === year.toLowerCase());
+    const getMonth = ( month) => sales.filter(sale => sale.month.toLowerCase() === month.toLowerCase());
 
-    const get2020 = () => sales.filter(sale => sale.store === "2020");
-    const get2019 = () => sales.filter(sale => sale.store === "2019");
-    
-    const getJanuar = () => sales.filter(sale => sale.store === "Januar");
-    const getFebruar = () => sales.filter(sale => sale.store === "Februar");
-    const getMars = () => sales.filter(sale => sale.store === "Mars");
-    const getApril = () => sales.filter(sale => sale.store === "April");
-    const getMai = () => sales.filter(sale => sale.store === "Mai");
-    const getJuni = () => sales.filter(sale => sale.store === "Juni");
-    const getJuli = () => sales.filter(sale => sale.store === "Juli");
-    const getAugust = () => sales.filter(sale => sale.store === "August");
-    const getSeptember = () => sales.filter(sale => sale.store === "September");
-    const getOktober = () => sales.filter(sale => sale.store === "Oktober");
-    const getNovember = () => sales.filter(sale => sale.store === "November");
-    const getDesember = () => sales.filter(sale => sale.store === "Desember");
-
-    const getBrutto = () => sales.filter(sale => sale.store === "Brutto");
-    const getNetto = () => sales.filter(sale => sale.store === "Netto");
 
     return {
         getAllSales,
-        getOsloS,
-        getKarlJohan,
-        getMajorstuen,
-        getTorshov,
-        get2019,
-        get2020,
-        getJanuar,
-        getFebruar,
-        getMars,
-        getApril,
-        getMai,
-        getJuni,
-        getJuli,
-        getAugust,
-        getSeptember,
-        getOktober,
-        getNovember,
-        getDesember,
-        getBrutto,
-        getNetto
+        getStores,
+        getYear,
+        getMonth
     }
 
 }()); // end of saleModule
