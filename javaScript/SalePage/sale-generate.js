@@ -96,11 +96,29 @@ const getAllTorshov = () => {
 
 saleSection.innerHTML = htmlTxt;
 }
+//januar
+const getJanuar = () => {
+    let htmlTxt = "";
+    saleModule.getTorshov().forEach(sales => {
+    htmlTxt += `
+        <article class="column">
+            <div class="card">
+                </section>
+                <section class="card-content">
+                    <h3>${sales.store}</h3>
+                    <p>${sales.year}, ${sales.month}, ${sales.brutto}, ${sales.netto} </p>
+                </section>
+            </div>
+        </article>
+    `;
+});
+
+saleSection.innerHTML = htmlTxt;
+}
 
 
 
-
-
+//OMSETNING
 //dropdown Butikk
 const menu = document.getElementById('dropdown');
 menu.addEventListener('click', e=>{
@@ -142,11 +160,10 @@ document.addEventListener('click', ()=>{
     menu3.classList.remove('is-active');
 })
 
-
 //checkbox'er i dropdown (fungerer ikke på den måten jeg vil den skal gjøre)
 /*
 function getSelectedValues(name) {
-    const checkBoxes = document.querySelectorAll('.dropdown input:checked');
+    const checkBoxes = document.querySelectorAll(`input[name=${name}]:checked`);
     let values = [];
     checkBoxes.forEach((checkbox) => {
         values.push(checkbox.value);
@@ -158,7 +175,6 @@ btn.addEventListener('click', (event) => {
     alert(getSelectedValues('color'));
 });
 
-
 function getSelectedValues() {
     const checkBoxes = document.getElementById(`input[type=${checkbox}]:checked`);
     let values = [];
@@ -166,16 +182,14 @@ function getSelectedValues() {
         values.push(checkbox.value);
     });
     return values;
-}*/
-
-const compareBtn = document.querySelector('#compare-btn');
-compareBtn.addEventListener('click', getAllKarlJohan);
-
-//compareBtn.addEventListener('click', getAllOsloS);
-/*
+}   
 if(checkbox.value.contain(values)){
     return getSelectedValues;
 }*/
+
+const compareBtn = document.querySelector('#compare-btn');
+compareBtn.addEventListener('click', getAllOsloS, getAllKarlJohan);
+
 
 //tabs
 const tabs = document.querySelectorAll('.tabs li');
@@ -196,3 +210,40 @@ tabs.forEach((tab) => {
         });
     })
 })
+
+//modal buttons
+const openModal = document.querySelectorAll('.modal');
+const modalBtn = document.querySelectorAll('.open-modal-btn');
+const closeModal = document.querySelectorAll('.delete, .modal-cancel-btn');
+const modalBackG = document.querySelectorAll('.modal-background');
+const modalNewWindow = document.querySelectorAll('.new-window-modal');
+
+// open popup
+var popup = function(popupClick){
+    openModal[popupClick].classList.add('is-active');
+}
+
+modalBtn.forEach((popupBtn, i) => {
+    popupBtn.addEventListener('click', () => {
+        popup(i);
+    });
+});
+
+// close popup
+// close when clicking the button
+closeModal.forEach((closeBtn) => {
+    closeBtn.addEventListener('click', () => {
+        openModal.forEach((popupView) => {
+            popupView.classList.remove('is-active');
+        });
+    });
+});
+
+// close when clicking outside the box/on the background
+modalBackG.forEach((modalB) => {
+    modalB.addEventListener('click', () => {
+        openModal.forEach((popupView) => {
+            popupView.classList.remove('is-active');
+        });
+    });
+});
