@@ -24,7 +24,7 @@ const showAll= () => {
         <div class="card">
             <section class="card-content">
                 <h3 class="is-size-4">${employees.firstName} ${employees.lastName}</h3>
-                <p>${employees.phone}, ${employees.email}, ${employees.age}</p>
+                <p>${employees.phone}, ${employees.email}</p>
                 <p>${employees.workPlace}, ${employees.work}, ${employees.workProsent}, AnsattID: ${employees.employeeID}</p> 
                 <p>Start dato: ${employees.startDate}</p>
             </section>
@@ -69,7 +69,7 @@ const searchByEmployeeID = () =>{
         <div class="card">
             <section class="card-content">
                 <h3 class="is-size-4">${employee.firstName} ${employee.lastName}</h3>
-                <p>${employee.phone}, ${employee.email}, ${employee.age}</p>
+                <p>${employee.phone}, ${employee.email}</p>
                 <p>${employee.workPlace}, ${employee.work}, ${employee.workProsent}, AnsattID: ${employee.employeeID}</p> 
                 <p>Start dato: ${employee.startDate}</p>
             </section>
@@ -92,7 +92,7 @@ const sortByOslo = () => {
         <div class="card">
             <section class="card-content">
                 <h3 class="is-size-4">${employee.firstName} ${employee.lastName}</h3>
-                <p>${employee.phone}, ${employee.email}, ${employee.age}</p>
+                <p>${employee.phone}, ${employee.email}</p>
                 <p>${employee.workPlace}, ${employee.work}, ${employee.workProsent}, AnsattID: ${employee.employeeID}</p> 
                 <p>Start dato: ${employee.startDate}</p>
             </section>
@@ -172,6 +172,30 @@ const sortByMajorstuen = () => {
         `
     })
     employeeSection.innerHTML = htmlTxt;
+}
+
+/**
+ * Array testing
+ */
+
+ const addEmployee = (ev) =>{
+    ev.preventDfault();
+
+        let employeeTest = {
+            firstName: document.getElementById('firstName').value,
+            lastName: document.getElementById('lastName').value,
+            phone: document.getElementById('phone').value,
+            email: document.getElementById('email'),
+            work: document.getElementById('work'),
+            workProsent: document.getElementById('workProsent'),
+            workPlace: document.getElementById('workPlace'),
+            startDate: document.getElementById('startDate'),
+            employeeID: document.getElementById('employeeID')
+        }
+
+        employees.push(employeeTest);
+
+    console.log(employees);
 }
 
 
@@ -302,6 +326,7 @@ stopAddEmployeeBtnModal.addEventListener('click', () =>{
 
 addEmployeeBtnModalApprov.addEventListener('click', () =>{
     addModalApprov.classList.remove('is-active');
+    addEmployee;
     addModalInformationConfirmation.classList.add('is-active');
 })
 
@@ -312,4 +337,6 @@ stopAddEmployeeBtnModalStop.addEventListener('click', () =>{
 addModalFinish.addEventListener('click', () =>{
     addModalInformationConfirmation.classList.remove('is-active');
 })
+
+
 
