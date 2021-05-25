@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/restaurantsPage.css">
+    <link rel="stylesheet" href="../css/mainPage.css">
     <link rel="stylesheet" href="../css/menuPage.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
@@ -17,6 +17,9 @@
     <title>Meny</title>
 </head>
 <body>
+
+    
+
     <!--Forside logo -->
     <div id="logo" class="p-5 container has-text-centered mb-6">
         <div class="inline-block">
@@ -49,6 +52,10 @@
             </div>
         </div>
     </nav>
+
+
+
+    <div class="container">
    <!-- Meny tabs -->
     <div class="tabs is-centered is-large">
         <ul>
@@ -67,8 +74,9 @@
         </ul>
     </div>
     <div class="px-2" id="tab-content">
+
+        <!--Drikke tabben -->
         <div id="drinks" class="is-hidden">
-            
             <div class="container">
                 <main class="columns">
                     <section  class="column is-half is-offset-one-quarter">
@@ -76,16 +84,14 @@
                         <section id="drinks-section">
 
                         </section>
+                        
                     </section>
-                    
-                    
                 </main>
             </div>
-
-            
         </div>
+
+        <!-- Hovedretter tabben -->
         <div id="main-course" >
-            
             <div class="container">
                 <main class="columns">
                     <section  class="column is-6">
@@ -100,11 +106,11 @@
 
                         </section>
                     </section>
-                    
                 </main>
             </div>
-            
         </div>
+        
+        <!-- Forrett/sides tabben -->
         <div id="side-dishes" class="is-hidden">
             <div class="container">
                 <main class="columns">
@@ -114,11 +120,10 @@
 
                         </section>
                     </section>
-                    
-                    
                 </main>
             </div>
         </div>
+        <!-- Dessert tabben -->
         <div id="dessert" class="is-hidden">
             <div class="container">
                 <main class="columns">
@@ -128,14 +133,361 @@
 
                         </section>
                     </section>
-                    
-                    
                 </main>
             </div>
         </div>
     </div>
 
+    <br>
+    <!-- Knapper -->
+        <nav class="level-right">
+            <div class="level-item">
+                <p>
+                    <button id="add-menu-item-btn" class="button">
+                    Legg til produkt
+                    </button>
+                </p>
+            </div>
+            <div class="level-item">
+                <p>
+                    <button id="edit-menu-item-btn" class="button">
+                        Rediger produkt
+                    </button>
+                </p>
+            </div>
+            <div class="level-item">
+                <p>
+                    <button id="remove-menu-item-btn" class="button">
+                        Slett produkt
+                    </button>
+                </p>
+            </div>
+       </nav>
+    </div>
+
+
+    <!-- Modal -->
+
+    <!--Legg til ansatt modal-->
+    <div class="modal" id="modal-1a">
+        <div class="modal-background" id="modal-bg-1a"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Legg til et produkt</p>
+                <button id="cancel-add-btn-2"class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <label>Hovedkategori:</label>
+                <div class="dropdown" id="dropdown1">
+                    <div class="dropdown-trigger">
+                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu1">
+                            <span>Click me</span>
+                            <span class="icon is-small">
+                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu1" role="menu">
+                        <div class="dropdown-content">
+                            <a href="#" class="dropdown-item">
+                                Hovedretter
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                Forretter
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                Desserter
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                Drikke
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <label>Underkategori:</label>
+                <div class="dropdown" id="dropdown2">
+                    <div class="dropdown-trigger">
+                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu1">
+                            <span>Click me</span>
+                            <span class="icon is-small">
+                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu2" role="menu">
+                        <div class="dropdown-content">
+                            <a href="#" class="dropdown-item">
+                                Pizza
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                Hovedretter
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                Forretter
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                Desserter
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                Drikke
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <label>Navn på rett:</label><input>
+                <br><br>
+                <label>Pris:</label><input>
+                <br><br>
+                <label>Id nummer:</label><input>
+                <br>
+            </section>
+            <footer class="modal-card-foot">
+                <button id="add-item-btn" class="button is-success">Legg til produkt</button>
+                <button id="cancel-add-btn"class="button">Avbryt</button>
+            </footer>
+        </div>
+    </div>
+<!-- Modal 1b som vil ha konfirmasjon om å legge til produkt -->
+    <div class="modal" id="modal-1b">
+        <div class="modal-background" id="modal-bg-1b"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">???</p>
+                    <button class="delete" id="cancel-add-btn-1b" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+
+                </section>
+                <footer class="modal-card-foot">
+                    <button class="button is-success" id="confirm-add-btn">Legg til produkt</button>
+                    <button class="button" id="cancel-add-btn-1b-2">Avbryt</button>
+                </footer>
+            </div>
+        
+    </div>
+<!-- Modal 1c som bekrefter at produkt har blitt lagt til -->
+    <div class="modal" id="modal-1c">
+        <div class="modal-background" id="modal-bg-1c"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">???</p>
+                    <button class="delete" id="cancel-add-btn-1c" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+
+                </section>
+                <footer class="modal-card-foot">
+                    <button class="button is-success" id="confirm-add-btn-2">Avslutt</button>
+                    
+                </footer>
+            </div>
+        
+    </div>
+
+    <!--Rediger produkt modal-->
+    <!-- Modal 2a for å spørre om hvilket produkt du vil endre på -->
+    <div class="modal" id="modal-2a">
+        <div class="modal-background" id="modal-bg-2a"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Rediger et produkt</p>
+                <button id="cancel-edit-btn"class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <label>Hvilken rett vil du endre på?</label>
+                <label>Id nummer:</label><input>
+                <br>
+            </section>
+            <footer class="modal-card-foot">
+                <button id="confirm-edit-btn" class="button is-success">Videre</button>
+                <button id="cancel-edit-btn-2"class="button">Avbryt</button>
+            </footer>
+        </div>
+    </div>
+    <!-- Modal 2b for å redigere produktet -->
+    <div class="modal" id="modal-2b">
+        <div class="modal-background" id="modal-bg-2b"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Rediger et produkt</p>
+                <button id="cancel-edit-btn-2b"class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <label>Hovedkategori:</label>
+                <div class="dropdown" id="dropdown1b">
+                    <div class="dropdown-trigger">
+                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu1">
+                            <span>Click me</span>
+                            <span class="icon is-small">
+                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu1" role="menu">
+                        <div class="dropdown-content">
+                            <a href="#" class="dropdown-item">
+                                Hovedretter
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                Forretter
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                Desserter
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                Drikke
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <label>Underkategori:</label>
+                <div class="dropdown" id="dropdown2b">
+                    <div class="dropdown-trigger">
+                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu1">
+                            <span>Click me</span>
+                            <span class="icon is-small">
+                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu2" role="menu">
+                        <div class="dropdown-content">
+                            <a href="#" class="dropdown-item">
+                                Pizza
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                Hovedretter
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                Forretter
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                Desserter
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                Drikke
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <label>Navn på rett:</label><input>
+                <br><br>
+                <label>Pris:</label><input>
+                <br><br>
+                <label>Id nummer:</label><input>
+                <br>
+            </section>
+            <footer class="modal-card-foot">
+                <button id="confirm-edit-btn-2b" class="button is-success">Rediger produkt</button>
+                <button id="cancel-edit-btn-2b-2"class="button">Avbryt</button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modal 2c som vil ha konfirmasjon om å redigere til produkt -->
+    <div class="modal" id="modal-2c">
+        <div class="modal-background" id="modal-bg-2c"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">???</p>
+                    <button class="delete" id="cancel-edit-btn-2c" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+
+                </section>
+                <footer class="modal-card-foot">
+                    <button class="button is-success" id="confirm-edit-btn-2c">Rediger produkt</button>
+                    <button class="button" id="cancel-edit-btn-2c-2">Avbryt</button>
+                </footer>
+            </div>
+        
+    </div>
+<!-- Modal 2d som bekrefter at produkt har blitt redigert -->
+    <div class="modal" id="modal-2d">
+        <div class="modal-background" id="modal-bg-2d"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">???</p>
+                    <button class="delete" id="cancel-edit-btn-2d" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+
+                </section>
+                <footer class="modal-card-foot">
+                    <button class="button is-success" id="confirm-edit-btn-2d">Avslutt</button>
+                    
+                </footer>
+            </div>
+        
+    </div>
+
+    <!--Modal 3 for å slette et produkt-->
+    <!--Modal 3a-->
+    <div class="modal" id="modal-3a">
+        <div class="modal-background" id="modal-bg-3a"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Slett et produkt</p>
+                <button id="cancel-remove-btn-3a"class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <label>Hvilket produkt vil du fjerne?</label>
+                <label>Id nummer:</label><input>
+                <br>
+            </section>
+            <footer class="modal-card-foot">
+                <button id="confirm-remove-btn" class="button is-success">Videre</button>
+                <button id="cancel-remove-btn-3a-2"class="button">Avbryt</button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modal 3b -->
+    <div class="modal" id="modal-3b">
+        <div class="modal-background" id="modal-bg-3b"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Slett et produkt</p>
+                <button id="cancel-remove-btn-3b"class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                
+                <br>
+            </section>
+            <footer class="modal-card-foot">
+                <button id="confirm-remove-btn-3b" class="button is-success">Videre</button>
+                <button id="cancel-remove-btn-3b-2"class="button">Avbryt</button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modal 3c -->
+    <div class="modal" id="modal-3c">
+        <div class="modal-background" id="modal-bg-3c"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Slett et produkt</p>
+                <button id="cancel-remove-btn-3c"class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                
+                <br>
+            </section>
+            <footer class="modal-card-foot">
+                <button id="confirm-remove-btn-3c" class="button is-success">Videre</button>
+               
+            </footer>
+        </div>
+    </div>
+
     <script src="../javaScript/MenuPage/tabsContent.js"></script> <!--Lenke til tabs js-->
+
+
+    
     
 
 
