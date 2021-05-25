@@ -190,10 +190,55 @@
                 </div>
                 <div class="level-left">
                   <div class="level-item">
-                    <button id="delete-employee-btn-modal" class="button is-link-light is-small">
+                    <button id="delete-employee-btn-modal" class="button is-link-light is-small modal-button" data-target="modal-ter" aria-haspopup="true">
                       Fjern ansatt
                     </button>
                   </div>
+                  <div class="level-item">
+                    <button id="stop-delete-employee-btn-modal" class="button is-link-light is-small modal-button" data-target="modal-ter">
+                      Avbryt
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bruker bekrefter å fjerne dennne ansatte-->
+            <div class="modal" id="delete-modal-information">
+              <div class="modal-background"></div>
+              <div class="modal-content has-background-white py-5 px-5">
+                <h3 class="title mb-6"> Slette en ansatt</h3>
+                <div class="level-left">
+                  <div class="level-item">
+                    <p>Sikker?</p>
+                  </div>
+                </div>
+                <div class="level-left">
+                  <div class="level-item">
+                    <button id="delete-employee-btn-modal-approv" class="button is-link-light is-small modal-button" data-target="modal-ter">
+                      Godkjen
+                    </button>
+                  </div>
+                  <div class="level-item">
+                    <button id="stop-delete-employee-btn-modal" class="button is-link-light is-small modal-button" data-target="modal-ter">
+                      Avbryt
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Får bekreftelse av at den er slettet-->
+            <div class="modal" id="delete-modal-information-confirmation">
+              <div class="modal-background"></div>
+              <div class="modal-content has-background-white py-5 px-5">
+                <h3 class="title mb-6"> Slette en ansatt</h3>
+                <div class="level-left">
+                  <div class="level-item">
+                    <p>Godkjent</p>
+                  </div>
+                </div>
+                <div class="level-left">
                   <div class="level-item">
                     <button id="stop-delete-employee-btn-modal" class="button is-link-light is-small modal-button" data-target="modal-ter">
                       Avbryt

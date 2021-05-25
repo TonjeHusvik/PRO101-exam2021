@@ -10,6 +10,7 @@ const sortByMajorstuenBtn = document.querySelector("#sort-by-majorstuen-btn");
 const searchTxtId = document.querySelector("#search-txt-id");
 const searchEmployeeIdBtn = document.querySelector("#search-employee-id-btn");
 const deleteEmployeeBtnModal = document.querySelector("#delete-employee-btn-modal");
+const deleteModalInformation = document.querySelector("#delete-modal-information");
 
 const showAll= () => {
 
@@ -173,10 +174,12 @@ const sortByMajorstuen = () => {
     employeeSection.innerHTML = htmlTxt;
 }
 
+
 showAll();
 searchLastnameBtn.addEventListener("click", searchByLastname);
 searchEmployeeIdBtn.addEventListener("click", searchByEmployeeID);
 
+deleteEmployeeBtnModal.addEventListener("click", deleteModalInformation);
 sortByMajorstuenBtn.addEventListener("click", sortByMajorstuen);
 sortByTorshovBtn.addEventListener("click", sortByTorshov);
 sortByKarlJohanBtn.addEventListener("click", sortByKarlJohan);
@@ -186,9 +189,9 @@ sortByOsloBtn.addEventListener("click", sortByOslo);
 
 /**Fjern ansatt knapp */
 const deleteBtn = document.querySelector("#delete-employee-btn");
-const modalBg = document.querySelector(".modal-background");
 const deleteModal = document.querySelector("#deleteModal");
 const stopDelteEmployeeBtn = document.querySelector("#stop-delete-employee-btn-modal");
+const deleteEmployeeBtnModalApprov = document.querySelector("#delete-employee-btn-modal-approv");
 
 deleteBtn.addEventListener('click', () =>{
     deleteModal.classList.add('is-active')
@@ -199,6 +202,15 @@ stopDelteEmployeeBtn.addEventListener('click', () =>{
     deleteModal.classList.remove('is-active');
 })
 
+
+deleteEmployeeBtnModal.addEventListener('click', () =>{
+    deleteModal.classList.remove('is-active');
+    deleteModalInformation.classList.add('is-active');
+})
+
+deleteEmployeeBtnModalApprov.addEventListener('click', () =>{
+    deleteModalInformation.classList.remove('is-active');
+})
 /**Rediger ansatt knapp */
 const editEmployeeBtn = document.querySelector("#edit-employee-btn");
 const editModal = document.querySelector("#editModal");
@@ -226,6 +238,7 @@ addEmployeeBtn.addEventListener('click', () =>{
 stopAddEmployeeBtnModal.addEventListener('click', () =>{
     addModal.classList.remove('is-active');
 })
-//sortByOsloS();
+
+
 
 
