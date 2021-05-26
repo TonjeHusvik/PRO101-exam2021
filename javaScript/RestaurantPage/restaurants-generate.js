@@ -106,7 +106,6 @@ RestaurantsModule.getAllRestaurants().forEach(restaurants => {
                     </div>
                 </section>
 
-
                 <footer class="modal-card-foot">
                         <button class="button modal-cancel-btn">Avslutt</button>
                         <button class="button is-light is-small edit-button">

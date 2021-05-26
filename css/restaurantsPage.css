@@ -1,3 +1,4 @@
+/* HEADER */
 #logo{
     background-color:#eabd1c;
     background-image: url(../images/banner.png);
@@ -14,10 +15,19 @@
     color: #fff;
 }
 
+#pizza-man-img {
+    margin-bottom: -25px
+}
+
+#logo-name-pizza {
+    margin-left: -10px;
+}
+
 .inline-block{
     display: inline-block;
 }
 
+/* HOVEDMENY */
 #main-navbar{
     text-align: center;
     margin: auto;
@@ -33,6 +43,7 @@
     margin-right: 35px;
 }
 
+/* RESTAURANT-CARDS */
 .restaurant-card-name {
     font-weight: 700;
     font-size: 22px;
@@ -41,14 +52,7 @@
     text-align: center;
 }
 
-#pizza-man-img {
-    margin-bottom: -25px
-}
-
-#logo-name-pizza {
-    margin-left: -10px;
-}
-
+/* POPUPS */
 .modal-card-title-main {
     font-weight: 700;
     margin-bottom: 7px;
@@ -59,6 +63,7 @@
     font-size: 15px
 }
 
+/* KONFIRMASJONSMELDING */
 .confirmation-message {
     position: absolute;
     top: 50%;
