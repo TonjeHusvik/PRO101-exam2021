@@ -164,6 +164,7 @@ const sortByOsloSDrinks = () =>{
     dishesInputArray.innerHTML = htmlTxt;
 }
 
+/** 
 const sortByOsloSAppetizer = () =>{
 
     let htmlTxt = "";
@@ -186,6 +187,8 @@ const sortByOsloSAppetizer = () =>{
     dishesInputArray.innerHTML = htmlTxt;
 }
 
+*/
+
 const sortByOsloSMainCourse = () =>{
 
     let htmlTxt = "";
@@ -203,6 +206,27 @@ const sortByOsloSMainCourse = () =>{
         </tr>
         `
 
+    })
+
+    dishesInputArray.innerHTML = htmlTxt;
+}
+
+const sortByOsloSAppetizer = () =>{
+    
+    let htmlTxt = "";
+
+    saleModule.getOsloSAppetizer().forEach(dishes =>{
+        const sumAmount = dishes.price + dishes.amount;
+        htmlTxt += `
+        <tr>
+            <td>${dishes.place}</td>
+            <td>${dishes.name}</td>
+            <td>${dishes.amount}</td>
+            <td>${dishes.price}</td>
+            <td>${dishes.category}</td>
+            <td>${sumAmount}</td>
+        </tr>
+        `
     })
 
     dishesInputArray.innerHTML = htmlTxt;

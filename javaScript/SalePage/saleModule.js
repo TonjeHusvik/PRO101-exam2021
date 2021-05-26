@@ -140,7 +140,7 @@ const saleModule = (function(){ // IIFE
     /**
      * Martine har endret her. 
      * Henter de forskjellige rettene fra de forskjellige restaurantene. Samt hente alle sammen. 
-     * @returns 
+     *  
      */
     const getAllDishes = () => salesDishes;
     
@@ -154,18 +154,18 @@ const saleModule = (function(){ // IIFE
 
     const getOsloSAppetizer = () => salesDishes.filter(dishes =>
         dishes.place == "Oslo S" && dishes.category == "Forett"
-    );
+        );
 
     const getOsloSMainCourse = () => salesDishes.filter(dishes =>
-        dishes.place = "Oslo S" && dishes.category == "Hovedretter"
+        dishes.place == "Oslo S" && dishes.category == "Hovedretter"
         );
 
     const getOsloSDessert = () => salesDishes.filter(dishes =>
-        dishes.place = "Oslo S" && dishes.category == "Dessert"
+        dishes.place == "Oslo S" && dishes.category == "Dessert"
         );
 
     const getOsloSPizza = () => salesDishes.filter(dishes =>
-        dishes.place = "Oslo S" && dishes.category == "Pizza"
+        dishes.place == "Oslo S" && dishes.category == "Pizza"
         );
     return {
         getAllSales,
