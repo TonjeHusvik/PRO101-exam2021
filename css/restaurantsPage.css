@@ -1,10 +1,12 @@
 #logo{
-    background-color:#fecc30;
+    background-color:#eabd1c;
+    background-image: url(../images/banner.png);
+    background-size: 100%;
     text-align: center;
     padding: 25px;
 }
 
-#logo-name{
+.logo-name{
     text-align: center;
     font-family:'Courier New', Courier, monospace;
     font-weight: 900;
@@ -31,7 +33,36 @@
     margin-right: 35px;
 }
 
-.button .is-primary{
-    background-color: #fecc30;
+.restaurant-card-name {
+    font-weight: 700;
+    font-size: 22px;
+    color: #363636;
+    cursor: pointer;
+    text-align: center;
 }
 
+#pizza-man-img {
+    margin-bottom: -25px
+}
+
+#logo-name-pizza {
+    margin-left: -10px;
+}
+
+.modal-card-title-main {
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.modal-card-title-second {
+    font-weight: 300;
+    font-size: 15px
+}
+
+.confirmation-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}

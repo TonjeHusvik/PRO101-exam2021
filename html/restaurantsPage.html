@@ -17,14 +17,14 @@
 
     <!-- HEADER -->
     <div id="logo" class="mb-1 container">
-        <div class="inline-block">
-            <img src="../images/pizza-transparent3.png" width="50px">
+        <div class="inline-block logo-div">
+            <h1 class="logo-name">Gyldne</h1>
         </div>
-        <div class="inline-block">
-            <h1 id="logo-name">Gyldne Pizza</h1>
+        <div class="inline-block logo-div">
+            <img id="pizza-man-img" src="../images/pizza-man.png" width="85px">
         </div>
-        <div class="inline-block">
-            <img src="../images/pizza-transparent3.png" width="50px">
+        <div id="logo-name-pizza" class="inline-block logo-div">
+            <h1 class="logo-name">Pizza</h1>
         </div>
     </div>
 
@@ -54,37 +54,13 @@
     <!-- EDIT/ADD/REMOVE MENU -->  
      <nav class="navbar container is-light" role="navigation" aria-label="main navigation">
         <div id="navbarBasicExample" class="navbar-menu">
+            <p class="confirmation-message"></p>
             <div class="navbar-end">
                 <div class="navbar-item mr-1">
                     <div class="buttons">
 
-                        <!-- edit-button -->
-                        <a class="button is-light popup-btn">Rediger</a>
-                        <!-- modal popup for edit-button -->
-                        <div class="modal">
-                            <div class="modal-background"></div>
-                            <div class="modal-card">
-                                <header class="modal-card-head">
-                                    <p class="modal-card-title">REDIGER RESTAURANT</p>
-                                    <button class="delete" aria-label="close"></button>
-                                </header>
-
-                                <section class="modal-card-body">
-                                    <p>Hvilken restaurant vil du redigere?</p><br>
-                                    <div id="edit-restaurants-modal">
-
-                                    </div>
-                                </section>
-
-                                <footer class="modal-card-foot">
-                                        <button onclick="pushData();" class="button is-success">Save changes</button>
-                                        <button class="button modal-cancel-btn">Cancel</button>
-                                </footer>
-                            </div>
-                        </div>
-
                         <!-- remove-button -->
-                        <a class="button is-light popup-btn">Fjern</a>
+                        <a class="button is-light is-small popup-btn">Fjern</a>
                         <!-- modal popup for remove-button -->
                         <div class="modal">
                             <div class="modal-background"></div>
@@ -102,14 +78,13 @@
                                 </section>
 
                                 <footer class="modal-card-foot">
-                                        <button onclick="pushData();" class="button is-success">Save changes</button>
-                                        <button class="button modal-cancel-btn">Cancel</button>
+                                        <button class="button modal-cancel-btn delete-restaurant-btn">Slett</button>
                                 </footer>
                             </div>
                         </div>
 
                         <!-- add-button -->
-                        <a class="button is-primary popup-btn"><strong>Legg til</strong></a>
+                        <a class="button is-warning is-small popup-btn"><strong>Legg til</strong></a>
                         <!-- modal popup for add-button -->
                         <div class="modal">
                             <div class="modal-background"></div>
@@ -119,21 +94,30 @@
                                     <button class="delete" aria-label="close"></button>
                                 </header>
 
-                                <section class="modal-card-body">
-                                    <label>Navn: </label><br><input id="name-input"><br><br>
-                                    <label>Addresse: </label><br><input id="address-input"><br><br>
-                                    <label>Leder: </label><br><input id="leader-input"><br><br>
-                                    <label>Telefon: </label><br><input id="phone-input"><br><br>
-                                    <label>Mail: </label><br><input id="mail-input"><br><br>
-                                    <label>Åpningstider: </label><br><input id="opening-times-input"><br><br>
-                                    <label>Antall ansatte: </label><br><input id="employees-input"><br><br>
-                                    <label>Etablert: </label><br><input id="established-input"><br>
-                                </section>
+                                <form>
+                                    <section class="modal-card-body">
+                                        <div class="columns">
+                                            <div class="column is-6">
+                                                <label>Navn: </label><br><input id="name-input"><br><br>
+                                                <label>Addresse: </label><br><input id="address-input"><br><br>
+                                                <label>Leder: </label><br><input id="leader-input"><br><br>
+                                                <label>Telefon: </label><br><input id="phone-input"><br><br>
+                                            </div>
+                                            <div class="column is-6">
+                                                <label>Mail: </label><br><input id="mail-input"><br><br>
+                                                <label>Åpningstider: </label><br><input id="opening-times-input"><br><br>
+                                                <label>Antall ansatte: </label><br><input id="employees-input"><br><br>
+                                                <label>Etablert: </label><br><input id="established-input"><br>
+                                            </div>
+                                        </div>
+                                    </section>
+                                
 
-                                <footer class="modal-card-foot">
-                                        <button onclick="pushData();" class="button is-success">Save changes</button>
-                                        <button class="button modal-cancel-btn">Cancel</button>
-                                </footer>
+                                    <footer class="modal-card-foot">
+                                            <button id="add-restaurant-btn" class="button is-warning">Legg til restaurant</button>
+                                            <button class="button modal-cancel-btn">Avslutt</button>
+                                    </footer>
+                                </form>
                             </div>
                         </div>
                         
@@ -142,12 +126,6 @@
             </div>
         </div>
     </nav>
-
-    
-
-    
-
-    
 
     <!-- RESTAURANTS COLUMNS -->
     <div class="mt-6 container">
