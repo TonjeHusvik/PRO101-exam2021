@@ -30,17 +30,20 @@
         <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
             <div id="navbarBasicExample" class="navbar-menu">
               <div class="navbar-start">
-                <a class="navbar-item">
+                <a href="../html/mainPage.html" class="navbar-item">
                   Forside
                 </a>
-                <a class="navbar-item">
+                <a href="../html/restaurantsPage.html" class="navbar-item">
                   Restauranter
                 </a>
-                <a class="navbar-item">
+                <a  href="../html/employeePage.html" class="navbar-item">
                   Ansatte
                 </a>
-                <a class="navbar-item">
+                <a href="../html/menuPage.html" class="navbar-item">
                   Meny
+                </a>
+                <a href="../html/salesPage.html" class="navbar-item">
+                  Salg
                 </a>
               </div>
             </div>
@@ -98,6 +101,23 @@
             </div>
           </div>
 
+          <!--Valgte å ha scriptet her for bedre oversikt over koden. Husk å legg denne koden inn i generate-->
+          <script>
+            const dropdown =
+                  document.querySelector('.dropdown');
+            const active =
+                  document.querySelector('.is-active')
+            document.body.addEventListener('click', function () {
+              if (active) {
+                dropdown.classList.remove('is-active')
+              }
+            })
+            dropdown.addEventListener('click', function (event) {
+              event.stopPropagation();
+              this.classList.toggle('is-active');
+            });
+          </script>
+
           <!--Søke meny-->
           <div class="level-item">
             <label class="label">Søk etter ansatt</label>
@@ -120,34 +140,13 @@
 
         <!--Søke meny-->
           
-          <!--Valgte å ha scriptet her for bedre oversikt over koden. Husk å legg denne koden inn i generate-->
-          <script>
-            const dropdown =
-                  document.querySelector('.dropdown');
-            const active =
-                  document.querySelector('.is-active')
-            document.body.addEventListener('click', function () {
-              if (active) {
-                dropdown.classList.remove('is-active')
-              }
-            })
-            dropdown.addEventListener('click', function (event) {
-              event.stopPropagation();
-              this.classList.toggle('is-active');
-            });
-          </script>
-
-        <!--Innholdet-->
-            <section id="employee-section" class="columns is-multiline">
-               
-            </section>
 
         <!--Knapp--> 
             <!--Fjern ansatt knapp-->
             <div class="level-left">
               <div class="level-item">
                 <p>
-                  <button id="delete-employee-btn" class="button is-danger is-medium modal-button" data-target="modal-ter" aria-haspopup="true">
+                  <button id="delete-employee-btn" class="button is-primary is-small modal-button" data-target="modal-ter" aria-haspopup="true">
                     Fjern ansatt
                   </button>
                 </p>
@@ -156,7 +155,7 @@
               <!--Rediger ansattknapp-->
               <div class="level-item">
                 <p>
-                  <button id="edit-employee-btn" class="button is-danger is-medium modal-button" data-target="modal-ter"  aria-haspopup="true">
+                  <button id="edit-employee-btn" class="button is-primary is-small modal-button" data-target="modal-ter"  aria-haspopup="true">
                     Rediger ansatt
                   </button>
                 </p>
@@ -165,7 +164,7 @@
               <!--Legg inn ny ansatt-->
               <div class="level-item">
                 <p>
-                  <button id="add-employee-btn" class="button is-danger is-medium modal-button" data-target="modal-ter" aria-haspopup="true">
+                  <button id="add-employee-btn" class="button is-primary is-small modal-button" data-target="modal-ter" aria-haspopup="true">
                     Legg til ansatt
                   </button>
                 </p>
@@ -559,6 +558,12 @@
               </div>
             </div>
           </div>
+
+
+          <!--Innholdet-->
+          <section id="employee-section" class="columns is-multiline">
+               
+          </section>
 
         </main>
   

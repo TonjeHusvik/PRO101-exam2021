@@ -107,19 +107,78 @@ const saleModule = (function(){ // IIFE
         {store: "Torshov", year:"2019", month: "Desember", brutto:"523.000", netto:"391.000"}
     ];
 
-    
+    const salesDishes = [
+        {place: "Oslo S",category: "Drikke", name:"Stor brus", price:45, amount: 100},
+        {place: "Oslo S", category: "Drikke", name:"Liten øl", price: 85, amount: 50},
+        {place: "Oslo S",category:"Drikke", name:"Stor øl", price: 110, amount: 60},
+        {place: "Oslo S", category: "Drikke", name:"Liten vin", price: 95, amount: 100},
+        {place: "Oslo s", category: "Drikke", name:"Vinflaske", price: 350, amount: 34},
+        {place: "Oslo S", category: "Drikke", name:"Drink", price: 125, amount: 101},
+        {place: "Oslo S", category: "Drikke", name:"Vann", price: 40, amount: 140},
+        {place: "Oslo S", category: "Forett", name: "Hvitløksbrød", price: 65, amount: 65},
+        {place: "Oslo S", category: "Forett", name:"Nachochips", price:95, amount: 100},
+        {place: "Oslo S", category: "Forett", name:"Løkringer", price:79, amount: 70},
+        {place: "Oslo S", category: "Forett", name:"Liten fries", price:59, amount: 50},
+        {place: "Oslo S", category: "Forett", name:"Stor fries", price:79, amount: 90},
+        {place: "Oslo S", category: "Pizza", name:"Kjøttdeig pizza", price:120, amount: 30},
+        {place: "Oslo S", category: "Pizza", name:"Biff pizza", price:120, amount: 35},
+        {place: "Oslo S", category: "Pizza", name:"Reke pizza", price:120, amount: 15},
+        {place: "Oslo S", category: "Hovedretter", name:"Lasagne", price:180, amount: 40},
+        {place: "Oslo S", category: "Hovedretter", name:"Kebabtallerken", price:170, amount: 45},
+        {place: "Oslo S", category: "Hovedretter", name:"Hamburger", price:155, amount: 60},
+        {place: "Oslo S", category: "Dessert", name:"Oreokake", price:95, amount: 100},
+        {place: "Oslo S", category: "Dessert", name:"Bananasplitt", price:95, amount: 100},
+        {place: "Oslo S", category: "Dessert", name:"Eplekake", price:80, amount: 100}
+    ];
+
     const getAllSales = () => sales;
 
     const getStores= ( store ) => sales.filter(sale => sale.store.toLowerCase() === store.toLowerCase());
     const getYear = ( year ) => sales.filter(sale => sale.year.toLowerCase() === year.toLowerCase());
     const getMonth = ( month) => sales.filter(sale => sale.month.toLowerCase() === month.toLowerCase());
 
+    /**
+     * Martine har endret her. 
+     * Henter de forskjellige rettene fra de forskjellige restaurantene. Samt hente alle sammen. 
+     * @returns 
+     */
+    const getAllDishes = () => salesDishes;
+    
+    const getOsloSDishes = () =>salesDishes.filter(dishes =>
+        dishes.place == "Oslo S"
+        );
+    
+    const getOsloSDrink = () => salesDishes.filter(dishes =>
+        dishes.place == "Oslo S" && dishes.category == "Drikke"
+        );
 
+    const getOsloSAppetizer = () => salesDishes.filter(dishes =>
+        dishes.place == "Oslo S" && dishes.category == "Forett"
+    );
+
+    const getOsloSMainCourse = () => salesDishes.filter(dishes =>
+        dishes.place = "Oslo S" && dishes.category == "Hovedretter"
+        );
+
+    const getOsloSDessert = () => salesDishes.filter(dishes =>
+        dishes.place = "Oslo S" && dishes.category == "Dessert"
+        );
+
+    const getOsloSPizza = () => salesDishes.filter(dishes =>
+        dishes.place = "Oslo S" && dishes.category == "Pizza"
+        );
     return {
         getAllSales,
         getStores,
         getYear,
-        getMonth
+        getMonth,
+        getAllDishes,
+        getOsloSDishes,
+        getOsloSDrink,
+        getOsloSAppetizer,
+        getOsloSMainCourse,
+        getOsloSDessert,
+        getOsloSPizza
     }
 
 }()); // end of saleModule

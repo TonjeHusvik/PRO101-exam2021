@@ -1,8 +1,8 @@
 const EmployeeModule =(function(){
 
-    //Lager et array
+    //Lager et array. Bruker let for å kunne endre på arrayet
 
-    const employees =[
+    let employees =[
         {firstName: "Silje", lastName: "Antonsen", phone: "39056345", email: "siljeA@tulle.no", work: "Dagligleder", workProsent: "100%", workPlace: "Oslo s", startDate: "09.08.2019", employeeID: "1"},
         {firstName: "Karin", lastName: "Klementin", phone: "30960506", email: "KKlem@fin.com", work: "Fulltidsansatt", workProsent: "100%", workPlace: "Oslo s", startDate: "10.11.2019", employeeID: "45"},
         {firstName: "Fenrik", lastName: "Simonsen", phone: "34554454", email: "FSim@live.no", work: "Deltidsansatt", workProsent: "20%", workPlace: "Karl Johan", startDate: "20.01.2020", employeeID: "60"},
@@ -44,6 +44,11 @@ const EmployeeModule =(function(){
         employee.workPlace == "Majorstuen"
         );
 
+    const test1 = () => employee.filter( employee =>
+        console.log(employees.length)
+        ); 
+        
+        
     
     return{
         getAllEmployees,
@@ -53,7 +58,6 @@ const EmployeeModule =(function(){
         getSortingKarlJohan,
         getSortingTorshov,
         getSortingMajorstuen,
-        employees
     }
 
    

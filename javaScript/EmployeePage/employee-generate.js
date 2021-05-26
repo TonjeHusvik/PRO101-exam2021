@@ -12,6 +12,10 @@ const searchEmployeeIdBtn = document.querySelector("#search-employee-id-btn");
 const deleteEmployeeBtnModal = document.querySelector("#delete-employee-btn-modal");
 const deleteModalInformation = document.querySelector("#delete-modal-information");
 
+//Input verdier
+
+const firstName = document.querySelector("#first-name");
+
 const showAll= () => {
 
     let htmlTxt= "";
@@ -178,25 +182,6 @@ const sortByMajorstuen = () => {
  * Array testing
  */
 
- const addEmployee = (ev) =>{
-    ev.preventDfault();
-
-        let employeeTest = {
-            firstName: document.getElementById('firstName').value,
-            lastName: document.getElementById('lastName').value,
-            phone: document.getElementById('phone').value,
-            email: document.getElementById('email'),
-            work: document.getElementById('work'),
-            workProsent: document.getElementById('workProsent'),
-            workPlace: document.getElementById('workPlace'),
-            startDate: document.getElementById('startDate'),
-            employeeID: document.getElementById('employeeID')
-        }
-
-        employees.push(employeeTest);
-
-    console.log(employees);
-}
 
 
 showAll();
@@ -326,7 +311,7 @@ stopAddEmployeeBtnModal.addEventListener('click', () =>{
 
 addEmployeeBtnModalApprov.addEventListener('click', () =>{
     addModalApprov.classList.remove('is-active');
-    addEmployee;
+    console.log(employee)
     addModalInformationConfirmation.classList.add('is-active');
 })
 
