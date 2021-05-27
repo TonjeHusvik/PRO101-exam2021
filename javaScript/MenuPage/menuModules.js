@@ -1,7 +1,7 @@
 let PizzaModule = (function() {
 
 
-    const pizzamenu = [
+    const menu = [
         {title: "Kjøttdeigpizza", category: "Pizza", id: "1", pris: "100kr/170kr"},
         {title: "Biffpizza", category: "Pizza", id: "2", pris: "120kr/190kr"},
         {title: "Rekepizza", category: "Pizza", id: "3", pris: "120kr/150kr"},
@@ -23,32 +23,32 @@ let PizzaModule = (function() {
     ];
 
     
-    const getAllPizzas = () => pizzamenu.filter(pizzas =>
+    const getAllPizzas = () => menu.filter(pizzas =>
         pizzas.category == "Pizza"
         );  
 
-    const getAllMaindishes = () => pizzamenu.filter(dishes =>
+    const getAllMaindishes = () => menu.filter(dishes =>
         dishes.category == "Hovedrett"
         ); 
 
-    const getAllDrinks = () => pizzamenu.filter(drinks => 
+    const getAllDrinks = () => menu.filter(drinks => 
         drinks.category == "Drikke"
     );
 
-    const getAllSides = () => pizzamenu.filter(sides =>
+    const getAllSides = () => menu.filter(sides =>
         sides.category == "Sides"
     );
 
-    const getAllDessert = () => pizzamenu.filter(dessert =>
+    const getAllDessert = () => menu.filter(dessert =>
         dessert.category == "Dessert"    
     );
 
    
 
-    let addNewMenu = (adding) => pizzamenu.push(adding);
+    let addNewMenu = (adding) => menu.push(adding);
 
-    const deleteMenu = (id) => pizzamenu.filter(pizzamenu =>
-        pizzamenu.id === id && pizzamenu.splice(id, 1)
+    const deleteMenu = (id) => menu.filter(menu =>
+        menu.id === id && menu.splice(id, 1)
      );
 
     return{
