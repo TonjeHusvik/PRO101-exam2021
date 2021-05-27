@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/employeePage.css">
+    <link rel="stylesheet" href="../css/restaurantsPage.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
@@ -14,20 +14,20 @@
 
 <body>
     <!--Logo-->
-        <div id="logo" class="p-5 container has-text-centered mb-6">
-            <div class="inline-block">
-                <img src="../images/pizza-transparent3.png" width="50px">
-            </div>
-            <div class="inline-block text-align-center">
-                <h1 id="logo-name">Gyldne Pizza</h1>
-            </div>
-            <div class="inline-block">
-                <img src="../images/pizza-transparent3.png" width="50px">
-            </div>
-        </div>
+    <div id="logo" class="mb-1 container">
+      <div class="inline-block logo-div">
+          <h1 class="logo-name">Gyldne</h1>
+      </div>
+      <div class="inline-block logo-div">
+          <img id="pizza-man-img" src="../images/pizza-man.png" width="85px">
+      </div>
+      <div id="logo-name-pizza" class="inline-block logo-div">
+          <h1 class="logo-name">Pizza</h1>
+      </div>
+  </div>
 
     <!--Navigation-->    
-        <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+        <nav class="navbar is-dark mt-0 container" role="navigation" aria-label="main navigation">
             <div id="navbarBasicExample" class="navbar-menu">
               <div class="navbar-start">
                 <a href="../html/mainPage.html" class="navbar-item">
@@ -80,7 +80,7 @@
                     <div class="dropdown-content">
                     
                       <a href="#" class="dropdown-item" id="sort-by-oslo-btn">
-                        Oslo
+                        Oslo S
                       </a>
           
                       <a href="#" class="dropdown-item" id="sort-by-karl-johan-btn">
@@ -136,30 +136,25 @@
             <label class="label">Søk etter ansatt</label>
           </div>
           <div class="level-item">
-              <input id="search-txt" class="input" type="text" placeholder="Etternavn">
-              <button id="search-lastname-btn" class="button">Søk</button>
+              <input id="search-txt" class="input is-small" type="text" placeholder="Etternavn">
+              <button id="search-lastname-btn" class="button is-small">Søk</button>
           </div>
 
           <div class="level-item">
             <label class="label">Søk etter ansatt_ID</label>
           </div>
           <div class="level-item">
-            <input id="search-txt-id" class="input" type="text" placeholder="AnsattID">
-            <button id="search-employee-id-btn" class="button">Søk</button>
+            <input id="search-txt-id" class="input is-small" type="text" placeholder="AnsattID">
+            <button id="search-employee-id-btn" class="button is-small">Søk</button>
           </div>
-        </div>
 
-            
 
-        <!--Søke meny-->
-          
-
-        <!--Knapp--> 
+          <!--Knapp--> 
             <!--Fjern ansatt knapp-->
-            <div class="level-left">
+            <div class="level-right">
               <div class="level-item">
                 <p>
-                  <button id="delete-employee-btn" class="button is-primary is-small modal-button" data-target="modal-ter" aria-haspopup="true">
+                  <button id="delete-employee-btn" class="button is-small modal-button" data-target="modal-ter" aria-haspopup="true">
                     Fjern ansatt
                   </button>
                 </p>
@@ -168,7 +163,7 @@
               <!--Rediger ansattknapp-->
               <div class="level-item">
                 <p>
-                  <button id="edit-employee-btn" class="button is-primary is-small modal-button" data-target="modal-ter"  aria-haspopup="true">
+                  <button id="edit-employee-btn" class="button is-small modal-button" data-target="modal-ter"  aria-haspopup="true">
                     Rediger ansatt
                   </button>
                 </p>
@@ -177,12 +172,20 @@
               <!--Legg inn ny ansatt-->
               <div class="level-item">
                 <p>
-                  <button id="add-employee-btn" class="button is-primary is-small modal-button" data-target="modal-ter" aria-haspopup="true">
+                  <button id="add-employee-btn" class="button is-warning is-small modal-button" data-target="modal-ter" aria-haspopup="true">
                     Legg til ansatt
                   </button>
                 </p>
               </div>
             </div>
+
+        </div>
+
+            
+
+        <!--Søke meny-->
+          
+
 
             
 
@@ -190,28 +193,31 @@
           <!--Fjerne ansatt-->
             <div class="modal" id="deleteModal">
               <div class="modal-background"></div>
-              <div class="modal-content has-background-white py-5 px-5">
-                <h3 class="title mb-6"> Slette en ansatt</h3>
-                <div class="level-left">
-                  <div class="level-item">
-                    <p>Legg inn ansatt ID  </p>
+              <div class="modal-card">
+                <header class="modal-card-head">
+                  <p class="modal-card-title">SLETT ANSATT</p>
+                </header>
+
+                <section class="modal-card-body">
+                  <div class="level-left">
+                    <div class="level-item">
+                      <p>Legg inn ansatt ID  </p>
+                    </div>
+                    <div class="level-item">
+                      <input id="employee-id-input-txt" type="text" placeholder="Ansatt ID">
+                    </div>
                   </div>
-                  <div class="level-item">
-                    <input id="employee-id-input-txt" type="text" placeholder="Ansatt ID">
-                  </div>
-                </div>
-                <div class="level-left">
-                  <div class="level-item">
-                    <button id="delete-employee-btn-modal" class="button is-link-light is-small modal-button" data-target="modal-ter" aria-haspopup="true">
-                      Fjern ansatt
-                    </button>
-                  </div>
-                  <div class="level-item">
-                    <button id="stop-delete-employee-btn-modal" class="button is-link-light is-small modal-button" data-target="modal-ter">
-                      Avbryt
-                    </button>
-                  </div>
-                </div>
+                </section>
+
+                <footer class="modal-card-foot">
+                  <button id="delete-employee-btn-modal" class="button is-link-light is-small modal-button" data-target="modal-ter" aria-haspopup="true">
+                    Fjern ansatt
+                  </button>
+                  <button id="stop-delete-employee-btn-modal" class="button is-link-light is-small modal-button" data-target="modal-ter">
+                    Avbryt
+                  </button>
+                </footer>
+                
               </div>
             </div>
 
