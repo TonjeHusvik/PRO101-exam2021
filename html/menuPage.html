@@ -37,19 +37,16 @@
     <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
-                <a href="../html/mainPage.html" class="navbar-item">
+                <a class="navbar-item">
                     Forside
                 </a>
-                <a href="../html/restaurantsPage.html" class="navbar-item">
+                <a class="navbar-item">
                     Restauranter
                 </a>
-                <a href="../html/employeePage.html" class="navbar-item">
+                <a class="navbar-item">
                     Ansatte
                 </a>
-                <a href="../html/menuPage.html" class="navbar-item"> 
-                    Meny
-                </a>
-                <a href="../html/salesPage.html" class="navbar-item">
+                <a class="navbar-item">
                     Salg
                 </a>
             </div>
@@ -171,7 +168,7 @@
 
     <!-- Modal -->
 
-    <!--Legg til ansatt modal-->
+    <!--Legg til meny objekt modal-->
     <div class="modal" id="modal-1a">
         <div class="modal-background" id="modal-bg-1a"></div>
         <div class="modal-card">
@@ -180,35 +177,8 @@
                 <button id="cancel-add-btn-2"class="delete" aria-label="close"></button>
             </header>
             <section class="modal-card-body">
-                <label>Hovedkategori:</label>
-                <div class="dropdown" id="dropdown1">
-                    <div class="dropdown-trigger">
-                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu1">
-                            <span>Click me</span>
-                            <span class="icon is-small">
-                                <i class="fas fa-angle-down" aria-hidden="true"></i>
-                            </span>
-                        </button>
-                    </div>
-                    <div class="dropdown-menu" id="dropdown-menu1" role="menu">
-                        <div class="dropdown-content">
-                            <a href="#" class="dropdown-item">
-                                Hovedretter
-                            </a>
-                            <a href="#" class="dropdown-item">
-                                Forretter
-                            </a>
-                            <a href="#" class="dropdown-item">
-                                Desserter
-                            </a>
-                            <a href="#" class="dropdown-item">
-                                Drikke
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <br><br>
-                <label>Underkategori:</label>
+                <!--
+                <label>Kategori:</label>
                 <div class="dropdown" id="dropdown2">
                     <div class="dropdown-trigger">
                         <button class="button" aria-haspopup="true" aria-controls="dropdown-menu1">
@@ -237,13 +207,13 @@
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <br><br>
-                <label>Navn på rett:</label><input>
+                <label>Navn på rett:</label><input id="title-add-txt" type="text" placeholder="Navn">
                 <br><br>
-                <label>Pris:</label><input>
+                <label>Pris:</label><input id="price-add-txt" type="text" placeholder="Pris">
                 <br><br>
-                <label>Id nummer:</label><input>
+                <label>Id nummer:</label><input id="id-add-txt" type="text" placeholder="Id nummer">
                 <br>
             </section>
             <footer class="modal-card-foot">
@@ -261,7 +231,7 @@
                     <button class="delete" id="cancel-add-btn-1b" aria-label="close"></button>
                 </header>
                 <section class="modal-card-body">
-
+                    <p id="input-add-menu"></p>
                 </section>
                 <footer class="modal-card-foot">
                     <button class="button is-success" id="confirm-add-btn">Legg til produkt</button>
@@ -318,34 +288,7 @@
                 <button id="cancel-edit-btn-2b"class="delete" aria-label="close"></button>
             </header>
             <section class="modal-card-body">
-                <label>Hovedkategori:</label>
-                <div class="dropdown" id="dropdown1b">
-                    <div class="dropdown-trigger">
-                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu1">
-                            <span>Click me</span>
-                            <span class="icon is-small">
-                                <i class="fas fa-angle-down" aria-hidden="true"></i>
-                            </span>
-                        </button>
-                    </div>
-                    <div class="dropdown-menu" id="dropdown-menu1" role="menu">
-                        <div class="dropdown-content">
-                            <a href="#" class="dropdown-item">
-                                Hovedretter
-                            </a>
-                            <a href="#" class="dropdown-item">
-                                Forretter
-                            </a>
-                            <a href="#" class="dropdown-item">
-                                Desserter
-                            </a>
-                            <a href="#" class="dropdown-item">
-                                Drikke
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <br><br>
+      
                 <label>Underkategori:</label>
                 <div class="dropdown" id="dropdown2b">
                     <div class="dropdown-trigger">
@@ -439,7 +382,7 @@
             </header>
             <section class="modal-card-body">
                 <label>Hvilket produkt vil du fjerne?</label>
-                <label>Id nummer:</label><input>
+                <label>Id nummer:</label><input id="menu-id-input-txt" type="text" placeholder="Id nummer">
                 <br>
             </section>
             <footer class="modal-card-foot">
@@ -458,7 +401,7 @@
                 <button id="cancel-remove-btn-3b"class="delete" aria-label="close"></button>
             </header>
             <section class="modal-card-body">
-                
+                <p id="input-delete-menu"></p>
                 <br>
             </section>
             <footer class="modal-card-foot">
@@ -489,6 +432,7 @@
 
     <script src="../javaScript/MenuPage/tabsContent.js"></script> <!--Lenke til tabs js-->
 
+    
 
     
     
