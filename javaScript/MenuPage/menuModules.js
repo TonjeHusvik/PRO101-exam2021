@@ -1,4 +1,4 @@
-let PizzaModule = (function() {
+const PizzaModule = (function() {
 
 
     let pizzamenu = [
@@ -44,7 +44,6 @@ let PizzaModule = (function() {
 
     const getAllDessert = () => dessertmenu;
 
-   
 
     let addNewMenu = (adding) => pizzamenu.push(adding);
 
