@@ -181,14 +181,6 @@
 
         </div>
 
-            
-
-        <!--Søke meny-->
-          
-
-
-            
-
         <!--Modal-->
           <!--Fjerne ansatt-->
             <div class="modal" id="deleteModal">
@@ -210,7 +202,7 @@
                 </section>
 
                 <footer class="modal-card-foot">
-                  <button id="delete-employee-btn-modal" class="button is-link-light is-small modal-button" data-target="modal-ter" aria-haspopup="true">
+                  <button id="delete-employee-btn-modal" class="button is-warning is-small modal-button" data-target="modal-ter" aria-haspopup="true">
                     Fjern ansatt
                   </button>
                   <button id="stop-delete-employee-btn-modal" class="button is-link-light is-small modal-button" data-target="modal-ter">
@@ -224,198 +216,223 @@
             <!-- Bruker bekrefter å fjerne dennne ansatte-->
             <div class="modal" id="delete-modal-information">
               <div class="modal-background"></div>
-              <div class="modal-content has-background-white py-5 px-5">
-                <h3 class="title mb-6"> Slette en ansatt</h3>
-                <div class="level-left">
-                  <div class="level-item">
-                    <p id="input-delete-employee"></p>
+              <div class="modal-card">
+
+                <header class="modal-card-head">
+                  <p class="modal-card-title">SLETT ANSATT</p>
+                </header>
+
+                <section class="modal-card-body">
+                  <div class="level-left">
+                    <div class="level-item">
+                      <p id="input-delete-employee"></p>
+                    </div>
                   </div>
-                </div>
-                <div class="level-left">
-                  <div class="level-item">
-                    <button id="delete-employee-btn-modal-approv" class="button is-link-light is-small modal-button" data-target="modal-ter">
-                      Godkjen
-                    </button>
-                  </div>
-                  <div class="level-item">
-                    <button id="stop-delete-employee-btn-modal-stop" class="button is-link-light is-small modal-button" data-target="modal-ter">
-                      Avbryt
-                    </button>
-                  </div>
-                </div>
+                </section>
+
+                <footer class="modal-card-foot">
+                  <button id="delete-employee-btn-modal-approv" class="button is-warning is-small modal-button" data-target="modal-ter">
+                    Godkjenn
+                  </button>
+                  <button id="stop-delete-employee-btn-modal-stop" class="button is-link-light is-small modal-button" data-target="modal-ter">
+                    Avbryt
+                  </button>
+                </footer>
+
               </div>
             </div>
 
             <!--Får bekreftelse av at den er slettet-->
             <div class="modal" id="delete-modal-information-confirmation">
               <div class="modal-background"></div>
-              <div class="modal-content has-background-white py-5 px-5">
-                <h3 class="title mb-6"> Slette en ansatt</h3>
-                <div class="level-left">
-                  <div class="level-item">
-                    <p>Godkjent</p>
+              <div class="modal-card">
+                <header class="modal-card-head">
+                  <h3 class="modal-card-title"> SLETT ANSATT</h3>
+                </header>
+                  
+                <section class="modal-card-body">
+                  <div class="level-left">
+                    <div class="level-item">
+                      <p>Godkjent</p>
+                    </div>
                   </div>
-                </div>
-                <div class="level-left">
-                  <div class="level-item">
-                    <button id="delete-modal-finish" class="button is-link-light is-small modal-button" data-target="modal-ter">
-                      Avbryt
-                    </button>
-                  </div>
-                </div>
+                </section>
+
+                <footer class="modal-card-foot">
+                  <button id="delete-modal-finish" class="button is-warning is-small modal-button" data-target="modal-ter">
+                    OK
+                  </button>
+                </footer>
+
               </div>
             </div>
 
           <!--Rediger ansatt-->
           <div class="modal" id="editModal">
             <div class="modal-background"></div>
-            <div class="modal-content has-background-white py-5 px-5">
-              <h3 class="title mb-6"> Rediger ansatt</h3>
-              <div class="level-left">
-                <div class="level-item">
-                  <p>Legg inn ansatt ID</p>
+            <div class="modal-card">
+
+              <header class="modal-card-head">
+                <p class="modal-card-title">REDIGER ANSATT</p>
+              </header>
+
+              <section class="modal-card-body">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p>Legg inn ansatt ID</p>
+                  </div>
+                  <div class="level-item">
+                    <input type="text" placeholder="Ansatt ID">
+                  </div>
                 </div>
-                <div class="level-item">
-                  <input type="text" placeholder="Ansatt ID">
-                </div>
-              </div>
-              <div class="level-left">
-                <div class="level-item">
-                  <button id="edit-employee-btn-modal" class="button is-link-light is-small">
-                    Rediger ansatt
-                  </button>
-                </div>
-                <div class="level-item">
-                  <button id="stop-edit-employee-btn-modal" class="button is-link-light is-small modal-button" data-target="modal-ter">
-                    Avbryt
-                  </button>
-                </div>
-              </div>
+              </section>
+
+              <footer class="modal-card-foot">
+                <button id="edit-employee-btn-modal" class="button is-warning is-small modal-button" data-target="modal-ter">
+                  Rediger ansatt
+                </button>
+                <button id="stop-edit-employee-btn-modal" class="button is-link-light is-small modal-button" data-target="modal-ter">
+                  Avbryt
+                </button>
+              </footer>
+
             </div>
           </div>
 
           <!--Bruker får opp den ansatte som skal redigeres-->
           <div class="modal" id="edit-modal-edit">
             <div class="modal-background"></div>
-            <div class="modal-content has-background-white py-5 px-5">
-              <h3 class="title mb-6"> Rediger ansatt</h3>
-              <div class="level-left">
-                <div class="level-item">
-                  <p>Fornavn</p>
+            <div class="modal-card">
+              <header class="modal-card-head">
+                <h3 class="modal-card-title"> REDIGER ANSATT</h3>
+              </header>
+
+              <section class="modal-card-body">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p>Fornavn</p>
+                  </div>
+                  <div class="level-item">
+                    <input type="text" placeholder="Fornavn">
+                  </div>
                 </div>
-                <div class="level-item">
-                  <input type="text" placeholder="Fornavn">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p>Etternavn</p>
+                  </div>
+                  <div class="level-item">
+                    <input type="text" placeholder="Etternavn">
+                  </div>
                 </div>
-              </div>
-              <div class="level-left">
-                <div class="level-item">
-                  <p>Etternavn</p>
+                <div class="level-left">
+                  <div class="level-item">
+                    <p>Tlf nr</p>
+                  </div>
+                  <div class="level-item">
+                    <input type="text" placeholder="Tlf nr">
+                  </div>
                 </div>
-                <div class="level-item">
-                  <input type="text" placeholder="Etternavn">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p>E-post</p>
+                  </div>
+                  <div class="level-item">
+                    <input type="text" placeholder="E-post">
+                  </div>
                 </div>
-              </div>
-              <div class="level-left">
-                <div class="level-item">
-                  <p>Tlf nr</p>
+                <div class="level-left">
+                  <div class="level-item">
+                    <p>Personnr</p>
+                  </div>
+                  <div class="level-item">
+                    <input type="text" placeholder="Personnr">
+                  </div>
                 </div>
-                <div class="level-item">
-                  <input type="text" placeholder="Tlf nr">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p>Stilling</p>
+                  </div>
+                  <div class="level-item">
+                    <input type="text" placeholder="Stilling">
+                  </div>
                 </div>
-              </div>
-              <div class="level-left">
-                <div class="level-item">
-                  <p>E-post</p>
+                <div class="level-left">
+                  <div class="level-item">
+                    <p>Arbeidssted</p>
+                  </div>
+                  <div class="level-item">
+                    <input type="text" placeholder="Arbeidssted">
+                  </div>
                 </div>
-                <div class="level-item">
-                  <input type="text" placeholder="E-post">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p>Stillingsprosent</p>
+                  </div>
+                  <div class="level-item">
+                    <input type="text" placeholder="Stillingsprosent">
+                  </div>
                 </div>
-              </div>
-              <div class="level-left">
-                <div class="level-item">
-                  <p>Personnr</p>
+                <div class="level-left">
+                  <div class="level-item">
+                    <p>Startdato</p>
+                  </div>
+                  <div class="level-item">
+                    <input type="text" placeholder="Startdato">
+                  </div>
                 </div>
-                <div class="level-item">
-                  <input type="text" placeholder="Personnr">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p>AnsattID</p>
+                  </div>
+                  <div class="level-item">
+                    <input type="text" placeholder="AnsattID">
+                  </div>
                 </div>
-              </div>
-              <div class="level-left">
-                <div class="level-item">
-                  <p>Stilling</p>
+                
+              </section>
+
+              <footer class="modal-card-foot">
+                <div class="level-left">
+                  <div class="level-item">
+                    <button id="edit-employee-btn-modal-edit" class="button is-warning is-small modal-button" data-target="modal-ter">
+                      Rediger
+                    </button>
+                  </div>
+                  <div class="level-item">
+                    <button id="stop-edit-employee-btn-modal-edit" class="button is-link-light is-small modal-button" data-target="modal-ter">
+                      Avbryt
+                    </button>
+                  </div>
                 </div>
-                <div class="level-item">
-                  <input type="text" placeholder="Stilling">
-                </div>
-              </div>
-              <div class="level-left">
-                <div class="level-item">
-                  <p>Arbeidssted</p>
-                </div>
-                <div class="level-item">
-                  <input type="text" placeholder="Arbeidssted">
-                </div>
-              </div>
-              <div class="level-left">
-                <div class="level-item">
-                  <p>Stillingsprosent</p>
-                </div>
-                <div class="level-item">
-                  <input type="text" placeholder="Stillingsprosent">
-                </div>
-              </div>
-              <div class="level-left">
-                <div class="level-item">
-                  <p>Startdato</p>
-                </div>
-                <div class="level-item">
-                  <input type="text" placeholder="Startdato">
-                </div>
-              </div>
-              <div class="level-left">
-                <div class="level-item">
-                  <p>AnsattID</p>
-                </div>
-                <div class="level-item">
-                  <input type="text" placeholder="AnsattID">
-                </div>
-              </div>
-              <div class="level-left">
-                <div class="level-item">
-                  <button id="edit-employee-btn-modal-edit" class="button is-link-light is-small">
-                    Rediger
-                  </button>
-                </div>
-                <div class="level-item">
-                  <button id="stop-edit-employee-btn-modal-edit" class="button is-link-light is-small modal-button" data-target="modal-ter">
-                    Avbryt
-                  </button>
-                </div>
-              </div>
+              </footer>
+
             </div>
           </div>
 
           <!-- Det nye redigerte kommer opp slik at brukeren kan sjekke at alt er riktig-->
           <div class="modal" id="edit-modal-approv">
             <div class="modal-background"></div>
-            <div class="modal-content has-background-white py-5 px-5">
-              <h3 class="title mb-6"> Rediger</h3>
-              <div class="level-left">
-                <div class="level-item">
-                  <p>Sikker?</p>
+            <div class="modal-card">
+              <header class="modal-card-head">
+                <h3 class="title"> REDIGER ANSATT</h3>
+              </header>
+
+              <section class="modal-card-body">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p>Sikker?</p>
+                  </div>
                 </div>
-              </div>
-              <div class="level-left">
-                <div class="level-item">
-                  <button id="edit-employee-btn-modal-approv" class="button is-link-light is-small modal-button" data-target="modal-ter">
-                    Godkjen
-                  </button>
-                </div>
-                <div class="level-item">
-                  <button id="stop-edit-employee-btn-modal-stop" class="button is-link-light is-small modal-button" data-target="modal-ter">
-                    Avbryt
-                  </button>
-                </div>
-              </div>
+              </section>
+
+              <footer class="modal-card-foot">
+                <button id="edit-employee-btn-modal-approv" class="button is-warning is-small modal-button" data-target="modal-ter">
+                  Godkjenn
+                </button>
+                <button id="stop-edit-employee-btn-modal-stop" class="button is-link-light is-small modal-button" data-target="modal-ter">
+                  Avbryt
+                </button>
+              </footer>
             </div>
           </div>
 
@@ -423,20 +440,20 @@
           <!-- Brukeren får godkjennelse at den er redigert samt den nye redigeringen-->
           <div class="modal" id="edit-modal-information-confirmation">
             <div class="modal-background"></div>
-            <div class="modal-content has-background-white py-5 px-5">
-              <h3 class="title mb-6"> Rediger ansatt</h3>
-              <div class="level-left">
-                <div class="level-item">
+            <div class="modal-card">
+              <header class="modal-card-head">
+                <p class="modal-card-title"> REDIGER ANSATT</p>
+              </header>
+
+              <section class="modal-card-body">
                   <p>Godkjent</p>
-                </div>
-              </div>
-              <div class="level-left">
-                <div class="level-item">
-                  <button id="edit-modal-finish" class="button is-link-light is-small modal-button" data-target="modal-ter">
-                    Avbryt
-                  </button>
-                </div>
-              </div>
+              </section>
+
+              <footer class="modal-card-foot">
+                <button id="edit-modal-finish" class="button is-warning is-small modal-button" data-target="modal-ter">
+                  OK
+                </button>
+              </footer>
             </div>
           </div>
 
@@ -444,137 +461,139 @@
           <!--Legge til ansatt-->
           <div class="modal" id="addModal">
             <div class="modal-background"></div>
-            <div class="modal-content has-background-white py-5 px-5">
-              <h3 class="title mb-6"> Legg til ansatt</h3>
-              <div class="level-left">
-                <div class="level-item">
-                  <p>Fornavn</p>
+            <div class="modal-card">
+              <header class="modal-card-head">
+                <p class="modal-card-title">LEGG TIL ANSATT</p>
+              </header>
+
+              <section class="modal-card-body">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p>Fornavn</p>
+                  </div>
+                  <div class="level-item">
+                    <input id="firstName-add-txt" type="text" placeholder="Fornavn">
+                  </div>
                 </div>
-                <div class="level-item">
-                  <input id="firstName-add-txt" type="text" placeholder="Fornavn">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p>Etternavn</p>
+                  </div>
+                  <div class="level-item">
+                    <input id="lastName-add-txt" type="text" placeholder="Etternavn">
+                  </div>
                 </div>
-              </div>
-              <div class="level-left">
-                <div class="level-item">
-                  <p>Etternavn</p>
+                <div class="level-left">
+                  <div class="level-item">
+                    <p>Tlf nr</p>
+                  </div>
+                  <div class="level-item">
+                    <input id="phone-add-txt" type="text" placeholder="Tlf nr">
+                  </div>
                 </div>
-                <div class="level-item">
-                  <input id="lastName-add-txt" type="text" placeholder="Etternavn">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p>E-post</p>
+                  </div>
+                  <div class="level-item">
+                    <input id="email-add-txt" type="text" placeholder="E-post">
+                  </div>
                 </div>
-              </div>
-              <div class="level-left">
-                <div class="level-item">
-                  <p>Tlf nr</p>
+                <div class="level-left">
+                  <div class="level-item">
+                    <p>Stilling</p>
+                  </div>
+                  <div class="level-item">
+                    <input id="work-add-txt" type="text" placeholder="Stilling">
+                  </div>
                 </div>
-                <div class="level-item">
-                  <input id="phone-add-txt" type="text" placeholder="Tlf nr">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p>Arbeidssted</p>
+                  </div>
+                  <div class="level-item">
+                    <input id="workPlace-add-txt" type="text" placeholder="Arbeidssted">
+                  </div>
                 </div>
-              </div>
-              <div class="level-left">
-                <div class="level-item">
-                  <p>E-post</p>
+                <div class="level-left">
+                  <div class="level-item">
+                    <p>Stillingsprosent</p>
+                  </div>
+                  <div class="level-item">
+                    <input id="workprosent-add-txt" type="text" placeholder="Stillingsprosent">
+                  </div>
                 </div>
-                <div class="level-item">
-                  <input id="email-add-txt" type="text" placeholder="E-post">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p>Startdato</p>
+                  </div>
+                  <div class="level-item">
+                    <input id="startDate-add-txt" type="text" placeholder="Startdato">
+                  </div>
                 </div>
-              </div>
-              <div class="level-left">
-                <div class="level-item">
-                  <p>Stilling</p>
+                <div class="level-left">
+                  <div class="level-item">
+                    <p>AnsattID</p>
+                  </div>
+                  <div class="level-item">
+                    <input id="employeeID-add-txt" type="text" placeholder="AnsattID">
+                  </div>
                 </div>
-                <div class="level-item">
-                  <input id="work-add-txt" type="text" placeholder="Stilling">
-                </div>
-              </div>
-              <div class="level-left">
-                <div class="level-item">
-                  <p>Arbeidssted</p>
-                </div>
-                <div class="level-item">
-                  <input id="workPlace-add-txt" type="text" placeholder="Arbeidssted">
-                </div>
-              </div>
-              <div class="level-left">
-                <div class="level-item">
-                  <p>Stillingsprosent</p>
-                </div>
-                <div class="level-item">
-                  <input id="workprosent-add-txt" type="text" placeholder="Stillingsprosent">
-                </div>
-              </div>
-              <div class="level-left">
-                <div class="level-item">
-                  <p>Startdato</p>
-                </div>
-                <div class="level-item">
-                  <input id="startDate-add-txt" type="text" placeholder="Startdato">
-                </div>
-              </div>
-              <div class="level-left">
-                <div class="level-item">
-                  <p>AnsattID</p>
-                </div>
-                <div class="level-item">
-                  <input id="employeeID-add-txt" type="text" placeholder="AnsattID">
-                </div>
-              </div>
-              <div class="level-left">
-                <div class="level-item">
-                  <button id="add-employee-btn-modal" class="button is-link-light is-small">
-                    Legg til
-                  </button>
-                </div>
-                <div class="level-item">
-                  <button id="stop-add-employee-btn-modal" class="button is-link-light is-small modal-button" data-target="modal-ter">
-                    Avbryt
-                  </button>
-                </div>
-              </div>
+              </section>
+
+              <footer class="modal-card-foot">
+                <button id="add-employee-btn-modal" class="button is-warning is-small">
+                  Legg til
+                </button>
+                <button id="stop-add-employee-btn-modal" class="button is-link-light is-small modal-button" data-target="modal-ter">
+                  Avbryt
+                </button>
+              </footer>
             </div>
           </div>
 
           <!-- Godkjenning fra bruker om å legge inn-->
           <div class="modal" id="add-modal-approv">
             <div class="modal-background"></div>
-            <div class="modal-content has-background-white py-5 px-5">
-              <h3 class="title mb-6"> Legg til ansatt</h3>
-              <div class="level-left">
+            <div class="modal-card">
+              <header class="modal-card-head">
+                <p class="modal-card-title"> LEGG TIL ANSATT</p>
+              </header>
+
+              <section class="modal-card-body">
                 <div class="level-item">
                   <p id="input-add-employee"></p>
                 </div>
-              </div>
-              <div class="level-left">
-                <div class="level-item">
-                  <button id="add-employee-btn-modal-approv" class="button is-link-light is-small modal-button" data-target="modal-ter">
-                    Godkjen
-                  </button>
-                </div>
-                <div class="level-item">
-                  <button id="stop-add-employee-btn-modal-stop" class="button is-link-light is-small modal-button" data-target="modal-ter">
-                    Avbryt
-                  </button>
-                </div>
-              </div>
+              </section>
+
+              <footer class="modal-card-foot">
+                <button id="add-employee-btn-modal-approv" class="button is-warning is-small modal-button" data-target="modal-ter">
+                  Godkjenn
+                </button>
+                <button id="stop-add-employee-btn-modal-stop" class="button is-link-light is-small modal-button" data-target="modal-ter">
+                  Avbryt
+                </button>
+              </footer>
             </div>
           </div>
 
           <!-- Godkjennelse dukker opp-->
           <div class="modal" id="add-modal-information-confirmation">
             <div class="modal-background"></div>
-            <div class="modal-content has-background-white py-5 px-5">
-              <h3 class="title mb-6"> Legge til ansatt</h3>
-              <div class="level-left">
-                <div class="level-item">
+            <div class="modal-card">
+              <header class="modal-card-head">
+                <p class="modal-card-title">LEGGE TIL ANSATT</p>
+              </header>
+
+              <section class="modal-card-body">
                   <p>Godkjent</p>
-                </div>
-              </div>
-              <div class="level-left">
-                <div class="level-item">
-                  <button id="add-modal-finish" class="button is-link-light is-small modal-button" data-target="modal-ter">
-                    Avbryt
-                  </button>
-                </div>
-              </div>
+              </section>
+
+              <footer class="modal-card-foot">
+                <button id="add-modal-finish" class="button is-warning is-small modal-button" data-target="modal-ter">
+                  OK
+                </button>
+              </footer>
             </div>
           </div>
 

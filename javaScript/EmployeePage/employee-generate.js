@@ -69,7 +69,7 @@ const searchByLastname = () => {
         <div class="card">
             <section class="card-content">
                 <h3 class="is-size-4">${employee.firstName} ${employee.lastName}</h3>
-                <p>${employee.phone}, ${employee.email}, ${employee.age}</p>
+                <p>${employee.phone}, ${employee.email}</p>
                 <p>${employee.workPlace}, ${employee.work}, ${employee.workProsent}, AnsattID: ${employee.employeeID}</p> 
                 <p>Start dato: ${employee.startDate}</p>
             </section>
@@ -195,7 +195,7 @@ const sortByKarlJohan = () => {
         <div class="card">
             <section class="card-content">
                 <h3 class="is-size-4">${employee.firstName} ${employee.lastName}</h3>
-                <p>${employee.phone}, ${employee.email}, ${employee.age}</p>
+                <p>${employee.phone}, ${employee.email}</p>
                 <p>${employee.workPlace}, ${employee.work}, ${employee.workProsent}, AnsattID: ${employee.employeeID}</p> 
                 <p>Start dato: ${employee.startDate}</p>
             </section>
@@ -218,7 +218,7 @@ const sortByTorshov = () => {
         <div class="card">
             <section class="card-content">
                 <h3 class="is-size-4">${employee.firstName} ${employee.lastName}</h3>
-                <p>${employee.phone}, ${employee.email}, ${employee.age}</p>
+                <p>${employee.phone}, ${employee.email}</p>
                 <p>${employee.workPlace}, ${employee.work}, ${employee.workProsent}, AnsattID: ${employee.employeeID}</p> 
                 <p>Start dato: ${employee.startDate}</p>
             </section>
@@ -242,7 +242,7 @@ const sortByMajorstuen = () => {
         <div class="card">
             <section class="card-content">
                 <h3 class="is-size-4">${employee.firstName} ${employee.lastName}</h3>
-                <p>${employee.phone}, ${employee.email}, ${employee.age}</p>
+                <p>${employee.phone}, ${employee.email}</p>
                 <p>${employee.workPlace}, ${employee.work}, ${employee.workProsent}, AnsattID: ${employee.employeeID}</p> 
                 <p>Start dato: ${employee.startDate}</p>
             </section>
