@@ -4,9 +4,9 @@ const MainModule =(function(){
 
     const mains =[
         {title: "Menyer", image:"menu-image.png", page:"menuPage.html"},
-        {title: "Ansatte", image: "employee-transparent.png", page: "employeePage.html"},
-        {title: "Restauranter", image: "restaurant-transparent.png", page: "restaurantsPage.html"},
-        {title: "Salg", image:"sale-image.jpg", page: "salesPage.html"}
+        {title: "Ansatte", image: "employee-image.png", page: "employeePage.html"},
+        {title: "Restauranter", image: "restaurant-image.png", page: "restaurantsPage.html"},
+        {title: "Salg", image:"sales-image.png", page: "salesPage.html"}
     ];
 
 
