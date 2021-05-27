@@ -101,68 +101,247 @@
 
                     <!--Dropdown meny-->
                     <div class="level-item">
-                      <div class="columns is-centered">
-                        <div class="column">
-                          <div class="dropdown">
-                            <div class="dropdown-trigger">
-                              <button class="button" 
-                                      aria-haspopup="true"
-                                      aria-controls="dropdown-menu">
-                                <span>Oslo</span>
-                                <span class="icon is-small">
-                                  <i class="fas fa-angle-down" 
-                                     aria-hidden="true"></i>
-                                </span>
-                              </button>
-                            </div>
-                            <!--Valgene som dukker opp når man trykker på dropdown-menyen-->
-                            <div class="dropdown-menu" 
-                                 id="dropdown-menu" 
-                                 role="menu">
-                              <div class="dropdown-content">
-                              
-                                <a href="#" class="dropdown-item" id="drinks-sort-by-oslo-btn">
-                                  Drikke
-                                </a>
+                        <div class="columns is-centered">
+                            <div class="column">
+                                <!--OSLO S-->
+                                <div class="dropdown" id="dp-oslos">
+                                    <div class="dropdown-trigger">
+                                        <button class="button" 
+                                                aria-haspopup="true"
+                                                aria-controls="dropdown-menu">
+                                            <span>Oslo S</span>
+                                            <span class="icon is-small">
+                                            <i class="fas fa-angle-down" 
+                                                aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                        </div>
+                                        <!--Valgene som dukker opp når man trykker på dropdown-menyen-->
+                                        <div class="dropdown-menu" 
+                                            id="dropdown-menu" 
+                                            role="menu">
+                                        <div class="dropdown-content">
+                                        
+                                            <a href="#" class="dropdown-item" id="drinks-sort-by-oslo-btn">
+                                                Drikke
+                                            </a>
+                                
+                                            <a href="#" class="dropdown-item" id="appetizer-sort-by-oslo-btn">
+                                                Forett
+                                            </a>
+                                
+                                            <a href="#" class="dropdown-item" id="main-course-sort-by-oslo-btn">
+                                                Hovedrett
+                                            </a>
                     
-                                <a href="#" class="dropdown-item" id="appetizer-sort-by-oslo-btn">
-                                  Forett
-                                </a>
+                                            <a href="#" class="dropdown-item" id="pizza-sort-by-oslo-btn">
+                                                Pizza
+                                            </a>
+
+                                            <a href="#" class="dropdown-item" id="dessert-sort-by-oslo-btn">
+                                                Dessert
+                                            </a>
+
+                                            <a href="#" class="dropdown-item" id="all-dishes-oslo-btn">
+                                                Alle
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--MAJORSTUEN-->
+                                <div class="dropdown" id="dp-majo">
+                                    <div class="dropdown-trigger">
+                                        <button class="button" 
+                                                aria-haspopup="true"
+                                                aria-controls="dropdown-menu">
+                                            <span>Majorstuen</span>
+                                            <span class="icon is-small">
+                                            <i class="fas fa-angle-down" 
+                                                aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                        </div>
+                                        <!--Valgene som dukker opp når man trykker på dropdown-menyen-->
+                                        <div class="dropdown-menu" 
+                                            id="dropdown-menu" 
+                                            role="menu">
+                                        <div class="dropdown-content">
+                                        
+                                            <a href="#" class="dropdown-item" id="drinks-sort-by-majo-btn">
+                                                Drikke
+                                            </a>
+                                
+                                            <a href="#" class="dropdown-item" id="appetizer-sort-by-majo-btn">
+                                                Forett
+                                            </a>
+                                
+                                            <a href="#" class="dropdown-item" id="main-course-sort-by-majo-btn">
+                                                Hovedrett
+                                            </a>
                     
-                                <a href="#" class="dropdown-item" id="main-course-sort-by-oslo-btn">
-                                  Hovedrett
-                                </a>
-          
-                                <a href="#" class="dropdown-item" id="pizza-sort-by-oslo-btn">
-                                  Pizza
-                                </a>
+                                            <a href="#" class="dropdown-item" id="pizza-sort-by-majo-btn">
+                                                Pizza
+                                            </a>
 
-                                <a href="#" class="dropdown-item" id="dessert-sort-by-oslo-btn">
-                                    Dessert
-                                </a>
+                                            <a href="#" class="dropdown-item" id="dessert-sort-by-majo-btn">
+                                                Dessert
+                                            </a>
 
-                                <a href="#" class="dropdown-item" id="all-dishes-oslo-btn">
-                                    Alle
-                                </a>
-                              </div>
+                                            <a href="#" class="dropdown-item" id="all-dishes-majo-btn">
+                                                Alle
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--KARL JOHAN-->
+                                <div class="dropdown" id="dp-karljohan">
+                                    <div class="dropdown-trigger">
+                                        <button class="button" 
+                                                aria-haspopup="true"
+                                                aria-controls="dropdown-menu">
+                                            <span>Karl Johan</span>
+                                            <span class="icon is-small">
+                                            <i class="fas fa-angle-down" 
+                                                aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                        </div>
+                                        <!--Valgene som dukker opp når man trykker på dropdown-menyen-->
+                                        <div class="dropdown-menu" 
+                                            id="dropdown-menu" 
+                                            role="menu">
+                                        <div class="dropdown-content">
+                                        
+                                            <a href="#" class="dropdown-item" id="drinks-sort-by-karljohan-btn">
+                                                Drikke
+                                            </a>
+                                
+                                            <a href="#" class="dropdown-item" id="appetizer-sort-by-karljohan-btn">
+                                                Forett
+                                            </a>
+                                
+                                            <a href="#" class="dropdown-item" id="main-course-sort-by-karljohan-btn">
+                                                Hovedrett
+                                            </a>
+                    
+                                            <a href="#" class="dropdown-item" id="pizza-sort-by-karljohan-btn">
+                                                Pizza
+                                            </a>
+
+                                            <a href="#" class="dropdown-item" id="dessert-sort-by-karljohan-btn">
+                                                Dessert
+                                            </a>
+
+                                            <a href="#" class="dropdown-item" id="all-dishes-karljohan-btn">
+                                                Alle
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--TORSHOV-->
+                                <div class="dropdown" id="dp-torshov">
+                                    <div class="dropdown-trigger">
+                                        <button class="button" 
+                                                aria-haspopup="true"
+                                                aria-controls="dropdown-menu">
+                                            <span>Torshov</span>
+                                            <span class="icon is-small">
+                                            <i class="fas fa-angle-down" 
+                                                aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                        </div>
+                                        <!--Valgene som dukker opp når man trykker på dropdown-menyen-->
+                                        <div class="dropdown-menu" 
+                                            id="dropdown-menu" 
+                                            role="menu">
+                                        <div class="dropdown-content">
+                                        
+                                            <a href="#" class="dropdown-item" id="drinks-sort-by-torshov-btn">
+                                            Drikke
+                                            </a>
+                                
+                                            <a href="#" class="dropdown-item" id="appetizer-sort-by-torshov-btn">
+                                            Forett
+                                            </a>
+                                
+                                            <a href="#" class="dropdown-item" id="main-course-sort-by-torshov-btn">
+                                            Hovedrett
+                                            </a>
+                    
+                                            <a href="#" class="dropdown-item" id="pizza-sort-by-torshov-btn">
+                                            Pizza
+                                            </a>
+
+                                            <a href="#" class="dropdown-item" id="dessert-sort-by-torshov-btn">
+                                                Dessert
+                                            </a>
+
+                                            <a href="#" class="dropdown-item" id="all-dishes-torshov-btn">
+                                                Alle
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                          </div>
                         </div>
-                      </div>
                     </div>
           
                     <!--Valgte å ha scriptet her for bedre oversikt over koden. Husk å legg denne koden inn i generate-->
                     <script>
-                      const dropdown =
-                            document.querySelector('.dropdown');
-                      const active =
+                        //OSLO S
+                      const dropdownOsloS =
+                            document.querySelector('#dp-oslos');
+                      const activeOsloS =
                             document.querySelector('.is-active')
                       document.body.addEventListener('click', function () {
-                        if (active) {
-                          dropdown.classList.remove('is-active')
+                        if (activeOsloS) {
+                          dropdownOsloS.classList.remove('is-active')
                         }
                       })
-                      dropdown.addEventListener('click', function (event) {
+                      dropdownOsloS.addEventListener('click', function (event) {
+                        event.stopPropagation();
+                        this.classList.toggle('is-active');
+                      });
+                      //MAJORSTUEN
+                      const dropdownMajo =
+                            document.querySelector('#dp-majo');
+                      const activeMajo =
+                            document.querySelector('.is-active')
+                      document.body.addEventListener('click', function () {
+                        if (activeMajo) {
+                          dropdownMajo.classList.remove('is-active')
+                        }
+                      })
+                      dropdownMajo.addEventListener('click', function (event) {
+                        event.stopPropagation();
+                        this.classList.toggle('is-active');
+                      });
+                      //MAJORSTUEN
+                      const dropdownKarlJohan =
+                            document.querySelector('#dp-karljohan');
+                      const activeKarl =
+                            document.querySelector('.is-active')
+                      document.body.addEventListener('click', function () {
+                        if (activeKarl) {
+                          dropdownKarlJohan.classList.remove('is-active')
+                        }
+                      })
+                      dropdownKarlJohan.addEventListener('click', function (event) {
+                        event.stopPropagation();
+                        this.classList.toggle('is-active');
+                      });
+                      //TORSHOV
+                      const dropdownTorshov =
+                            document.querySelector('#dp-torshov');
+                      const activeTorshov =
+                            document.querySelector('.is-active')
+                      document.body.addEventListener('click', function () {
+                        if (activeTorshov) {
+                          dropdownTorshov.classList.remove('is-active')
+                        }
+                      })
+                      dropdownTorshov.addEventListener('click', function (event) {
                         event.stopPropagation();
                         this.classList.toggle('is-active');
                       });
@@ -188,6 +367,8 @@
                 <tfoot>
                     <tr>
                         <th>Sum</th>
+                        <td></td>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
