@@ -1,21 +1,33 @@
-const PizzaModule = (function() {
+let PizzaModule = (function() {
 
 
     let pizzamenu = [
-        {title: "Kjøttdeigpizza", id: "1", pris: "100kr/170kr"},
-        {title: "Biffpizza", id: "2", pris: "120kr/190kr"},
-        {title: "Rekepizza", id: "3", pris: "120kr/150kr"}
+        {title: "Kjøttdeigpizza", category: "Pizza", id: "1", pris: "100kr/170kr"},
+        {title: "Biffpizza", category: "Pizza", id: "2", pris: "120kr/190kr"},
+        {title: "Rekepizza", category: "Pizza", id: "3", pris: "120kr/150kr"},
+        {title: "Lasagne", category: "Hovedrett",id: "19", pris: "180kr"},
+        {title: "Kebabtallerken", category: "Hovedrett",id: "15", pris: "170kr"},
+        {title: "Hamburger", category: "Hovedrett",id: "17", pris: "155kr"}
     ];
 
-    let getAllPizzas = () => pizzamenu;
+    
+    let getAllPizzas = () => pizzamenu.filter(pizzas =>
+        pizzas.category == "Pizza"
+        );  
 
+    
+    //let getAllPizzas = () => pizzamenu;
+
+/** 
     const maindishes = [
         {title: "Lasagne", id: "19", pris: "180kr"},
         {title: "Kebabtallerken", id: "15", pris: "170kr"},
         {title: "Hamburger", id: "17", pris: "155kr"}
     ];
-
-    const getAllMaindishes = () => maindishes; 
+*/
+    const getAllMaindishes = () => pizzamenu.filter(dishes =>
+        dishes.category == "Hovedrett"
+        ); 
 
     const drinksmenu = [
         {title: "Brus", pris: "45kr/85kr", id: "42"},
@@ -44,6 +56,7 @@ const PizzaModule = (function() {
 
     const getAllDessert = () => dessertmenu;
 
+   
 
     let addNewMenu = (adding) => pizzamenu.push(adding);
 
