@@ -108,6 +108,7 @@ const saleModule = (function(){ // IIFE
     ];
 
     const salesDishes = [
+        //OSLO S
         {place: "Oslo S",category: "Drikke", name:"Stor brus", price:45, amount: 100},
         {place: "Oslo S", category: "Drikke", name:"Liten øl", price: 85, amount: 50},
         {place: "Oslo S",category:"Drikke", name:"Stor øl", price: 110, amount: 60},
@@ -128,7 +129,73 @@ const saleModule = (function(){ // IIFE
         {place: "Oslo S", category: "Hovedretter", name:"Hamburger", price:155, amount: 60},
         {place: "Oslo S", category: "Dessert", name:"Oreokake", price:95, amount: 100},
         {place: "Oslo S", category: "Dessert", name:"Bananasplitt", price:95, amount: 100},
-        {place: "Oslo S", category: "Dessert", name:"Eplekake", price:80, amount: 100}
+        {place: "Oslo S", category: "Dessert", name:"Eplekake", price:80, amount: 100},
+        //MAJORSTUEN
+        {place: "Majorstuen",category: "Drikke", name:"Stor brus", price:45, amount: 100},
+        {place: "Majorstuen", category: "Drikke", name:"Liten øl", price: 85, amount: 50},
+        {place: "Majorstuen",category:"Drikke", name:"Stor øl", price: 110, amount: 60},
+        {place: "Majorstuen", category: "Drikke", name:"Liten vin", price: 95, amount: 100},
+        {place: "Majorstuen", category: "Drikke", name:"Vinflaske", price: 350, amount: 34},
+        {place: "Majorstuen", category: "Drikke", name:"Drink", price: 125, amount: 101},
+        {place: "Majorstuen", category: "Drikke", name:"Vann", price: 40, amount: 140},
+        {place: "Majorstuen", category: "Forett", name: "Hvitløksbrød", price: 65, amount: 65},
+        {place: "Majorstuen", category: "Forett", name:"Nachochips", price:95, amount: 100},
+        {place: "Majorstuen", category: "Forett", name:"Løkringer", price:79, amount: 70},
+        {place: "Majorstuen", category: "Forett", name:"Liten fries", price:59, amount: 50},
+        {place: "Majorstuen", category: "Forett", name:"Stor fries", price:79, amount: 90},
+        {place: "Majorstuen", category: "Pizza", name:"Kjøttdeig pizza", price:120, amount: 30},
+        {place: "Majorstuen", category: "Pizza", name:"Biff pizza", price:120, amount: 35},
+        {place: "Majorstuen", category: "Pizza", name:"Reke pizza", price:120, amount: 15},
+        {place: "Majorstuen", category: "Hovedretter", name:"Lasagne", price:180, amount: 40},
+        {place: "Majorstuen", category: "Hovedretter", name:"Kebabtallerken", price:170, amount: 45},
+        {place: "Majorstuen", category: "Hovedretter", name:"Hamburger", price:155, amount: 60},
+        {place: "Majorstuen", category: "Dessert", name:"Oreokake", price:95, amount: 100},
+        {place: "Majorstuen", category: "Dessert", name:"Bananasplitt", price:95, amount: 100},
+        {place: "Majorstuen", category: "Dessert", name:"Eplekake", price:80, amount: 100},
+        //KARL JOHAN
+        {place: "Karl Johan",category: "Drikke", name:"Stor brus", price:45, amount: 100},
+        {place: "Karl Johan", category: "Drikke", name:"Liten øl", price: 85, amount: 50},
+        {place: "Karl Johan",category:"Drikke", name:"Stor øl", price: 110, amount: 60},
+        {place: "Karl Johan", category: "Drikke", name:"Liten vin", price: 95, amount: 100},
+        {place: "Karl Johan", category: "Drikke", name:"Vinflaske", price: 350, amount: 34},
+        {place: "Karl Johan", category: "Drikke", name:"Drink", price: 125, amount: 101},
+        {place: "Karl Johan", category: "Drikke", name:"Vann", price: 40, amount: 140},
+        {place: "Karl Johan", category: "Forett", name: "Hvitløksbrød", price: 65, amount: 65},
+        {place: "Karl Johan", category: "Forett", name:"Nachochips", price:95, amount: 100},
+        {place: "Karl Johan", category: "Forett", name:"Løkringer", price:79, amount: 70},
+        {place: "Karl Johan", category: "Forett", name:"Liten fries", price:59, amount: 50},
+        {place: "Karl Johan", category: "Forett", name:"Stor fries", price:79, amount: 90},
+        {place: "Karl Johan", category: "Pizza", name:"Kjøttdeig pizza", price:120, amount: 30},
+        {place: "Karl Johan", category: "Pizza", name:"Biff pizza", price:120, amount: 35},
+        {place: "Karl Johan", category: "Pizza", name:"Reke pizza", price:120, amount: 15},
+        {place: "Karl Johan", category: "Hovedretter", name:"Lasagne", price:180, amount: 40},
+        {place: "Karl Johan", category: "Hovedretter", name:"Kebabtallerken", price:170, amount: 45},
+        {place: "Karl Johan", category: "Hovedretter", name:"Hamburger", price:155, amount: 60},
+        {place: "Karl Johan", category: "Dessert", name:"Oreokake", price:95, amount: 100},
+        {place: "Karl Johan", category: "Dessert", name:"Bananasplitt", price:95, amount: 100},
+        {place: "Karl Johan", category: "Dessert", name:"Eplekake", price:80, amount: 100},
+        //TORSHOV
+        {place: "Torshov",category: "Drikke", name:"Stor brus", price:45, amount: 100},
+        {place: "Torshov", category: "Drikke", name:"Liten øl", price: 85, amount: 50},
+        {place: "Torshov",category:"Drikke", name:"Stor øl", price: 110, amount: 60},
+        {place: "Torshov", category: "Drikke", name:"Liten vin", price: 95, amount: 100},
+        {place: "Torshov", category: "Drikke", name:"Vinflaske", price: 350, amount: 34},
+        {place: "Torshov", category: "Drikke", name:"Drink", price: 125, amount: 101},
+        {place: "Torshov", category: "Drikke", name:"Vann", price: 40, amount: 140},
+        {place: "Torshov", category: "Forett", name: "Hvitløksbrød", price: 65, amount: 65},
+        {place: "Torshov", category: "Forett", name:"Nachochips", price:95, amount: 100},
+        {place: "Torshov", category: "Forett", name:"Løkringer", price:79, amount: 70},
+        {place: "Torshov", category: "Forett", name:"Liten fries", price:59, amount: 50},
+        {place: "Torshov", category: "Forett", name:"Stor fries", price:79, amount: 90},
+        {place: "Torshov", category: "Pizza", name:"Kjøttdeig pizza", price:120, amount: 30},
+        {place: "Torshov", category: "Pizza", name:"Biff pizza", price:120, amount: 35},
+        {place: "Torshov", category: "Pizza", name:"Reke pizza", price:120, amount: 15},
+        {place: "Torshov", category: "Hovedretter", name:"Lasagne", price:180, amount: 40},
+        {place: "Torshov", category: "Hovedretter", name:"Kebabtallerken", price:170, amount: 45},
+        {place: "Torshov", category: "Hovedretter", name:"Hamburger", price:155, amount: 60},
+        {place: "Torshov", category: "Dessert", name:"Oreokake", price:95, amount: 100},
+        {place: "Torshov", category: "Dessert", name:"Bananasplitt", price:95, amount: 100},
+        {place: "Torshov", category: "Dessert", name:"Eplekake", price:80, amount: 100}
     ];
 
     const getAllSales = () => sales;
@@ -167,6 +234,83 @@ const saleModule = (function(){ // IIFE
     const getOsloSPizza = () => salesDishes.filter(dishes =>
         dishes.place == "Oslo S" && dishes.category == "Pizza"
         );
+    
+    //MAJORSTUEN
+    const getMajoDishes = () =>salesDishes.filter(dishes =>
+        dishes.place == "Majorstuen"
+        );
+        
+    const getMajoDrink = () => salesDishes.filter(dishes =>
+        dishes.place == "Majorstuen" && dishes.category == "Drikke"
+        );
+    
+    const getMajoAppetizer = () => salesDishes.filter(dishes =>
+        dishes.place == "Majorstuen" && dishes.category == "Forett"
+        );
+    
+    const getMajoMainCourse = () => salesDishes.filter(dishes =>
+        dishes.place == "Majorstuen" && dishes.category == "Hovedretter"
+        );
+    
+    const getMajoDessert = () => salesDishes.filter(dishes =>
+        dishes.place == "Majorstuen" && dishes.category == "Dessert"
+        );
+    
+    const getMajoPizza = () => salesDishes.filter(dishes =>
+        dishes.place == "Majorstuen" && dishes.category == "Pizza"
+        );
+    
+    //KARL JOHAN
+    const getKarljohanDishes = () =>salesDishes.filter(dishes =>
+        dishes.place == "Karl Johan"
+        );
+        
+    const getKarljohanDrink = () => salesDishes.filter(dishes =>
+        dishes.place == "Karl Johan" && dishes.category == "Drikke"
+        );
+    
+    const getKarljohanAppetizer = () => salesDishes.filter(dishes =>
+        dishes.place == "Karl Johan" && dishes.category == "Forett"
+        );
+    
+    const getKarljohanMainCourse = () => salesDishes.filter(dishes =>
+        dishes.place == "Karl Johan" && dishes.category == "Hovedretter"
+        );
+    
+    const getKarljohanDessert = () => salesDishes.filter(dishes =>
+        dishes.place == "Karl Johan" && dishes.category == "Dessert"
+        );
+    
+    const getKarljohanPizza = () => salesDishes.filter(dishes =>
+        dishes.place == "Karl Johan" && dishes.category == "Pizza"
+        );
+    
+    //TORSHOV
+    const getTorshovDishes = () =>salesDishes.filter(dishes =>
+        dishes.place == "Torshov"
+        );
+        
+    const getTorshovDrink = () => salesDishes.filter(dishes =>
+        dishes.place == "Torshov" && dishes.category == "Drikke"
+        );
+    
+    const getTorshovAppetizer = () => salesDishes.filter(dishes =>
+        dishes.place == "Torshov" && dishes.category == "Forett"
+        );
+    
+    const getTorshovMainCourse = () => salesDishes.filter(dishes =>
+        dishes.place == "Torshov" && dishes.category == "Hovedretter"
+        );
+    
+    const getTorshovDessert = () => salesDishes.filter(dishes =>
+        dishes.place == "Torshov" && dishes.category == "Dessert"
+        );
+    
+    const getTorshovPizza = () => salesDishes.filter(dishes =>
+        dishes.place == "Torshov" && dishes.category == "Pizza"
+        );
+
+
     return {
         getAllSales,
         getStores,
@@ -178,7 +322,25 @@ const saleModule = (function(){ // IIFE
         getOsloSAppetizer,
         getOsloSMainCourse,
         getOsloSDessert,
-        getOsloSPizza
+        getOsloSPizza,
+        getMajoDishes,
+        getMajoDrink,
+        getMajoAppetizer,
+        getMajoMainCourse,
+        getMajoDessert,
+        getMajoPizza,
+        getKarljohanDishes,
+        getKarljohanDrink,
+        getKarljohanAppetizer,
+        getKarljohanMainCourse,
+        getKarljohanDessert,
+        getKarljohanPizza,
+        getTorshovDishes,
+        getTorshovDrink,
+        getTorshovAppetizer,
+        getTorshovMainCourse,
+        getTorshovDessert,
+        getTorshovPizza
     }
 
 }()); // end of saleModule

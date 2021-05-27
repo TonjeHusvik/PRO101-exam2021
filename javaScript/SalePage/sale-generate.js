@@ -8,8 +8,8 @@ const searchTxtMonth = document.querySelector("#search-txt-month");
 const searchStoresBtn = document.querySelector('#search-stores-btn');
 const searchYearBtn = document.querySelector('#search-year-btn');
 const searchMonthBtn = document.querySelector('#search-month-btn');
-const dishesBtn = document.querySelector("#dishes-btn");3
-//MARTINE
+const dishesBtn = document.querySelector("#dishes-btn");
+//OSLO S - RETTER DROPDOWN //MARTINE
 const dishesInputArray = document.querySelector("#dishes-input-array");
 const drinksSortByOsloBtn = document.querySelector("#drinks-sort-by-oslo-btn");
 const appetizerSortByOsloBtn = document.querySelector("#appetizer-sort-by-oslo-btn");
@@ -17,6 +17,28 @@ const mainCourseSortByOsloBtn = document.querySelector("#main-course-sort-by-osl
 const dessertSortByOsloBtn = document.querySelector("#dessert-sort-by-oslo-btn");
 const pizzaSortByOsloBtn = document.querySelector("#pizza-sort-by-oslo-btn");
 const allDishesOsloBtn = document.querySelector("#all-dishes-oslo-btn");
+//MAJORSTUEN - RETTER DROPDOWN 
+const drinksSortByMajoBtn = document.querySelector("#drinks-sort-by-majo-btn");
+const appetizerSortByMajoBtn = document.querySelector("#appetizer-sort-by-majo-btn");
+const mainCourseSortByMajoBtn = document.querySelector("#main-course-sort-by-majo-btn");
+const dessertSortByMajoBtn = document.querySelector("#dessert-sort-by-majo-btn");
+const pizzaSortByMajoBtn = document.querySelector("#pizza-sort-by-majo-btn");
+const allDishesMajoBtn = document.querySelector("#all-dishes-majo-btn");
+//KARL JOHAN - RETTER DROPDOWN
+const drinksSortByKarljohanBtn = document.querySelector("#drinks-sort-by-karljohan-btn");
+const appetizerSortByKarljohanBtn = document.querySelector("#appetizer-sort-by-karljohan-btn");
+const mainCourseSortByKarljohanBtn = document.querySelector("#main-course-sort-by-karljohan-btn");
+const dessertSortByKarljohanBtn = document.querySelector("#dessert-sort-by-karljohan-btn");
+const pizzaSortByKarljohanBtn = document.querySelector("#pizza-sort-by-karljohan-btn");
+const allDishesKarljohanBtn = document.querySelector("#all-dishes-karljohan-btn");
+//TORSHOV - RETTER DROPDOWN
+const drinksSortByTorshovBtn = document.querySelector("#drinks-sort-by-torshov-btn");
+const appetizerSortByTorshovBtn = document.querySelector("#appetizer-sort-by-torshov-btn");
+const mainCourseSortByTorshovBtn = document.querySelector("#main-course-sort-by-torshov-btn");
+const dessertSortByTorshovBtn = document.querySelector("#dessert-sort-by-torshov-btn");
+const pizzaSortByTorshovBtn = document.querySelector("#pizza-sort-by-torshov-btn");
+const allDishesTorshovBtn = document.querySelector("#all-dishes-torshov-btn");
+
 //Viser alle restauranter + årstall + måneder
 const showAll = () => {
     let htmlTxt = "";
@@ -273,6 +295,394 @@ const sortByOsloSDessert = () =>{
     dishesInputArray.innerHTML = htmlTxt;
 }
 
+//MAJORSTUEN
+const sortByMajoDishes = () => {
+
+    let htmlTxt = "";
+
+    saleModule.getMajoDishes().forEach(dishes =>{
+        const sumAmount = dishes.price + dishes.amount;
+        htmlTxt +=`
+        <tr>
+                <td>${dishes.place}</td>
+                <td>${dishes.name}</td>
+                <td>${dishes.amount}</td>
+                <td>${dishes.price}</td>
+                <td>${dishes.category}</td>
+                <td>${sumAmount}</td>
+            </tr>
+
+        `
+    })
+
+    dishesInputArray.innerHTML = htmlTxt;
+}
+ 
+const sortByMajoDrinks = () =>{
+
+    let htmlTxt = "";
+
+    saleModule.getMajoDrink().forEach(dishes =>{
+        const sumAmount = dishes.price + dishes.amount;
+        htmlTxt +=`
+        <tr>
+                <td>${dishes.place}</td>
+                <td>${dishes.name}</td>
+                <td>${dishes.amount}</td>
+                <td>${dishes.price}</td>
+                <td>${dishes.category}</td>
+                <td>${sumAmount}</td>
+            </tr>
+
+        `
+    })
+
+    dishesInputArray.innerHTML = htmlTxt;
+}
+
+const sortByMajoMainCourse = () =>{
+
+    let htmlTxt = "";
+
+    saleModule.getMajoMainCourse().forEach(dishes =>{
+        const sumAmount = dishes.price + dishes.amount;
+        htmlTxt += `
+        <tr>
+            <td>${dishes.place}</td>
+            <td>${dishes.name}</td>
+            <td>${dishes.amount}</td>
+            <td>${dishes.price}</td>
+            <td>${dishes.category}</td>
+            <td>${sumAmount}</td>
+        </tr>
+        `
+
+    })
+
+    dishesInputArray.innerHTML = htmlTxt;
+}
+
+const sortByMajoAppetizer = () =>{
+    
+    let htmlTxt = "";
+
+    saleModule.getMajoAppetizer().forEach(dishes =>{
+        const sumAmount = dishes.price + dishes.amount;
+        htmlTxt += `
+        <tr>
+            <td>${dishes.place}</td>
+            <td>${dishes.name}</td>
+            <td>${dishes.amount}</td>
+            <td>${dishes.price}</td>
+            <td>${dishes.category}</td>
+            <td>${sumAmount}</td>
+        </tr>
+        `
+    })
+
+    dishesInputArray.innerHTML = htmlTxt;
+}
+
+const sortByMajoPizza = () =>{
+    let htmlTxt = "";
+
+    saleModule.getMajoPizza().forEach(dishes =>{
+        const sumAmount = dishes.price + dishes.amount;
+        htmlTxt += `
+        <tr>
+            <td>${dishes.place}</td>
+            <td>${dishes.name}</td>
+            <td>${dishes.amount}</td>
+            <td>${dishes.price}</td>
+            <td>${dishes.category}</td>
+            <td>${sumAmount}</td>
+        </tr>
+        `
+    })
+
+    dishesInputArray.innerHTML = htmlTxt;
+}
+
+const sortByMajoDessert = () =>{
+     
+    let htmlTxt = "";
+
+    saleModule.getMajoDessert().forEach(dishes =>{
+        const sumAmount = dishes.price + dishes.amount;
+        htmlTxt += `
+        <tr>
+            <td>${dishes.place}</td>
+            <td>${dishes.name}</td>
+            <td>${dishes.amount}</td>
+            <td>${dishes.price}</td>
+            <td>${dishes.category}</td>
+            <td>${sumAmount}</td>
+        </tr>
+        `
+    })
+
+    dishesInputArray.innerHTML = htmlTxt;
+}
+//KARL JOHAN
+const sortByKarljohanDishes = () => {
+
+    let htmlTxt = "";
+
+    saleModule.getKarljohanDishes().forEach(dishes =>{
+        const sumAmount = dishes.price + dishes.amount;
+        htmlTxt +=`
+        <tr>
+                <td>${dishes.place}</td>
+                <td>${dishes.name}</td>
+                <td>${dishes.amount}</td>
+                <td>${dishes.price}</td>
+                <td>${dishes.category}</td>
+                <td>${sumAmount}</td>
+            </tr>
+
+        `
+    })
+
+    dishesInputArray.innerHTML = htmlTxt;
+}
+ 
+const sortByKarljohanDrinks = () =>{
+
+    let htmlTxt = "";
+
+    saleModule.getKarljohanDrink().forEach(dishes =>{
+        const sumAmount = dishes.price + dishes.amount;
+        htmlTxt +=`
+        <tr>
+                <td>${dishes.place}</td>
+                <td>${dishes.name}</td>
+                <td>${dishes.amount}</td>
+                <td>${dishes.price}</td>
+                <td>${dishes.category}</td>
+                <td>${sumAmount}</td>
+            </tr>
+
+        `
+    })
+
+    dishesInputArray.innerHTML = htmlTxt;
+}
+
+const sortByKarljohanMainCourse = () =>{
+
+    let htmlTxt = "";
+
+    saleModule.getKarljohanMainCourse().forEach(dishes =>{
+        const sumAmount = dishes.price + dishes.amount;
+        htmlTxt += `
+        <tr>
+            <td>${dishes.place}</td>
+            <td>${dishes.name}</td>
+            <td>${dishes.amount}</td>
+            <td>${dishes.price}</td>
+            <td>${dishes.category}</td>
+            <td>${sumAmount}</td>
+        </tr>
+        `
+
+    })
+
+    dishesInputArray.innerHTML = htmlTxt;
+}
+
+const sortByKarljohanAppetizer = () =>{
+    
+    let htmlTxt = "";
+
+    saleModule.getKarljohanAppetizer().forEach(dishes =>{
+        const sumAmount = dishes.price + dishes.amount;
+        htmlTxt += `
+        <tr>
+            <td>${dishes.place}</td>
+            <td>${dishes.name}</td>
+            <td>${dishes.amount}</td>
+            <td>${dishes.price}</td>
+            <td>${dishes.category}</td>
+            <td>${sumAmount}</td>
+        </tr>
+        `
+    })
+
+    dishesInputArray.innerHTML = htmlTxt;
+}
+
+const sortByKarljohanPizza = () =>{
+    let htmlTxt = "";
+
+    saleModule.getKarljohanPizza().forEach(dishes =>{
+        const sumAmount = dishes.price + dishes.amount;
+        htmlTxt += `
+        <tr>
+            <td>${dishes.place}</td>
+            <td>${dishes.name}</td>
+            <td>${dishes.amount}</td>
+            <td>${dishes.price}</td>
+            <td>${dishes.category}</td>
+            <td>${sumAmount}</td>
+        </tr>
+        `
+    })
+
+    dishesInputArray.innerHTML = htmlTxt;
+}
+
+const sortByKarljohanDessert = () =>{
+     
+    let htmlTxt = "";
+
+    saleModule.getKarljohanDessert().forEach(dishes =>{
+        const sumAmount = dishes.price + dishes.amount;
+        htmlTxt += `
+        <tr>
+            <td>${dishes.place}</td>
+            <td>${dishes.name}</td>
+            <td>${dishes.amount}</td>
+            <td>${dishes.price}</td>
+            <td>${dishes.category}</td>
+            <td>${sumAmount}</td>
+        </tr>
+        `
+    })
+
+    dishesInputArray.innerHTML = htmlTxt;
+}
+
+//TORSHOV
+//KARL JOHAN
+const sortByTorshovDishes = () => {
+
+    let htmlTxt = "";
+
+    saleModule.getTorshovDishes().forEach(dishes =>{
+        const sumAmount = dishes.price + dishes.amount;
+        htmlTxt +=`
+        <tr>
+                <td>${dishes.place}</td>
+                <td>${dishes.name}</td>
+                <td>${dishes.amount}</td>
+                <td>${dishes.price}</td>
+                <td>${dishes.category}</td>
+                <td>${sumAmount}</td>
+            </tr>
+
+        `
+    })
+
+    dishesInputArray.innerHTML = htmlTxt;
+}
+ 
+const sortByTorshovDrinks = () =>{
+
+    let htmlTxt = "";
+
+    saleModule.getTorshovDrink().forEach(dishes =>{
+        const sumAmount = dishes.price + dishes.amount;
+        htmlTxt +=`
+        <tr>
+                <td>${dishes.place}</td>
+                <td>${dishes.name}</td>
+                <td>${dishes.amount}</td>
+                <td>${dishes.price}</td>
+                <td>${dishes.category}</td>
+                <td>${sumAmount}</td>
+            </tr>
+
+        `
+    })
+
+    dishesInputArray.innerHTML = htmlTxt;
+}
+
+const sortByTorshovMainCourse = () =>{
+
+    let htmlTxt = "";
+
+    saleModule.getTorshovMainCourse().forEach(dishes =>{
+        const sumAmount = dishes.price + dishes.amount;
+        htmlTxt += `
+        <tr>
+            <td>${dishes.place}</td>
+            <td>${dishes.name}</td>
+            <td>${dishes.amount}</td>
+            <td>${dishes.price}</td>
+            <td>${dishes.category}</td>
+            <td>${sumAmount}</td>
+        </tr>
+        `
+
+    })
+
+    dishesInputArray.innerHTML = htmlTxt;
+}
+
+const sortByTorshovAppetizer = () =>{
+    
+    let htmlTxt = "";
+
+    saleModule.getTorshovAppetizer().forEach(dishes =>{
+        const sumAmount = dishes.price + dishes.amount;
+        htmlTxt += `
+        <tr>
+            <td>${dishes.place}</td>
+            <td>${dishes.name}</td>
+            <td>${dishes.amount}</td>
+            <td>${dishes.price}</td>
+            <td>${dishes.category}</td>
+            <td>${sumAmount}</td>
+        </tr>
+        `
+    })
+
+    dishesInputArray.innerHTML = htmlTxt;
+}
+
+const sortByTorshovPizza = () =>{
+    let htmlTxt = "";
+
+    saleModule.getTorshovPizza().forEach(dishes =>{
+        const sumAmount = dishes.price + dishes.amount;
+        htmlTxt += `
+        <tr>
+            <td>${dishes.place}</td>
+            <td>${dishes.name}</td>
+            <td>${dishes.amount}</td>
+            <td>${dishes.price}</td>
+            <td>${dishes.category}</td>
+            <td>${sumAmount}</td>
+        </tr>
+        `
+    })
+
+    dishesInputArray.innerHTML = htmlTxt;
+}
+
+const sortByTorshovDessert = () =>{
+     
+    let htmlTxt = "";
+
+    saleModule.getTorshovDessert().forEach(dishes =>{
+        const sumAmount = dishes.price + dishes.amount;
+        htmlTxt += `
+        <tr>
+            <td>${dishes.place}</td>
+            <td>${dishes.name}</td>
+            <td>${dishes.amount}</td>
+            <td>${dishes.price}</td>
+            <td>${dishes.category}</td>
+            <td>${sumAmount}</td>
+        </tr>
+        `
+    })
+
+    dishesInputArray.innerHTML = htmlTxt;
+}
+
+
 //omsetningsdel - knapper med søk
 searchStoresBtn.addEventListener('click', getAllStores);
 searchYearBtn.addEventListener('click', getAllYear);
@@ -280,7 +690,6 @@ searchMonthBtn.addEventListener('click', getAllMonth);
 showAll();
 
 //Martine. Knappen. Oslo dropdown meny
-
 dishesBtn.addEventListener('click', mainteable); 
 drinksSortByOsloBtn.addEventListener('click', sortByOsloSDrinks); //Knappen fungerer.
 appetizerSortByOsloBtn.addEventListener('click', sortByOsloSAppetizer);
@@ -288,6 +697,33 @@ mainCourseSortByOsloBtn.addEventListener('click', sortByOsloSMainCourse);
 pizzaSortByOsloBtn.addEventListener('click', sortByOsloSPizza);
 dessertSortByOsloBtn.addEventListener('click', sortByOsloSDessert);
 allDishesOsloBtn.addEventListener('click', sortByOsloSDishes);
+
+//MAJORSTUEN
+
+drinksSortByMajoBtn.addEventListener('click', sortByMajoDrinks); //Knappen fungerer.
+appetizerSortByMajoBtn.addEventListener('click', sortByMajoAppetizer);
+mainCourseSortByMajoBtn.addEventListener('click', sortByMajoMainCourse);
+pizzaSortByMajoBtn.addEventListener('click', sortByMajoPizza);
+dessertSortByMajoBtn.addEventListener('click', sortByMajoDessert);
+allDishesMajoBtn.addEventListener('click', sortByMajoDishes);
+
+//KARLJOHAN
+
+drinksSortByKarljohanBtn.addEventListener('click', sortByKarljohanDrinks); //Knappen fungerer.
+appetizerSortByKarljohanBtn.addEventListener('click', sortByKarljohanAppetizer);
+mainCourseSortByKarljohanBtn.addEventListener('click', sortByKarljohanMainCourse);
+pizzaSortByKarljohanBtn.addEventListener('click', sortByKarljohanPizza);
+dessertSortByKarljohanBtn.addEventListener('click', sortByKarljohanDessert);
+allDishesKarljohanBtn.addEventListener('click', sortByKarljohanDishes);
+
+//TORSHOV
+
+drinksSortByTorshovBtn.addEventListener('click', sortByTorshovDrinks); //Knappen fungerer.
+appetizerSortByTorshovBtn.addEventListener('click', sortByTorshovAppetizer);
+mainCourseSortByTorshovBtn.addEventListener('click', sortByTorshovMainCourse);
+pizzaSortByTorshovBtn.addEventListener('click', sortByTorshovPizza);
+dessertSortByTorshovBtn.addEventListener('click', sortByTorshovDessert);
+allDishesTorshovBtn.addEventListener('click', sortByTorshovDishes);
 
 //tabs
 const tabs = document.querySelectorAll('.tabs li');
@@ -345,3 +781,4 @@ modalBackG.forEach((modalB) => {
         });
     });
 });
+
