@@ -94,6 +94,10 @@
                       <a href="#" class="dropdown-item" id="sort-by-majorstuen-btn">
                         Majorstuen
                       </a>
+
+                      <a href="#" class="dropdown-item" id="sort-by-all-btn">
+                        Alle
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -116,6 +120,15 @@
               event.stopPropagation();
               this.classList.toggle('is-active');
             });
+
+            /**
+             * 
+             * Array testing
+             * 
+             * **/
+
+
+             
           </script>
 
           <!--Søke meny-->
@@ -184,7 +197,7 @@
                     <p>Legg inn ansatt ID  </p>
                   </div>
                   <div class="level-item">
-                    <input type="text" placeholder="Ansatt ID">
+                    <input id="employee-id-input-txt" type="text" placeholder="Ansatt ID">
                   </div>
                 </div>
                 <div class="level-left">
@@ -209,7 +222,7 @@
                 <h3 class="title mb-6"> Slette en ansatt</h3>
                 <div class="level-left">
                   <div class="level-item">
-                    <p>Sikker?</p>
+                    <p id="input-delete-employee"></p>
                   </div>
                 </div>
                 <div class="level-left">
@@ -432,7 +445,7 @@
                   <p>Fornavn</p>
                 </div>
                 <div class="level-item">
-                  <input id="firstName"type="text" placeholder="Fornavn">
+                  <input id="firstName-add-txt" type="text" placeholder="Fornavn">
                 </div>
               </div>
               <div class="level-left">
@@ -440,7 +453,7 @@
                   <p>Etternavn</p>
                 </div>
                 <div class="level-item">
-                  <input id="lastName" type="text" placeholder="Etternavn">
+                  <input id="lastName-add-txt" type="text" placeholder="Etternavn">
                 </div>
               </div>
               <div class="level-left">
@@ -448,7 +461,7 @@
                   <p>Tlf nr</p>
                 </div>
                 <div class="level-item">
-                  <input id="phone" type="text" placeholder="Tlf nr">
+                  <input id="phone-add-txt" type="text" placeholder="Tlf nr">
                 </div>
               </div>
               <div class="level-left">
@@ -456,7 +469,7 @@
                   <p>E-post</p>
                 </div>
                 <div class="level-item">
-                  <input type="text" placeholder="E-post">
+                  <input id="email-add-txt" type="text" placeholder="E-post">
                 </div>
               </div>
               <div class="level-left">
@@ -464,7 +477,7 @@
                   <p>Stilling</p>
                 </div>
                 <div class="level-item">
-                  <input id="work" type="text" placeholder="Stilling">
+                  <input id="work-add-txt" type="text" placeholder="Stilling">
                 </div>
               </div>
               <div class="level-left">
@@ -472,7 +485,7 @@
                   <p>Arbeidssted</p>
                 </div>
                 <div class="level-item">
-                  <input id="workPlace" type="text" placeholder="Arbeidssted">
+                  <input id="workPlace-add-txt" type="text" placeholder="Arbeidssted">
                 </div>
               </div>
               <div class="level-left">
@@ -480,7 +493,7 @@
                   <p>Stillingsprosent</p>
                 </div>
                 <div class="level-item">
-                  <input id="workprosent" type="text" placeholder="Stillingsprosent">
+                  <input id="workprosent-add-txt" type="text" placeholder="Stillingsprosent">
                 </div>
               </div>
               <div class="level-left">
@@ -488,7 +501,7 @@
                   <p>Startdato</p>
                 </div>
                 <div class="level-item">
-                  <input id="startDate" type="text" placeholder="Startdato">
+                  <input id="startDate-add-txt" type="text" placeholder="Startdato">
                 </div>
               </div>
               <div class="level-left">
@@ -496,7 +509,7 @@
                   <p>AnsattID</p>
                 </div>
                 <div class="level-item">
-                  <input id="employeeID" type="text" placeholder="AnsattID">
+                  <input id="employeeID-add-txt" type="text" placeholder="AnsattID">
                 </div>
               </div>
               <div class="level-left">
@@ -521,7 +534,7 @@
               <h3 class="title mb-6"> Legg til ansatt</h3>
               <div class="level-left">
                 <div class="level-item">
-                  <p>Sikker?</p>
+                  <p id="input-add-employee"></p>
                 </div>
               </div>
               <div class="level-left">

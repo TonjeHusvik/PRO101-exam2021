@@ -2,6 +2,8 @@ const EmployeeModule =(function(){
 
     //Lager et array. Bruker let for å kunne endre på arrayet
 
+
+
     let employees =[
         {firstName: "Silje", lastName: "Antonsen", phone: "39056345", email: "siljeA@tulle.no", work: "Dagligleder", workProsent: "100%", workPlace: "Oslo s", startDate: "09.08.2019", employeeID: "1"},
         {firstName: "Karin", lastName: "Klementin", phone: "30960506", email: "KKlem@fin.com", work: "Fulltidsansatt", workProsent: "100%", workPlace: "Oslo s", startDate: "10.11.2019", employeeID: "45"},
@@ -13,12 +15,26 @@ const EmployeeModule =(function(){
         {firstName: "Emi", lastName: "Sogn", phone: "09865784", email: "EmS@tulle.no", work: "Fulltidsansatt", workProsent: "100%", workPlace: "Majorstuen", startDate: "03.12.2019", employeeID: "54"}
     ];
 
-    
+     
+
 
     const getAllEmployees = () => employees;
 
-    const getByLastname = ( lastName ) => employees.filter(employee =>
-        employee.lastName.toLowerCase() === lastName.toLowerCase() );
+
+
+    const getByLastname = ( lastName) => employees.filter(employee =>
+        employee.lastName.toLowerCase() === lastName.toLowerCase() 
+        
+        );
+
+    let addNewEmployee = (adding) => employees.push(adding);
+
+    const deleteEmployee = (employeeID) => employees.filter(employee =>
+        employee.employeeID === employeeID
+    );
+
+
+    //let hei = employees.push(tester3);
 
     const getByEmployeeID = (employeeID) => employees.filter(employee =>
         employee.employeeID.toLowerCase() === employeeID.toLowerCase()
@@ -49,6 +65,7 @@ const EmployeeModule =(function(){
         ); 
         
         
+
     
     return{
         getAllEmployees,
@@ -58,6 +75,9 @@ const EmployeeModule =(function(){
         getSortingKarlJohan,
         getSortingTorshov,
         getSortingMajorstuen,
+        addNewEmployee,
+        deleteEmployee,
+        employees
     }
 
    

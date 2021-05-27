@@ -12,9 +12,25 @@ const searchEmployeeIdBtn = document.querySelector("#search-employee-id-btn");
 const deleteEmployeeBtnModal = document.querySelector("#delete-employee-btn-modal");
 const deleteModalInformation = document.querySelector("#delete-modal-information");
 
+const firstNameAddTxt = document.querySelector("#firstName-add-txt");
+const lastNameAddTxt = document.querySelector("#lastName-add-txt");
+const phoneAddTxt = document.querySelector("#phone-add-txt");
+const emailAddTxt = document.querySelector("#email-add-txt");
+const workAddTxt = document.querySelector("#work-add-txt");
+const workPlaceAddTxt = document.querySelector("#workPlace-add-txt");
+const workprosentAddTxt = document.querySelector("#workprosent-add-txt");
+const startDateAddTxt = document.querySelector("#startDate-add-txt");
+const employeeIDAddTxt = document.querySelector("#employeeID-add-txt");
+
+const inputAddEmployee = document.querySelector("#input-add-employee");
+
+const employeeIDInputTxt = document.querySelector("#employee-id-input-txt");
+const inputDelteEmployee = document.querySelector("#input-delete-employee");
+
+const sortByAllBtn = document.querySelector("#sort-by-all-btn");
 //Input verdier
 
-const firstName = document.querySelector("#first-name");
+
 
 const showAll= () => {
 
@@ -62,6 +78,84 @@ const searchByLastname = () => {
     })
 
     employeeSection.innerHTML = htmlTxt;
+}
+
+
+const addEmployee = () =>{
+
+    const array = [
+        {firstName: "Mari"}
+    ];
+
+
+    const tester2 ={
+        firstName: firstNameAddTxt.value,
+        lastName: lastNameAddTxt.value,
+        phone: phoneAddTxt.value,
+        email: emailAddTxt.value,
+        work: workAddTxt.value,
+        workPlace: workPlaceAddTxt.value,
+        workProsent: workprosentAddTxt.value,
+        startDate: startDateAddTxt.value,
+        employeeID: employeeIDAddTxt.value
+    }
+    
+    EmployeeModule.addNewEmployee(tester2);
+    
+ 
+    //array.push(tester2);
+
+
+    console.log(array);
+
+    
+    const testerOutput = `
+    <article class="column is-4">
+    <div class="card">
+        <section class="card-content">
+            <h3 class="is-size-4">${array.firstName} ${array.lastName}</h3>
+            <p>${array.phone}, ${array.email}</p>
+            <p>${array.workPlace}, ${array.work}, ${array.workProsent}, AnsattID: ${array.employeeID}</p> 
+            <p>Start dato: ${array.startDate}</p>
+        </section>
+    </div>
+</article>
+    `;
+
+    const htmlTxt= `
+        <p>Fornavn: ${tester2.firstName}</p>
+        <p>Etternavn: ${tester2.lastName}</p>
+        <p>Tlfnr.: ${tester2.phone}</p>
+        <p>E-post: ${tester2.email}</p>
+        <p>Stilling: ${tester2.work}</p>
+        <p>Arbeidssplass: ${tester2.workPlace}</p>
+        <p>Prosent: ${tester2.workProsent}</p>
+        <p>Start dato: ${tester2.startDate}</p>
+        <p>Ansatt ID: ${tester2.employeeID}</p>
+    
+    `;
+
+    inputAddEmployee.innerHTML = htmlTxt;
+
+    //employeeSection.innerHTML = testerOutput;
+
+    
+    return array;
+}
+    
+const deleteEmployee = () =>{
+    let htmlTxt = "";
+
+    EmployeeModule.deleteEmployee(employeeIDInputTxt.value).forEach(employee =>{
+        htmlTxt +=`
+            <p>${employee.firstName}</p>
+            <p>${employee.lastName}</p>
+        `;
+
+        
+    })
+
+    inputDelteEmployee.innerHTML = htmlTxt;
 }
 
 const searchByEmployeeID = () =>{
@@ -194,6 +288,8 @@ sortByTorshovBtn.addEventListener("click", sortByTorshov);
 sortByKarlJohanBtn.addEventListener("click", sortByKarlJohan);
 sortByOsloBtn.addEventListener("click", sortByOslo);
 
+sortByAllBtn.addEventListener("click", showAll);
+
 //modal
 
 /**Fjern ansatt knapp */
@@ -217,6 +313,7 @@ stopDelteEmployeeBtn.addEventListener('click', () =>{
 
 deleteEmployeeBtnModal.addEventListener('click', () =>{
     deleteModal.classList.remove('is-active');
+    deleteEmployee();
     deleteModalInformation.classList.add('is-active');
 })
 
@@ -231,6 +328,7 @@ deleteModalFinish.addEventListener('click', () =>{
 
 stopDeleteEmployeeBtnModalStop.addEventListener('click', () =>{
     deleteModalInformation.classList.remove('is-active');
+    showAll();
 })
 
 
@@ -302,6 +400,7 @@ addEmployeeBtn.addEventListener('click', () =>{
 
 addEmployeeBtnModal.addEventListener('click', () =>{
     addModal.classList.remove('is-active');
+    addEmployee();
     addModalApprov.classList.add('is-active');
 })
 
@@ -311,7 +410,6 @@ stopAddEmployeeBtnModal.addEventListener('click', () =>{
 
 addEmployeeBtnModalApprov.addEventListener('click', () =>{
     addModalApprov.classList.remove('is-active');
-    console.log(employee)
     addModalInformationConfirmation.classList.add('is-active');
 })
 
@@ -321,6 +419,7 @@ stopAddEmployeeBtnModalStop.addEventListener('click', () =>{
 
 addModalFinish.addEventListener('click', () =>{
     addModalInformationConfirmation.classList.remove('is-active');
+    showAll();
 })
 
 
