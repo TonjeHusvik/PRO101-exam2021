@@ -148,16 +148,6 @@ cancelAddBtn1c.addEventListener('click', () => {
     modal1c.classList.remove('is-active');
 })
 
-//Dropdown meny i Legg til meny objekt modal
-
-//Dropwdown Kategori
-//const dropdown2 = document.querySelector('#dropdown2');
-
-//dropdown2.addEventListener('click', function(event) {
-  //  event.stopPropagation();
-    //this.classList.toggle('is-active');
-//})
-
 // Rediger modal
 // Modal 2a for å spørre om hvilket produkt du vil endre på
 const editMenuBtn = document.querySelector('#edit-menu-item-btn');
@@ -224,16 +214,6 @@ cancelEditBtn2d.addEventListener('click', () => {
 })
 confirmEditBtn2d.addEventListener('click', () => {
     modal2d.classList.remove('is-active');
-})
-
-//Dropdown meny i Redigere ansatt
-
-//Dropwdown Kategori
-const dropdown2b = document.querySelector('#dropdown2b');
-
-dropdown2b.addEventListener('click', function(event) {
-    event.stopPropagation();
-    this.classList.toggle('is-active');
 })
 
 //Modal 3
