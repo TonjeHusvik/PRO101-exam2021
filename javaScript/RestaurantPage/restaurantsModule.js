@@ -1,4 +1,4 @@
-export let RestaurantsModule = (function(){ // IIFE
+export const RestaurantsModule = (function(){ // IIFE
 
     let restaurants = [
         {restaurant: "Oslo S", image: "oslos-restaurant.png", id: 1, address: "Oslo Svinger 34, 0342 Oslo", leader: "Silje Antonsen", phone: "624 95 345", mail: "oslos@gyldnepizza.no", openingtimes: "Alle dager, 10:00 - 21:00", emplyees: "2 ansatte", established: "2019"},
@@ -9,7 +9,9 @@ export let RestaurantsModule = (function(){ // IIFE
 
     let getAllRestaurants = () => restaurants;
 
-    return {getAllRestaurants, restaurants}
+    let addNewRestaurant = (adding) => restaurants.push(adding);
+
+    return {getAllRestaurants, addNewRestaurant, restaurants}
 
 
 }()); // end of RestaurantsModule
