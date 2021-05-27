@@ -62,8 +62,8 @@
         <!-- OMSETNINGDELEN STARTER HER -->
         <div id="sale-details">
             <div class="has-text-right">
-                <button class="button is-small open-modal-btn">Legg til omsetning</button>
-                <button class="button is-small">Rediger omsetning</button>
+                <button class="button is-small" id="add-sale-btn">Legg til omsetning</button>
+                <button class="button is-small" id="edit-sale-btn">Rediger omsetning</button>
             </div>
             <!-- INPUTFELT -->
             <div class="container">
@@ -374,14 +374,13 @@
                         <td></td>
                     </tr>
                 </tfoot>
-                
             </table>
         </div>
     </div>
 
 
     <!-- MODAL - LEGG TIL OMSETNING -->
-    <div class="modal" id="add-sale">
+    <div class="modal" id="modal-add-sale">
         <div class="modal-background"></div>
         <div class="modal-card">
             <header class="modal-card-head">
@@ -396,13 +395,13 @@
                     <label>Netto: </label><input><br><br>
             </section>
             <footer class="modal-card-foot">
-                <button class="button new-window-modal">Lagre</button>
-                <button class="button modal-cancel-btn">Avbryt</button>
+                <button class="button" id="modal-add-sale-approve-btn">Lagre</button>
+                <button class="button" id="modal-add-sale-cancel-btn">Avbryt</button>
             </footer>
         </div>
     </div>
     <!-- MODAL - BEKREFT -->
-    <div class="modal" id="are-you-sure" >
+    <div class="modal" id="modal-validate-add-sale" >
         <div class="modal-background"></div>
         <div class="modal-card">
             <header class="modal-card-head">
@@ -413,13 +412,13 @@
                 <p>Er du sikker på at du vil gjøre denne endringen? </p>
             </section>
             <footer class="modal-card-foot">
-                <button class="button new-window-modal">Godkjenn</button>
-                <button class="button modal-cancel-btn">Avbryt</button>
+                <button class="button" id="modal-validate-add-sale-approve-btn">Godkjenn</button>
+                <button class="button" id="modal-validate-add-sale-cancel-btn">Avbryt</button>
             </footer>
         </div>
     </div>
     <!-- MODAL - BEKREFTELSE -->
-    <div class="modal" id="are-you-sure" >
+    <div class="modal" id="modal-add-sale-validation" >
         <div class="modal-background"></div>
         <div class="modal-card">
             <header class="modal-card-head">
@@ -430,13 +429,13 @@
                 <p>Ett nytt salg er nå lagt inn</p>
             </section>
             <footer class="modal-card-foot">
-                <button class="button new-window-modal">OK</button>
-                <button class="button modal-cancel-btn">Ok</button>
+                <button class="button" id="modal-add-sale-validation-approve-btn">Godkjenn</button>
+                <button class="button" id="modal-add-sale-validation-cancel-btn">Avbryt</button>
             </footer>
         </div>
     </div>
     <!-- MODAL REDIGER -->
-    <div class="modal" id="are-you-sure" >
+    <div class="modal" id="modal-edit-sale" >
         <div class="modal-background"></div>
         <div class="modal-card">
             <header class="modal-card-head">
@@ -450,13 +449,13 @@
                 <label>Måned: </label><input><br><br>
             </section>
             <footer class="modal-card-foot">
-                <button class="button new-window-modal">Videre</button>
-                <button class="button modal-cancel-btn">Avbryt</button>
+                <button class="button" id="modal-edit-sale-approve-btn">Videre</button>
+                <button class="button" id="modal-edit-sale-cancel-btn">Avbryt</button>
             </footer>
         </div>
     </div>
     <!-- MODAL REDIGER - HVA SKAL REDIGERES -->
-    <div class="modal" id="are-you-sure" >
+    <div class="modal" id="modal-edit-sale-details" >
         <div class="modal-background"></div>
         <div class="modal-card">
             <header class="modal-card-head">
@@ -469,46 +468,45 @@
                 <label>Brutto: </label><input><br><br>
             </section>
             <footer class="modal-card-foot">
-                <button class="button new-window-modal">Godkjenn</button>
-                <button class="button modal-cancel-btn">Avbryt</button>
+                <button class="button" id="modal-edit-sale-details-approve-btn">Godkjenn</button>
+                <button class="button" id="modal-edit-sale-details-cancel-btn">Avbryt</button>
             </footer>
         </div>
     </div>
     <!-- MODAL REDIGER BEKREFT-->
-    <div class="modal" id="are-you-sure" >
+    <div class="modal" id="modal-edit-sale-validate" >
         <div class="modal-background"></div>
         <div class="modal-card">
             <header class="modal-card-head">
                 <p class="modal-card-title">ER DU SIKKER</p>
-                <p></p>
                 <button class="delete" aria-label="close"></button>
             </header>
             <section class="modal-card-body">
                 <p>Er du sikker på at du vil gjennomføre denne endringen?</p>
             </section>
             <footer class="modal-card-foot">
-                <button class="button new-window-modal">Godkjenn</button>
-                <button class="button modal-cancel-btn">Avbryt</button>
+                <button class="button" id="modal-edit-sale-validate-approve-btn">Godkjenn</button>
+                <button class="button" id="modal-edit-sale-validate-cancel-btn">Avbryt</button>
             </footer>
         </div>
     </div>
     <!-- MODAL BEKREFTELSE -->
-    <div class="modal" id="are-you-sure" >
+    <div class="modal" id="modal-edit-sale-validation" >
         <div class="modal-background"></div>
         <div class="modal-card">
             <header class="modal-card-head">
                 <p class="modal-card-title">HANDLING BEKREFTET</p>
-                <p></p>
                 <button class="delete" aria-label="close"></button>
             </header>
             <section class="modal-card-body">
                 <p>Endringer har nå blitt gjort</p>
             </section>
             <footer class="modal-card-foot">
-                <button class="button new-window-modal">Godkjenn</button>
-                <button class="button modal-cancel-btn">Avbryt</button>
+                <button class="button" id="modal-edit-sale-validation-approve-btn">Godkjenn</button>
+                <button class="button" id="modal-edit-sale-validation-cancel-btn">Avbryt</button>
             </footer>
         </div>
     </div>
+
 </body>
 </html>

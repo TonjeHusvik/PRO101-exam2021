@@ -745,11 +745,12 @@ tabs.forEach((tab) => {
     })
 })
 
+/*
 //modal buttons
-const openModal = document.querySelectorAll('.modal');
-const modalBtn = document.querySelectorAll('.open-modal-btn');
-const closeModal = document.querySelectorAll('.delete, .modal-cancel-btn');
-
+const openModal = document.querySelectorAll('.modal'); //åpen popup (gjelder alle popups)
+const closeModal = document.querySelectorAll('.delete'); //lukke knapp for alle modaler
+const modalBtn = document.querySelectorAll('#add-sale-btn'); //knapp for salg på forside
+const editBtn = document.querySelectorAll('#modal-edit-sale');
 
 // open popup
 var popup = function(popupClick){
@@ -781,4 +782,110 @@ modalBackG.forEach((modalB) => {
         });
     });
 });
+*/
+
+//MODALS LEGG TIL SALG
+const addSaleBtn = document.querySelectorAll("#add-sale-btn"); //knapp til popup
+const modalAddSale = document.querySelectorAll("#modal-add-sale"); //popup side 1
+const addSaleApproveBtn = document.querySelector("#modal-add-sale-approve-btn"); //godkjenn knapp
+const addSaleCancelBtn = document.querySelector("#modal-add-sale-cancel-btn"); //avbryt-knapp
+const modalValidateAddSale = document.querySelector("#modal-validate-add-sale"); //popup side2
+const validateAddSaleApproveBtn = document.querySelector("#modal-validate-add-sale-approve-btn"); //godkjenn knapp
+const validateAddSaleCancelBtn = document.querySelector("#modal-validate-add-sale-cancel-btn");//avbryt-knapp
+const modalAddSaleValidation = document.querySelector("#modal-add-sale-validation"); //popup side3
+const addSaleValidationApproveBtn = document.querySelector("#modal-add-sale-validation-approve-btn"); //godkjenn knapp
+const addSaleValidationCancelBtn = document.querySelector("#modal-add-sale-validation-cancel-btn"); //avbryt-knapp
+
+addSaleBtn.addEventListener('click', () =>{
+    modalAddSale.classList.add('is-active');
+})
+
+addSaleApproveBtn.addEventListener('click', () =>{
+    modalAddSale.classList.remove('is-active');
+    //funksjon addSale();
+    modalValidateAddSale.classList.add('is-active');//neste side
+}) 
+
+addSaleCancelBtn.addEventListener('click', () =>{
+    modalAddSale.classList.remove('is-active');
+}) 
+
+validateAddSaleApproveBtn.addEventListener('click', () =>{
+    modalValidateAddSale.classList.remove('is-active');
+    modalAddSaleValidation.classList.add('is-active');//neste side
+}) 
+
+validateAddSaleCancelBtn.addEventListener('click', () =>{
+    modalValidateAddSale.classList.remove('is-active');
+}) 
+
+addSaleValidationApproveBtn.addEventListener('click', () =>{
+    modalAddSaleValidation.classList.remove('is-active');
+    showAll();
+})
+
+addSaleValidationCancelBtn.addEventListener('click', () =>{
+    modalAddSaleValidation.classList.remove('is-active');
+})
+
+//MODALS KNAPPER ENDRE SALG
+const editSaleBtn = document.querySelector("#edit-sale-btn"); //knapp til popup side 1
+const modalEditSale = document.querySelector("#modal-edit-sale"); //popup side 1
+const editSaleApproveBtn = document.querySelector("#modal-edit-sale-approve-btn"); //godkjenn knapp
+const editSaleCancelBtn = document.querySelector("#modal-edit-sale-cancel-btn"); //avbryt-knapp
+const modalEditSaleDetails = document.querySelector("#modal-edit-sale-details"); //popup side 2
+const editSaleDetailsApproveBtn = document.querySelector("#modal-edit-sale-details-approve-btn"); //godkjenn knapp
+const editSaleDetailsCancelBtn = document.querySelector("#modal-edit-sale-details-cancel-btn"); //avbryt-knapp
+const modalEditSaleValidate = document.querySelector("#modal-edit-sale-validate"); //popup side 3
+const editSaleValidateApproveBtn = document.querySelector("#modal-edit-sale-validate-approve-btn"); //godkjenn knapp
+const editSaleValidateCancelBtn = document.querySelector("#modal-edit-sale-validate-cancel-btn"); //avbryt-knapp
+const modalEditSaleValidation = document.querySelector("#modal-edit-sale-validation"); //popup side 4
+const editSaleValidationApproveBtn = document.querySelector("#modal-edit-sale-validation-approve-btn"); //godkjenn knapp
+const editSaleValidationCancelBtn = document.querySelector("#modal-edit-sale-validation-cancel-btn"); //avbryt-knapp
+
+editSaleBtn.addEventListener('click', () =>{
+    modalEditSale.classList.add('is-active');
+})
+
+editSaleApproveBtn.addEventListener('click', () =>{
+    modalEditSale.classList.remove('is-active');
+    modalEditSaleDetails.classList.add('is-active');
+})
+
+editSaleCancelBtn.addEventListener('click', () =>{
+    modalEditSale.classList.remove('is-active');
+})
+
+editSaleDetailsApproveBtn.addEventListener('click', () =>{
+    modalEditSaleDetails.classList.remove('is-active');
+    modalEditSaleValidate.classList.add('is-active');
+})
+
+editSaleDetailsCancelBtn.addEventListener('click', () =>{
+    modalEditSaleDetails.classList.remove('is-active');
+})
+
+editSaleValidateApproveBtn.addEventListener('click', () =>{
+    modalEditSaleValidate.classList.remove('is-active');
+    modalEditSaleValidation.classList.add('is-active');
+})
+
+editSaleValidateCancelBtn.addEventListener('click', () =>{
+    modalEditSaleValidation.classList.remove('is-active');
+})
+
+editSaleValidationApproveBtn.addEventListener('click', () =>{
+    modalEditSaleValidation.classList.remove('is-active');
+    showAll();
+})
+editSaleValidationCancelBtn.addEventListener('click', () =>{
+    modalEditSaleValidation.classList.remove('is-active');
+})
+
+
+//MODALS KNAPPER LEGG TIL RETTER - SALG
+
+
+//MODALS KNAPPER ENDRE RETTER - SALG
+
 
