@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/mainPage.css">
-    <link rel="stylesheet" href="../css/menuPage.css">
+    <link rel="stylesheet" href="../css/restaurantsPage.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     
@@ -21,15 +21,15 @@
     
 
     <!--Forside logo -->
-    <div id="logo" class="p-5 container has-text-centered mb-6">
-        <div class="inline-block">
-            <img src="../images/pizza-transparent3.png" width="50px">
+    <div id="logo" class="mb-1 container">
+        <div class="inline-block logo-div">
+            <h1 class="logo-name">Gyldne</h1>
         </div>
-        <div class="inline-block text-align-center">
-            <h1 id="logo-name">Gyldne Pizza</h1>
+        <div class="inline-block logo-div">
+            <img id="pizza-man-img" src="../images/pizza-man.png" width="85px">
         </div>
-        <div class="inline-block">
-            <img src="../images/pizza-transparent3.png" width="50px">
+        <div id="logo-name-pizza" class="inline-block logo-div">
+            <h1 class="logo-name">Pizza</h1>
         </div>
     </div>
 
@@ -53,11 +53,11 @@
         </div>
     </nav>
 
-
+    <br>
 
     <div class="container">
    <!-- Meny tabs -->
-    <div class="tabs is-centered is-large">
+    <div class="tabs is-centered is-large is-boxed">
         <ul>
             <li  data-target="drinks">
                 <a>Drikke</a>
@@ -123,6 +123,7 @@
                 </main>
             </div>
         </div>
+
         <!-- Dessert tabben -->
         <div id="dessert" class="is-hidden">
             <div class="container">
@@ -143,21 +144,21 @@
         <nav class="level-right">
             <div class="level-item">
                 <p>
-                    <button id="add-menu-item-btn" class="button">
+                    <button id="add-menu-item-btn" class="button is-warning">
                     Legg til produkt
                     </button>
                 </p>
             </div>
             <div class="level-item">
                 <p>
-                    <button id="edit-menu-item-btn" class="button">
+                    <button id="edit-menu-item-btn" class="button is-warning">
                         Rediger produkt
                     </button>
                 </p>
             </div>
             <div class="level-item">
                 <p>
-                    <button id="remove-menu-item-btn" class="button">
+                    <button id="remove-menu-item-btn" class="button is-warning">
                         Slett produkt
                     </button>
                 </p>
@@ -168,7 +169,7 @@
 
     <!-- Modal -->
 
-    <!--Legg til meny objekt modal-->
+    <!--Modal 1a Legg til meny objekt modal-->
     <div class="modal" id="modal-1a">
         <div class="modal-background" id="modal-bg-1a"></div>
         <div class="modal-card">
@@ -192,7 +193,7 @@
             </footer>
         </div>
     </div>
-<!-- Modal 1b som vil ha konfirmasjon om å legge til produkt -->
+<!-- Modal 1b forsikrer om å legge til dette produktet -->
     <div class="modal" id="modal-1b">
         <div class="modal-background" id="modal-bg-1b"></div>
             <div class="modal-card">
@@ -313,7 +314,7 @@
     </div>
 
     <!--Modal 3 for å slette et produkt-->
-    <!--Modal 3a-->
+    <!--Modal 3a for å spørre om hvilket produkt du vil slette-->
     <div class="modal" id="modal-3a">
         <div class="modal-background" id="modal-bg-3a"></div>
         <div class="modal-card">
@@ -333,7 +334,7 @@
         </div>
     </div>
 
-    <!-- Modal 3b -->
+    <!-- Modal 3b for å forsikre om at du vil slette det angitte produktet-->
     <div class="modal" id="modal-3b">
         <div class="modal-background" id="modal-bg-3b"></div>
         <div class="modal-card">
@@ -353,7 +354,7 @@
         </div>
     </div>
 
-    <!-- Modal 3c -->
+    <!-- Modal 3c bekrefter at produktet har blitt slettet -->
     <div class="modal" id="modal-3c">
         <div class="modal-background" id="modal-bg-3c"></div>
         <div class="modal-card">
@@ -371,14 +372,9 @@
         </div>
     </div>
 
-    <script src="../javaScript/MenuPage/tabsContent.js"></script> <!--Lenke til tabs js-->
-
+    <!--Lenke til tabs js-->
+    <script src="../javaScript/MenuPage/tabsContent.js"></script> 
     
-
-    
-    
-
-
 <footer>
 
 </footer>
