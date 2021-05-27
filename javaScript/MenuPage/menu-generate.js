@@ -2,6 +2,7 @@ import PizzaModule from './menuModules.js'
 
 const pizzaSection = document.querySelector("#pizza-section");
 
+const showMenu = () => {
 
 let htmlTxt= "";
 
@@ -18,6 +19,7 @@ PizzaModule.getAllPizzas().forEach( pizzamenu => {
 
     pizzaSection.innerHTML = htmlTxt;
 });
+
 
 const maindishSection = document.querySelector("#maindish-section");
 
@@ -88,8 +90,9 @@ PizzaModule.getAllDessert().forEach( dessertmenu => {
     dessertSection.innerHTML = desserthtmlTxt;
 });
 
+}
 
-
+showMenu();
 
  // Modaler
 
@@ -139,6 +142,7 @@ const cancelAddBtn1c = document.querySelector('#cancel-add-btn-1c');
 
 confirmAddBtn2.addEventListener('click', () => {
     modal1c.classList.remove('is-active');
+    showMenu();
 })
 cancelAddBtn1c.addEventListener('click', () => {
     modal1c.classList.remove('is-active');
@@ -285,20 +289,23 @@ confirmremoveBtn3c.addEventListener('click', () => {
 })
 
 
-const titleAddTxt = document.querySelectorAll('#title-add-txt');
-const priceAddTxt = document.querySelectorAll('#price-add-txt');
-const idAddTxt = document.querySelectorAll('#id-add-txt');
+const titleAddTxt = document.querySelector('#title-add-txt');
+const priceAddTxt = document.querySelector('#price-add-txt');
+const idAddTxt = document.querySelector('#id-add-txt');
 const inputAddMenu = document.querySelector('#input-add-menu');
+
 
 const addMenu = () =>{
 
     const tester2 ={
         title: titleAddTxt.value,
         pris: priceAddTxt.value,
-        id: idAddTxt.value,
-    }
+        id: idAddTxt.value
+    };
     
     PizzaModule.addNewMenu(tester2);
+
+  
     
     const htmlTxt= `
         <p>Navn på rett: ${tester2.title}</p>
@@ -307,7 +314,7 @@ const addMenu = () =>{
     `;
 
     inputAddMenu.innerHTML = htmlTxt;
-}
+};
 
 const menuIdInputTxt = document.querySelector('#menu-id-input-txt');
 const inputDeleteMenu = document.querySelector('#input-delete-menu');
@@ -318,11 +325,10 @@ const deleteMenu = () =>{
     PizzaModule.deleteMenu(menuIdInputTxt.value).forEach(pizzamenu =>{
         htmlTxt +=`
             <p>${pizzamenu.title}</p>
-            <p>${pizzamenu.pris}</p>
         `;
 
         
-    })
+    });
 
     inputDeleteMenu.innerHTML = htmlTxt;
-}
+};
