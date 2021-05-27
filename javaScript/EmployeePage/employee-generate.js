@@ -57,6 +57,7 @@ const showAll= () => {
 
 }
 
+
 /** Søk etter en ansatt med etternavn */
 const searchByLastname = () => {
 
@@ -131,8 +132,6 @@ const deleteEmployee = () =>{
             <p>${employee.firstName}</p>
             <p>${employee.lastName}</p>
         `;
-
-        console.log(employeeIDAddTxt);
     })
 
     inputDelteEmployee.innerHTML = htmlTxt;

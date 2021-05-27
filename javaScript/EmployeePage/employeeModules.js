@@ -27,11 +27,13 @@ const EmployeeModule =(function(){
         
         );
 
+        
     let addNewEmployee = (adding) => employees.push(adding);
 
     const deleteEmployee = (employeeID) => employees.filter(employee =>
        employee.employeeID === employeeID && employees.splice(employeeID, 1)
     );
+
 
 
    /** 
@@ -67,10 +69,6 @@ const EmployeeModule =(function(){
         employee.workPlace == "Majorstuen"
         );
 
-    const test1 = () => employee.filter( employee =>
-        console.log(employees.length)
-        ); 
-        
         
 
     
