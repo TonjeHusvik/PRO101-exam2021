@@ -37,7 +37,7 @@ PizzaModule.getAllMaindishes().forEach( maindishes => {
     `;
 
     maindishSection.innerHTML = mainhtmlTxt;
-});
+}); 
 
 const drinksSection = document.querySelector("#drinks-section");
 
@@ -288,7 +288,7 @@ confirmremoveBtn3c.addEventListener('click', () => {
     modal3c.classList.remove('is-active');
 })
 
-
+const categoryAddTxt = document.querySelector('#category-add-text');
 const titleAddTxt = document.querySelector('#title-add-txt');
 const priceAddTxt = document.querySelector('#price-add-txt');
 const idAddTxt = document.querySelector('#id-add-txt');
@@ -298,6 +298,7 @@ const inputAddMenu = document.querySelector('#input-add-menu');
 const addMenu = () =>{
 
     const tester2 ={
+        category: categoryAddTxt.value,
         title: titleAddTxt.value,
         pris: priceAddTxt.value,
         id: idAddTxt.value
