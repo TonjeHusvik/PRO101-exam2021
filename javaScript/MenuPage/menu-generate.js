@@ -37,7 +37,7 @@ PizzaModule.getAllMaindishes().forEach( maindishes => {
     `;
 
     maindishSection.innerHTML = mainhtmlTxt;
-});
+}); 
 
 const drinksSection = document.querySelector("#drinks-section");
 
@@ -148,16 +148,6 @@ cancelAddBtn1c.addEventListener('click', () => {
     modal1c.classList.remove('is-active');
 })
 
-//Dropdown meny i Legg til meny objekt modal
-
-//Dropwdown Kategori
-//const dropdown2 = document.querySelector('#dropdown2');
-
-//dropdown2.addEventListener('click', function(event) {
-  //  event.stopPropagation();
-    //this.classList.toggle('is-active');
-//})
-
 // Rediger modal
 // Modal 2a for å spørre om hvilket produkt du vil endre på
 const editMenuBtn = document.querySelector('#edit-menu-item-btn');
@@ -226,16 +216,6 @@ confirmEditBtn2d.addEventListener('click', () => {
     modal2d.classList.remove('is-active');
 })
 
-//Dropdown meny i Redigere ansatt
-
-//Dropwdown Kategori
-const dropdown2b = document.querySelector('#dropdown2b');
-
-dropdown2b.addEventListener('click', function(event) {
-    event.stopPropagation();
-    this.classList.toggle('is-active');
-})
-
 //Modal 3
 //Modal 3a
 const removeItemBtn = document.querySelector('#remove-menu-item-btn');
@@ -288,7 +268,7 @@ confirmremoveBtn3c.addEventListener('click', () => {
     modal3c.classList.remove('is-active');
 })
 
-
+const categoryAddTxt = document.querySelector('#category-add-text');
 const titleAddTxt = document.querySelector('#title-add-txt');
 const priceAddTxt = document.querySelector('#price-add-txt');
 const idAddTxt = document.querySelector('#id-add-txt');
@@ -298,6 +278,7 @@ const inputAddMenu = document.querySelector('#input-add-menu');
 const addMenu = () =>{
 
     const tester2 ={
+        category: categoryAddTxt.value,
         title: titleAddTxt.value,
         pris: priceAddTxt.value,
         id: idAddTxt.value
