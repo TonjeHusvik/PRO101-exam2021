@@ -132,6 +132,8 @@ const deleteEmployee = () =>{
             <p>${employee.firstName}</p>
             <p>${employee.lastName}</p>
         `;
+
+        console.log(employeeIDInputTxt);
     })
 
     inputDelteEmployee.innerHTML = htmlTxt;
