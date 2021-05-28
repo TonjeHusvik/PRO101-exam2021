@@ -1,12 +1,25 @@
 #logo{
-    background-color: chocolate;
-    border-radius: 5px;
+    background-color:#eabd1c;
+    background-image: url(../images/banner.png);
+    background-size: 100%;
+    text-align: center;
+    padding: 25px;
 }
 
-#logo-name{
+.logo-name{
     text-align: center;
     font-family:'Courier New', Courier, monospace;
+    font-weight: 900;
     font-size:60px;
+    color: #fff;
+}
+
+#pizza-man-img {
+    margin-bottom: -25px
+}
+
+#logo-name-pizza {
+    margin-left: -10px;
 }
 
 .inline-block{
@@ -26,8 +39,4 @@
     text-align: center;
     margin-left: 75px;
     margin-right: 75px;
-}
-
-.buttons{
-    margin-left: 37%;
 }
