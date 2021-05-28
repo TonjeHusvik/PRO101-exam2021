@@ -153,7 +153,7 @@
                                     </div>
                                 </div>
                                 <!--MAJORSTUEN-->
-                                <div class="dropdown" id="dp-majo">
+                                <div class="dropdown" id="dp-majorstuen">
                                     <div class="dropdown-trigger">
                                         <button class="button" 
                                                 aria-haspopup="true"
@@ -290,6 +290,70 @@
                             </div>
                         </div>
                     </div>
+
+                    <script>
+                        //Oslo S
+                        const dropdownOslo =
+                              document.querySelector('#dp-majorstuen');
+                        const activeOslo =
+                              document.querySelector('.is-active')
+                        document.body.addEventListener('click', function () {
+                          if (activeOslo) {
+                            dropdownOslo.classList.remove('is-active')
+                          }
+                        })
+                        dropdownOslo.addEventListener('click', function (event) {
+                          event.stopPropagation();
+                          this.classList.toggle('is-active');
+                        });
+
+
+                        //Majorsuten
+                        const dropdownM =
+                              document.querySelector('#dp-oslos');
+                        const activeM =
+                              document.querySelector('.is-active')
+                        document.body.addEventListener('click', function () {
+                          if (activeM) {
+                            dropdownM.classList.remove('is-active')
+                          }
+                        })
+                        dropdownM.addEventListener('click', function (event) {
+                          event.stopPropagation();
+                          this.classList.toggle('is-active');
+                        });
+
+                        //Torshov
+                        const dropdownT =
+                              document.querySelector('#dp-torshov');
+                        const activeT =
+                              document.querySelector('.is-active')
+                        document.body.addEventListener('click', function () {
+                          if (activeT) {
+                            dropdownT.classList.remove('is-active')
+                          }
+                        })
+                        dropdownT.addEventListener('click', function (event) {
+                          event.stopPropagation();
+                          this.classList.toggle('is-active');
+                        });
+
+                        //Karl Johan
+                        const dropdownKJ =
+                              document.querySelector('#dp-karljohan');
+                        const activeKJ =
+                              document.querySelector('.is-active')
+                        document.body.addEventListener('click', function () {
+                          if (activeKJ) {
+                            dropdownKJ.classList.remove('is-active')
+                          }
+                        })
+                        dropdownKJ.addEventListener('click', function (event) {
+                          event.stopPropagation();
+                          this.classList.toggle('is-active');
+                        });
+            
+                      </script>
                     <!-- MODAL - LEGG TIL OMSETNING -->
                     <div class="modal" id="modal-add-sale">
                             <div class="modal-background"></div>
