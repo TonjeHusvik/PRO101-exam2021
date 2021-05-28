@@ -122,7 +122,7 @@ const mainteable = () => {
     let htmlTxt = "";
 
     saleModule.getAllDishes().forEach(dishes =>{
-        const sumAmount = dishes.price + dishes.amount;
+        const sumAmount = dishes.price * dishes.amount;
         htmlTxt +=`
             <tr>
                 <td>${dishes.place}</td>
@@ -147,7 +147,7 @@ const sortByOsloSDishes = () => {
     let htmlTxt = "";
 
     saleModule.getOsloSDishes().forEach(dishes =>{
-        const sumAmount = dishes.price + dishes.amount;
+        const sumAmount = dishes.price * dishes.amount;
         htmlTxt +=`
         <tr>
                 <td>${dishes.place}</td>
@@ -169,7 +169,7 @@ const sortByOsloSDrinks = () =>{
     let htmlTxt = "";
 
     saleModule.getOsloSDrink().forEach(dishes =>{
-        const sumAmount = dishes.price + dishes.amount;
+        const sumAmount = dishes.price * dishes.amount;
         htmlTxt +=`
         <tr>
                 <td>${dishes.place}</td>
@@ -185,31 +185,6 @@ const sortByOsloSDrinks = () =>{
 
     dishesInputArray.innerHTML = htmlTxt;
 }
-
-/** 
-const sortByOsloSAppetizer = () =>{
-
-    let htmlTxt = "";
-
-    saleModule.getOsloSAppetizer().forEach(dishes =>{
-        const sumAmount = dishes.price + dishes.amount;
-        htmlTxt +=`
-            <tr>
-                <td>${dishes.place}</td>
-                <td>${dishes.name}</td>
-                <td>${dishes.amount}</td>
-                <td>${dishes.price}</td>
-                <td>${dishes.category}</td>
-                <td>${sumAmount}</td>
-            </tr>
-
-        `
-    })
-
-    dishesInputArray.innerHTML = htmlTxt;
-}
-
-*/
 
 const sortByOsloSMainCourse = () =>{
 
@@ -445,7 +420,7 @@ const sortByKarljohanDishes = () => {
 
     dishesInputArray.innerHTML = htmlTxt;
 }
- 
+
 const sortByKarljohanDrinks = () =>{
 
     let htmlTxt = "";
@@ -553,7 +528,6 @@ const sortByKarljohanDessert = () =>{
 }
 
 //TORSHOV
-//KARL JOHAN
 const sortByTorshovDishes = () => {
 
     let htmlTxt = "";
@@ -683,7 +657,7 @@ const sortByTorshovDessert = () =>{
 }
 
 
-//omsetningsdel - knapper med søk
+//Omsetningsdel - knapper med søk
 searchStoresBtn.addEventListener('click', getAllStores);
 searchYearBtn.addEventListener('click', getAllYear);
 searchMonthBtn.addEventListener('click', getAllMonth);
@@ -699,7 +673,6 @@ dessertSortByOsloBtn.addEventListener('click', sortByOsloSDessert);
 allDishesOsloBtn.addEventListener('click', sortByOsloSDishes);
 
 //MAJORSTUEN
-
 drinksSortByMajoBtn.addEventListener('click', sortByMajoDrinks); //Knappen fungerer.
 appetizerSortByMajoBtn.addEventListener('click', sortByMajoAppetizer);
 mainCourseSortByMajoBtn.addEventListener('click', sortByMajoMainCourse);
@@ -708,7 +681,6 @@ dessertSortByMajoBtn.addEventListener('click', sortByMajoDessert);
 allDishesMajoBtn.addEventListener('click', sortByMajoDishes);
 
 //KARLJOHAN
-
 drinksSortByKarljohanBtn.addEventListener('click', sortByKarljohanDrinks); //Knappen fungerer.
 appetizerSortByKarljohanBtn.addEventListener('click', sortByKarljohanAppetizer);
 mainCourseSortByKarljohanBtn.addEventListener('click', sortByKarljohanMainCourse);
@@ -717,7 +689,6 @@ dessertSortByKarljohanBtn.addEventListener('click', sortByKarljohanDessert);
 allDishesKarljohanBtn.addEventListener('click', sortByKarljohanDishes);
 
 //TORSHOV
-
 drinksSortByTorshovBtn.addEventListener('click', sortByTorshovDrinks); //Knappen fungerer.
 appetizerSortByTorshovBtn.addEventListener('click', sortByTorshovAppetizer);
 mainCourseSortByTorshovBtn.addEventListener('click', sortByTorshovMainCourse);
@@ -758,6 +729,34 @@ modalBackG.forEach((modalB) => {
     });
 });
 
+//firstpage popup
+const addRestaurantSaleFirstPageTxt = document.querySelector("#add-restaurant-sale-firstpage-txt");
+const addYearSaleFirstPageTxt = document.querySelector("#add-year-sale-firstpage-txt");
+const addMonthSaleFirstpageTxt = document.querySelector("#add-month-sale-firstpage-txt");
+const addBruttoSaleFirstPageTxt = document.querySelector("#add-brutto-sale-firstpage-txt");
+const addNettoSaleFirstpageTxt = document.querySelector("#add-netto-sale-firstpage-txt");
+const inputAddSale = document.querySelector("#input-add-sale");
+
+const addSale = () =>{
+    const addSaleValue = {
+        store: addRestaurantSaleFirstPageTxt.value,
+        year: addYearSaleFirstPageTxt.value,
+        month: addMonthSaleFirstpageTxt.value,
+        brutto: addBruttoSaleFirstPageTxt.value,
+        netto: addNettoSaleFirstpageTxt.value
+    }
+    saleModule.addNewSale(addSaleValue);
+
+    const htmlTxt = `
+        <p>Restaurant: ${addSaleValue.store}</p>
+        <p>År: ${addSaleValue.year}</p>
+        <p>Måned: ${addSaleValue.month}</p>
+        <p>Brutto: ${addSaleValue.brutto}</p>
+        <p>Netto: ${addSaleValue.netto}</p>
+    `;
+
+    inputAddSale.innerHTML = htmlTxt;
+}
 
 //MODALS LEGG TIL SALG
 const addSaleBtn = document.querySelector("#add-sale-btn"); //knapp til popup
@@ -776,7 +775,7 @@ addSaleBtn.addEventListener('click', () =>{
 
 addSaleApproveBtn.addEventListener('click', () =>{
     modalAddSale.classList.remove('is-active'); //går ut fra popup
-    //funksjon addSale();
+    addSale();
     modalValidateAddSale.classList.add('is-active'); //neste side
 }) 
 
@@ -846,9 +845,36 @@ editSaleValidateCancelBtn.addEventListener('click', () =>{
 
 editSaleValidationApproveBtn.addEventListener('click', () =>{
     modalEditSaleValidation.classList.remove('is-active'); //går ut fra popup
-    showAll();
 })
 
+const addRestaurantDishFirstPageTxt = document.querySelector("#add-restaurant-dish-firstpage-txt");
+const addCategoryDishFirstPageTxt = document.querySelector("#add-category-dish-firstpage-txt");
+const addNameDishFirstpageTxt = document.querySelector("#add-name-dish-firstpage-txt");
+const addPriceDishFirstPageTxt = document.querySelector("#add-price-dish-firstpage-txt");
+const addAmountDishFirstpageTxt = document.querySelector("#add-amount-dish-firstpage-txt");
+const inputAddDish = document.querySelector("#input-add-dish");
+
+//MODALS LEGG TIL RETTER
+const addDish = () =>{
+    const addDishValue = {
+        store: addRestaurantDishFirstPageTxt.value,
+        category: addCategoryDishFirstPageTxt.value,
+        name: addNameDishFirstpageTxt.value,
+        price: addPriceDishFirstPageTxt.value,
+        amount: addAmountDishFirstpageTxt.value
+    }
+    saleModule.addNewDish(addDishValue);
+
+    const htmlTxt = `
+        <p>Restaurant: ${addDishValue.store}</p>
+        <p>Kategori: ${addDishValue.category}</p>
+        <p>Navn: ${addDishValue.name}</p>
+        <p>Pris: ${addDishValue.price}</p>
+        <p>Antall: ${addDishValue.amount}</p>
+    `;
+
+    inputAddDish.innerHTML = htmlTxt;
+}
 
 //MODALS KNAPPER LEGG TIL RETTER - SALG
 const addDishBtn = document.querySelector("#add-dish-btn"); //knapp til popup
@@ -867,7 +893,7 @@ addDishBtn.addEventListener('click', () =>{
 
 addDishApproveBtn.addEventListener('click', () =>{
     modalAddDish.classList.remove('is-active'); //går ut fra popup
-    //funksjon addSale();
+    addDish();
     modalValidateAddDish.classList.add('is-active'); //neste side
 }) 
 
@@ -938,4 +964,7 @@ editDishValidationApproveBtn.addEventListener('click', () =>{
     modalEditDishValidation.classList.remove('is-active'); //går ut fra popup
     showAll();
 })
+
+
+
 
