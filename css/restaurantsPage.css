@@ -1,8 +1,8 @@
 /* HEADER */
 #logo{
-    background-color:#eabd1c;
-    background-image: url(../images/banner.png);
+    background-color:#e9bc34;
     background-size: 100%;
+    background-image: url(../images/banner.png);
     text-align: center;
     padding: 25px;
 }
@@ -61,13 +61,4 @@
 .modal-card-title-second {
     font-weight: 300;
     font-size: 15px
-}
-
-/* KONFIRMASJONSMELDING */
-.confirmation-message {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
 }

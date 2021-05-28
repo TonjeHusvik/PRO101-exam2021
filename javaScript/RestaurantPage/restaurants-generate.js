@@ -1,11 +1,18 @@
 import {RestaurantsModule} from './restaurantsModule.js'
 
-let confirmationMessage = document.getElementsByClassName(".confirmation-message");
+// getting all html-elements
+const restaurantsSection = document.querySelector("#restaurants-section");
+const deleteRestaurantsModal = document.querySelector("#delete-restaurants-modal");
+const addRestaurantBtn = document.querySelector("#add-restaurant-btn");
+const deleteRestaurantBtn = document.querySelector("#delete-restaurant-btn");
+const confirmationMessage = document.getElementsByClassName("confirmation-message");
+const deleteRestaurantIdValue = document.getElementsByClassName("delete-restaurant-id-value");
 
 // function to push info from user input into restaurants array, to add a new restaurant
 let pushData = (ev) => {
    ev.preventDefault(); // to stop the form from submitting    
     var result = confirm("Legg til restaurant?"); // popup to confirm before you submit
+    var addOK = alert("Restauranten er lagt til!"); 
     if (result) {
         const input = {        
             restaurant: document.getElementById('name-input').value,
@@ -21,7 +28,7 @@ let pushData = (ev) => {
         }
                 
         RestaurantsModule.addNewRestaurant(input);
-        confirmationMessage.innerHTML = "Restauranten har blitt lagt til!";
+        addOK;
         document.querySelector('form').reset(); // reset form after submitting
         
         console.log(RestaurantsModule.restaurants);
@@ -29,50 +36,55 @@ let pushData = (ev) => {
 }
 
 // confirmation message before deleting a restaurant, followed by a message confirming the removal
+
 let editRestaurantOK = () => {
     var result = confirm("Vil du virkelig slette denne restauranten?"); // popup to confirm before you submit
+    var deleteOK = alert("Restauranten er slettet!")
     if (result) {
-        confirmationMessage.innerHTML = "Restauranten er slettet!";
+        deleteOK;
+        removeRestaurantModal.classList.remove('is-active');
     }
 }
 
-// getting all html-elements
-const restaurantsSection = document.querySelector("#restaurants-section");
-const deleteRestaurantsModal = document.querySelector("#delete-restaurants-modal");
-const addRestaurantBtn = document.querySelector("#add-restaurant-btn");
-const deleteRestaurantBtn = document.querySelector(".delete-restaurant-btn");
-
-// empty variables
-let restaurantCardTxt = "";
-let deleteRestaurantsModalTxt = "";
+// delete restaurant?
+/*
+const deleteRestaurant = () =>{
+    RestaurantsModule.deleteRestaurant(deleteRestaurantIdValue.value).forEach(restaurants =>{
+        
+        console.log(deleteRestaurantIdValue);
+    })
+}
+*/
 
 // looping through and printing out all restaurants with their modals
-
 const showAll = () => {
+
+let restaurantCardTxt = "";
+
     RestaurantsModule.getAllRestaurants().forEach(restaurants => {
         restaurantCardTxt += `
             <!-- RESTAURANT CARDS -->
-            <article class="column">
+            <article class="column is-3">
                 <div class="card">
                     <section class="card-image">
                         <img src="../images/restaurants/${restaurants.image}">
                     </section>
                     <section class="card-content">
-                        <p class="popup-btn restaurant-card-name">${restaurants.restaurant}</p>
+                        <p class="restaurant-popup-btn restaurant-card-name">${restaurants.restaurant}</p>
                     </section>
                 </div>
             </article>
             
             <!-- MODAL POPUP -->
-            <div class="modal">
-                <div class="modal-background"></div>
+            <div class="modal restaurant-card-modal">
+                <div class="modal-background restaurant-modal-bg"></div>
                 <div class="modal-card">
 
                     <header class="modal-card-head">
                         <div class="modal-card-title">
                         <p class="modal-card-title-main">${restaurants.restaurant}</p>
                         <p class="modal-card-title-second">${restaurants.address}</p></div>
-                        <button class="delete" aria-label="close"></button>
+                        <button class="delete close-restaurant-modal" aria-label="close"></button>
                     </header>
 
                     <section class="modal-card-body">
@@ -111,7 +123,7 @@ const showAll = () => {
                     </section>
 
                     <footer class="modal-card-foot">
-                            <button class="button modal-cancel-btn">Avslutt</button>
+                            <button class="button close-restaurant-modal">Avslutt</button>
                             <button class="button is-light is-small edit-button">
                                 <span class="icon is-small">
                                     <i class="fas fa-pencil-alt"></i>
@@ -129,20 +141,44 @@ const showAll = () => {
 showAll();
 
 // printing out all restaurant names so you can choose which one to delete
+let deleteRestaurantsModalTxt = "";
+
 RestaurantsModule.getAllRestaurants().forEach(restaurants => {
     deleteRestaurantsModalTxt += `
-        <input type="checkbox" class="restaurant${restaurants.id}" name="restaurant${restaurants.id}" value="${restaurants.id}">
-        <label for="restaurant${restaurants.id}">${restaurants.restaurant}</label><br>
+        <label class="restaurant${restaurants.id}" class="radio">
+            <input id="delete-restaurant-id-value" type="radio" name="restaurant" value="class="${restaurants.id}"">
+            ${restaurants.restaurant}
+        </label><br>
     `;
+});
+deleteRestaurantsModal.innerHTML = deleteRestaurantsModalTxt;
+
+// to make sure the document is loaded before function runs
+document.addEventListener('DOMContentLoaded', () => {
+    addRestaurantBtn.addEventListener('click', pushData);
+    deleteRestaurantBtn.addEventListener('click', editRestaurantOK);
 });
 
 // MODAL POPUP OPEN/CLOSE
-const popupViews = document.querySelectorAll('.modal');
-const popuppBtns = document.querySelectorAll('.popup-btn');
-const closeBtns = document.querySelectorAll('.delete, .modal-cancel-btn');
-const modalBg = document.querySelectorAll('.modal-background');
+// getting html-elements for restaurant card popups
+const popupViews = document.querySelectorAll('.restaurant-card-modal');
+const popuppBtns = document.querySelectorAll('.restaurant-popup-btn');
+const closeBtns = document.querySelectorAll('.close-restaurant-modal');
+const modalBg = document.querySelectorAll('.restaurant-modal-bg');
 
-// open popup
+// getting html-elements for add restaurant-button and delete restaurant-button
+// add restaurant
+const addRestaurantPopupBtn = document.querySelector('#add-restaurant-popup-btn');
+const addRestaurantsModalCancelBtn = document.querySelector('#add-restaurant-modal-cancel-btn');
+const addRestaurantsModalCancelBtn2 = document.querySelector('#add-restaurant-modal-cancel-btn2');
+const addRestaurantModal = document.querySelector('#add-restaurant-modal');
+//remove restaurant
+const removeRestaurantPopupBtn = document.querySelector('#remove-restaurant-popup-btn');
+const removeRestaurantCancelBtn = document.querySelector('#remove-restaurant-cancel-btn');
+const removeRestaurantModal = document.querySelector('#remove-restaurant-modal');
+
+
+// open restaurant popup
 var popup = function(popupClick){
     popupViews[popupClick].classList.add('is-active');
 }
@@ -153,14 +189,13 @@ popuppBtns.forEach((popupBtn, i) => {
     });
 });
 
-// close popup
+// close restaurant popup
 // close when clicking the button
 closeBtns.forEach((closeBtn) => {
     closeBtn.addEventListener('click', () => {
         popupViews.forEach((popupView) => {
             popupView.classList.remove('is-active');
         });
-        showAll();
     });
 });
 
@@ -173,27 +208,31 @@ modalBg.forEach((modalB) => {
     });
 });
 
-deleteRestaurantsModal.innerHTML = deleteRestaurantsModalTxt;
+// open add-restaurant popup
+addRestaurantPopupBtn.addEventListener('click', () => {
+    addRestaurantModal.classList.add('is-active');
+})
 
-// to make sure the document is loaded before function runs
+// close add-restaurant popup and show the new restaurant, if any, when clicking "Legg til restaurant"
+addRestaurantsModalCancelBtn.addEventListener('click', () => {
+    addRestaurantModal.classList.remove('is-active');
 
-
-//document.addEventListener('DOMContentLoaded', () => {
-    addRestaurantBtn.addEventListener('click', pushData, showAll);
-//});
-
-/*
-//document.addEventListener('DOMContentLoaded', () => {
-    addRestaurantBtn.addEventListener('click', () => {
-        pushData();
+    if(RestaurantsModule.restaurants.length >= 5){
         showAll();
-    });
-//});
-*/
+    }
+})
 
+// close add-restaurant popup when clicking "Avslutt"
+addRestaurantsModalCancelBtn2.addEventListener('click', () => {
+    addRestaurantModal.classList.remove('is-active');
+})
 
-document.addEventListener('DOMContentLoaded', () => {
-    deleteRestaurantBtn.addEventListener('click', editRestaurantOK);
-});
+// open delete-restaurant popup
+removeRestaurantPopupBtn.addEventListener('click', () => {
+    removeRestaurantModal.classList.add('is-active');
+})
 
-
+// close delete-restaurant popup
+removeRestaurantCancelBtn.addEventListener('click', () => {
+    removeRestaurantModal.classList.remove('is-active');
+})
