@@ -1,8 +1,10 @@
 /* HEADER */
 #logo{
-    background-color:#eabd1c;
+    background-color:#e9bc34;
     background-image: url(../images/banner.png);
-    background-size: 100%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
     text-align: center;
     padding: 25px;
 }
@@ -41,6 +43,7 @@
     text-align: center;
     margin-left: 35px;
     margin-right: 35px;
+    float: left;
 }
 
 /* RESTAURANT-CARDS */
@@ -61,13 +64,4 @@
 .modal-card-title-second {
     font-weight: 300;
     font-size: 15px
-}
-
-/* KONFIRMASJONSMELDING */
-.confirmation-message {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
 }
