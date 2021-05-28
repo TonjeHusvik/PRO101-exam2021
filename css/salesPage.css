@@ -1,7 +1,9 @@
 #logo{
-    background-color:#eabd1c;
+    background-color:#e9bc34;
     background-image: url(../images/banner.png);
-    background-size: 100%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
     text-align: center;
     padding: 25px;
 }
