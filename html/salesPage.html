@@ -297,19 +297,19 @@
                             </header>
                             <section class="modal-card-body">
                                 <label>Restaurant:</label>
-                                <input id="add-restaurant-sale-txt" type="text" placeholder="restaurant">
+                                <input id="add-restaurant-sale-firstpage-txt" type="text" placeholder="restaurant">
                                 <br><br>
                                 <label>År: </label>
-                                <input id="add-year-sale-txt" type="text" placeholder="årstall">
+                                <input id="add-year-sale-firstpage-txt" type="text" placeholder="årstall">
                                 <br><br>
                                 <label>Måned: </label>
-                                <input id="add-month-sale-txt" type="text" placeholder="month">
+                                <input id="add-month-sale-firstpage-txt" type="text" placeholder="month">
                                 <br><br>
                                 <label>Brutto: </label>
-                                <input id="add-brutto-sale-txt" type="text" placeholder="brutto">
+                                <input id="add-brutto-sale-firstpage-txt" type="text" placeholder="brutto">
                                 <br><br>
                                 <label>Netto: </label>
-                                <input id="add-netto-sale-txt" type="text" placeholder="netto">
+                                <input id="add-netto-sale-firstpage-txt" type="text" placeholder="netto">
                                 <br><br>
                             </section>
                             <footer class="modal-card-foot">
@@ -327,6 +327,8 @@
                                 <button class="delete" aria-label="close"></button>
                             </header>
                             <section class="modal-card-body">
+                                <p id="input-add-sale"></p>
+                                <br>
                                 <p>Er du sikker på at du vil gjøre denne endringen? </p>
                             </section>
                             <footer class="modal-card-foot">
@@ -362,12 +364,14 @@
                             </header>
                             <section class="modal-card-body">
                                 <label>Restaurant:</label>
-                                <input>
+                                <input id="add-restaurant-sale-secondpage-txt" type="text" placeholder="restaurant">
                                 <br><br>
                                 <label>År: </label>
-                                <input>
+                                <input id="add-restaurant-sale-secondpage-txt" type="text" placeholder="årstall">
                                 <br><br>
-                                <label>Måned: </label><input><br><br>
+                                <label>Måned: </label>
+                                <input id="add-restaurant-sale-secondpage-txt" type="text" placeholder="month">
+                                <br><br>
                             </section>
                             <footer class="modal-card-foot">
                                 <button class="button" id="modal-edit-sale-approve-btn">Videre</button>
@@ -385,8 +389,12 @@
                                 <button class="delete" aria-label="close"></button>
                             </header>
                             <section class="modal-card-body">
-                                <label>Netto:</label><input><br><br>
-                                <label>Brutto: </label><input><br><br>
+                                <label>Netto:</label>
+                                <input id="add-restaurant-sale-secondpage-txt" type="text" placeholder="netto">
+                                <br><br>
+                                <label>Brutto: </label>
+                                <input id="add-restaurant-sale-secondpage-txt" type="text" placeholder="brutto">
+                                <br><br>
                             </section>
                             <footer class="modal-card-foot">
                                 <button class="button" id="modal-edit-sale-details-approve-btn">Godkjenn</button>
@@ -513,7 +521,7 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td></td>
+                        <td id="total-sale"></td>
                     </tr>
                 </tfoot>
             </table>
@@ -526,11 +534,20 @@
                         <button class="delete" aria-label="close"></button>
                     </header>
                     <section class="modal-card-body">
-                        <label>Restaurant:</label><input><br><br>
-                            <label>År: </label><input><br><br>
-                            <label>Måned: </label><input><br><br>
-                            <label>Brutto: </label><input><br><br>
-                            <label>Netto: </label><input><br><br>
+                        <label>Restaurant:</label>
+                        <input id="add-restaurant-dish-firstpage-txt">
+                        <br><br>
+                        <label>Kategori: </label>
+                        <input id="add-category-dish-firstpage-txt">
+                        <br><br>
+                        <label>Navn: </label>
+                        <input id="add-name-dish-firstpage-txt">
+                        <br><br>
+                        <label>Pris: </label>
+                        <input id="add-price-dish-firstpage-txt">
+                        <br><br>
+                        <label>Antall: </label>
+                        <input id="add-amount-dish-firstpage-txt">                            <br><br>
                     </section>
                     <footer class="modal-card-foot">
                         <button class="button" id="modal-add-dish-approve-btn">Lagre</button>
@@ -547,6 +564,7 @@
                         <button class="delete" aria-label="close"></button>
                     </header>
                     <section class="modal-card-body">
+                        <p id="input-add-dish"></p>
                         <p>Er du sikker på at du vil gjøre denne endringen? </p>
                     </section>
                     <footer class="modal-card-foot">
