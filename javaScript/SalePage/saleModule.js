@@ -310,6 +310,9 @@ const saleModule = (function(){ // IIFE
         dishes.place == "Torshov" && dishes.category == "Pizza"
         );
 
+    let addNewSale = (adding) => sales.push(adding);
+
+    let addNewDish = (adding) => salesDishes.push(adding);
 
     return {
         getAllSales,
@@ -340,7 +343,9 @@ const saleModule = (function(){ // IIFE
         getTorshovAppetizer,
         getTorshovMainCourse,
         getTorshovDessert,
-        getTorshovPizza
+        getTorshovPizza,
+        addNewSale,
+        addNewDish
     }
 
 }()); // end of saleModule
