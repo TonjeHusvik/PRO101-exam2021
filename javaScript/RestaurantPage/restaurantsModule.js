@@ -1,5 +1,6 @@
-export const RestaurantsModule = (function(){ // IIFE
+export const RestaurantsModule = (function(){
 
+    // array for å holde på informasjonen om alle restaurantene
     let restaurants = [
         {restaurant: "Oslo S", image: "oslos-restaurant.png", id: 0, address: "Oslo Svinger 34, 0342 Oslo", leader: "Silje Antonsen", phone: "624 95 345", mail: "oslos@gyldnepizza.no", openingtimes: "Alle dager, 10:00 - 21:00", emplyees: "2 ansatte", established: "2019"},
         {restaurant: "Majorstua", image: "majorstua-restaurant.png", id: 1, address: "Majorstua 56, 0468 Oslo", leader: "Hanne Davidsen", phone: "638 98 474", mail: "majorstua@gyldnepizza.no", openingtimes: "Alle dager, 11:00 - 22:00", emplyees: "2 ansatte", established: "2019"},
@@ -7,18 +8,15 @@ export const RestaurantsModule = (function(){ // IIFE
         {restaurant: "Karl Johan", image: "karljohan-restaurant.png", id: 3, address: "Karl Johans Gate 87, 0908 Oslo", leader: "Sonja Finne", phone: "765 37 384", mail: "karljohan@gyldnepizza.no", openingtimes: "man - fre: 09:00 - 21:00, lør - søn: 08:00 - 24:00", emplyees: "2 ansatte", established: "2019"}
     ];
 
+    // funksjon for å få tak i informasjonen i arrayet
     let getAllRestaurants = () => restaurants;
 
+    // funksjon for å pushe info til array fra brukerinput
     let addNewRestaurant = (adding) => restaurants.push(adding);
-
-    const deleteRestaurant = (restaurantID) => restaurants.filter(restaurants =>
-        restaurants.id === restaurantID && restaurants.splice(restaurantID, 1)
-     );
 
     return {
         getAllRestaurants, 
         addNewRestaurant, 
-        deleteRestaurant, 
         restaurants
     }
 

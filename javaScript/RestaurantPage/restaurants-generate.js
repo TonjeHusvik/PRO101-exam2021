@@ -1,18 +1,18 @@
 import {RestaurantsModule} from './restaurantsModule.js'
 
-// getting all html-elements
+// får tak i html-elementer
 const restaurantsSection = document.querySelector("#restaurants-section");
 const deleteRestaurantsModal = document.querySelector("#delete-restaurants-modal");
 const addRestaurantBtn = document.querySelector("#add-restaurant-btn");
 const deleteRestaurantBtn = document.querySelector("#delete-restaurant-btn");
-const confirmationMessage = document.getElementsByClassName("confirmation-message");
-const deleteRestaurantIdValue = document.getElementsByClassName("delete-restaurant-id-value");
 
-// function to push info from user input into restaurants array, to add a new restaurant
+// funksjon for å pushe brukerinput til restaurants-array, og legge til ny restaurant
 let pushData = (ev) => {
-   ev.preventDefault(); // to stop the form from submitting    
-    var result = confirm("Legg til restaurant?"); // popup to confirm before you submit
+   ev.preventDefault(); // for at skjemaet ikke skal submitte 
+    var result = confirm("Legg til restaurant?"); // popup for å bekrefte før man submitter
     var addOK = alert("Restauranten er lagt til!"); 
+
+    // hvis man trykker OK på confirm-alert, så kjører funksjonen
     if (result) {
         const input = {        
             restaurant: document.getElementById('name-input').value,
@@ -28,46 +28,35 @@ let pushData = (ev) => {
         }
                 
         RestaurantsModule.addNewRestaurant(input);
-        addOK;
+        addOK; // bekrefter at restauranten blir lagt til
         document.querySelector('form').reset(); // reset form after submitting
-        
+
         console.log(RestaurantsModule.restaurants);
     }
 }
 
-// confirmation message before deleting a restaurant, followed by a message confirming the removal
-
+// bekreftelsesmelding før man sletter restaurant, etterfulgt av alert på at restauranten er slettet
 let editRestaurantOK = () => {
-    var result = confirm("Vil du virkelig slette denne restauranten?"); // popup to confirm before you submit
-    var deleteOK = alert("Restauranten er slettet!")
+    var result = confirm("Vil du virkelig slette denne restauranten?"); // popup for å bekrefte før man sletter
+    var deleteOK = alert("Restauranten er slettet!") // popup for å bekrefte at restauranten er slettet
     if (result) {
         deleteOK;
         removeRestaurantModal.classList.remove('is-active');
     }
 }
 
-// delete restaurant?
-/*
-const deleteRestaurant = () =>{
-    RestaurantsModule.deleteRestaurant(deleteRestaurantIdValue.value).forEach(restaurants =>{
-        
-        console.log(deleteRestaurantIdValue);
-    })
-}
-*/
-
-// looping through and printing out all restaurants with their modals
+// looper igjennom og printer ut alle restauranter i cards, sammen med deres modal
 const showAll = () => {
 
 let restaurantCardTxt = "";
 
     RestaurantsModule.getAllRestaurants().forEach(restaurants => {
         restaurantCardTxt += `
-            <!-- RESTAURANT CARDS -->
+            <!-- ${restaurants.restaurant} RESTAURANT CARD -->
             <article class="column is-3">
                 <div class="card">
                     <section class="card-image">
-                        <img src="../images/restaurants/${restaurants.image}">
+                        <img src="../images/restaurants/${restaurants.image}" alt="${restaurants.restaurant}-restaurantbilde">
                     </section>
                     <section class="card-content">
                         <p class="restaurant-popup-btn restaurant-card-name">${restaurants.restaurant}</p>
@@ -75,7 +64,7 @@ let restaurantCardTxt = "";
                 </div>
             </article>
             
-            <!-- MODAL POPUP -->
+            <!-- ${restaurants.restaurant} MODAL POPUP -->
             <div class="modal restaurant-card-modal">
                 <div class="modal-background restaurant-modal-bg"></div>
                 <div class="modal-card">
@@ -100,6 +89,7 @@ let restaurantCardTxt = "";
                                 <p><b>Etablert</b></p><p>${restaurants.established}</p>
                             </div>
                         </div>
+
                         <div class="buttons">
                             <a class="button is-warning is-small">
                                 <span class="icon is-small">
@@ -137,10 +127,9 @@ let restaurantCardTxt = "";
         restaurantsSection.innerHTML = restaurantCardTxt;
     });
 }
-
 showAll();
 
-// printing out all restaurant names so you can choose which one to delete
+// printer ut alle restaurantnavn, så du kan velge hvem som skal slettes
 let deleteRestaurantsModalTxt = "";
 
 RestaurantsModule.getAllRestaurants().forEach(restaurants => {
@@ -153,32 +142,33 @@ RestaurantsModule.getAllRestaurants().forEach(restaurants => {
 });
 deleteRestaurantsModal.innerHTML = deleteRestaurantsModalTxt;
 
-// to make sure the document is loaded before function runs
+// kjører funksjoner når tilhørende knapper blir trykket på
+// forsikrer seg om at sokumentet er lastet før funksjonene kjøres
 document.addEventListener('DOMContentLoaded', () => {
     addRestaurantBtn.addEventListener('click', pushData);
     deleteRestaurantBtn.addEventListener('click', editRestaurantOK);
 });
 
-// MODAL POPUP OPEN/CLOSE
-// getting html-elements for restaurant card popups
+// MODAL POPUP ÅPNE/LUKKE
+// henter html-elementene for restaurant-card-popups
 const popupViews = document.querySelectorAll('.restaurant-card-modal');
 const popuppBtns = document.querySelectorAll('.restaurant-popup-btn');
 const closeBtns = document.querySelectorAll('.close-restaurant-modal');
 const modalBg = document.querySelectorAll('.restaurant-modal-bg');
 
-// getting html-elements for add restaurant-button and delete restaurant-button
-// add restaurant
+// henter html-elementer for legg til restaurant-knapp og slett restaurant-knapp
+// legg til restaurant
 const addRestaurantPopupBtn = document.querySelector('#add-restaurant-popup-btn');
 const addRestaurantsModalCancelBtn = document.querySelector('#add-restaurant-modal-cancel-btn');
 const addRestaurantsModalCancelBtn2 = document.querySelector('#add-restaurant-modal-cancel-btn2');
 const addRestaurantModal = document.querySelector('#add-restaurant-modal');
-//remove restaurant
+// slett restaurant
 const removeRestaurantPopupBtn = document.querySelector('#remove-restaurant-popup-btn');
 const removeRestaurantCancelBtn = document.querySelector('#remove-restaurant-cancel-btn');
 const removeRestaurantModal = document.querySelector('#remove-restaurant-modal');
 
 
-// open restaurant popup
+// felles funksjon for å åpne restaurant-card-popups
 var popup = function(popupClick){
     popupViews[popupClick].classList.add('is-active');
 }
@@ -189,8 +179,8 @@ popuppBtns.forEach((popupBtn, i) => {
     });
 });
 
-// close restaurant popup
-// close when clicking the button
+// felles funksjon for å lukke restaurant-card-popups
+// lukkes når man trykker på "Avslutt" eller krysset i hjørnet
 closeBtns.forEach((closeBtn) => {
     closeBtn.addEventListener('click', () => {
         popupViews.forEach((popupView) => {
@@ -199,7 +189,7 @@ closeBtns.forEach((closeBtn) => {
     });
 });
 
-// close when clicking outside the box/on the background
+// lukkes når man trykker på bakgrunnen/uttafor boksen
 modalBg.forEach((modalB) => {
     modalB.addEventListener('click', () => {
         popupViews.forEach((popupView) => {
@@ -208,12 +198,12 @@ modalBg.forEach((modalB) => {
     });
 });
 
-// open add-restaurant popup
+// åpner legg-til-restaurant-popup
 addRestaurantPopupBtn.addEventListener('click', () => {
     addRestaurantModal.classList.add('is-active');
 })
 
-// close add-restaurant popup and show the new restaurant, if any, when clicking "Legg til restaurant"
+// lukker legg-til-restaurant-popup og viser den nye restauranten, hvis noen, når man trykker på "Legg til restaurant"
 addRestaurantsModalCancelBtn.addEventListener('click', () => {
     addRestaurantModal.classList.remove('is-active');
 
@@ -222,17 +212,21 @@ addRestaurantsModalCancelBtn.addEventListener('click', () => {
     }
 })
 
-// close add-restaurant popup when clicking "Avslutt"
+// lukker legg-til-restaurant-popup når man trykker på "Avslutt"
 addRestaurantsModalCancelBtn2.addEventListener('click', () => {
     addRestaurantModal.classList.remove('is-active');
+
+    if(RestaurantsModule.restaurants.length >= 5){
+        showAll();
+    }
 })
 
-// open delete-restaurant popup
+// åpner slett-restaurant-popup
 removeRestaurantPopupBtn.addEventListener('click', () => {
     removeRestaurantModal.classList.add('is-active');
 })
 
-// close delete-restaurant popup
+// lukker slett-restaurant-popup
 removeRestaurantCancelBtn.addEventListener('click', () => {
     removeRestaurantModal.classList.remove('is-active');
 })
