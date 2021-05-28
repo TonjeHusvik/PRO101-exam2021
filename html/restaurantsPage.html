@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/restaurantsPage.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="../css/restaurantsPage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <script defer type="module" src="../javaScript/RestaurantPage/restaurants-generate.js"></script>
     <title>Restauranter</title>
@@ -17,14 +17,14 @@
             <h1 class="logo-name">Gyldne</h1>
         </div>
         <div class="inline-block logo-div">
-            <img id="pizza-man-img" src="../images/pizza-man.png" width="85px">
+            <img id="pizza-man-img" src="../images/pizza-man.png" width="85px" alt="Gyldne Pizza's logo, pizza-man">
         </div>
         <div id="logo-name-pizza" class="inline-block logo-div">
             <h1 class="logo-name">Pizza</h1>
         </div>
     </div>
 
-    <!-- MAIN MENU -->    
+    <!-- HOVEDMENY -->    
     <nav id="main-navbar" class="navbar is-dark mt-0 container" role="navigation" aria-label="main navigation">
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
@@ -47,7 +47,7 @@
         </div>
     </nav>
 
-    <!-- EDIT/ADD/REMOVE MENU -->  
+    <!-- SLETT/LEGG TIL-MENY -->  
      <nav class="navbar container is-light" role="navigation" aria-label="main navigation">
         <div id="navbarBasicExample" class="navbar-menu">
             <p id="confirmation-message"></p>
@@ -55,9 +55,9 @@
                 <div class="navbar-item mr-1">
                     <div class="buttons">
 
-                        <!-- remove-button -->
-                        <a id="remove-restaurant-popup-btn" class="button is-light is-small">Fjern</a>
-                        <!-- modal popup for remove-button -->
+                        <!-- slett-knapp -->
+                        <a id="remove-restaurant-popup-btn" class="button is-light is-small">Slett</a>
+                        <!-- modal popup for slett-knapp -->
                         <div id="remove-restaurant-modal" class="modal">
                             <div class="modal-background"></div>
                             <div class="modal-card">
@@ -80,9 +80,9 @@
                         </div>
                         <!-- modal popup -->
 
-                        <!-- add-button -->
+                        <!-- legg til-knapp -->
                         <a id="add-restaurant-popup-btn" class="button is-warning is-small"><strong>Legg til</strong></a>
-                        <!-- modal popup for add-button -->
+                        <!-- modal popup for legg til-knapp -->
                         <div id="add-restaurant-modal" class="modal">
                             <div class="modal-background"></div>
                             <div class="modal-card">
@@ -94,23 +94,22 @@
                                     <section class="modal-card-body">
                                         <div class="columns">
                                             <div class="column is-6">
-                                                <label>Navn: </label><br><input id="name-input"><br><br>
-                                                <label>Addresse: </label><br><input id="address-input"><br><br>
-                                                <label>Leder: </label><br><input id="leader-input"><br><br>
-                                                <label>Telefon: </label><br><input id="phone-input"><br><br>
+                                                <label>Navn</label><br><input id="name-input"><br><br>
+                                                <label>Addresse</label><br><input id="address-input"><br><br>
+                                                <label>Leder</label><br><input id="leader-input"><br><br>
+                                                <label>Telefon</label><br><input id="phone-input"><br><br>
                                             </div>
                                             <div class="column is-6">
-                                                <label>Mail: </label><br><input id="mail-input"><br><br>
-                                                <label>Åpningstider: </label><br><input id="opening-times-input"><br><br>
-                                                <label>Antall ansatte: </label><br><input id="employees-input"><br><br>
-                                                <label>Etablert: </label><br><input id="established-input"><br>
+                                                <label>Mail</label><br><input id="mail-input"><br><br>
+                                                <label>Åpningstider</label><br><input id="opening-times-input"><br><br>
+                                                <label>Antall ansatte</label><br><input id="employees-input"><br><br>
+                                                <label>Etablert</label><br><input id="established-input"><br>
                                             </div>
                                         </div>
                                     </section>
                                     <footer class="modal-card-foot">
                                             <button type="button" id="add-restaurant-btn" class="button is-warning">Legg til restaurant</button>
                                             <button type="button" id="add-restaurant-modal-cancel-btn2" class="button">Avslutt</button>
-                                            <p class="add-restaurant-confirmation-msg"></p>
                                     </footer>
                                 </form>
                             </div>
