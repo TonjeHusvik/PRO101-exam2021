@@ -1,8 +1,10 @@
 /* HEADER */
 #logo{
     background-color:#e9bc34;
-    background-size: 100%;
     background-image: url(../images/banner.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
     text-align: center;
     padding: 25px;
 }
