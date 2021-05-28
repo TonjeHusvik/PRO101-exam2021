@@ -22,11 +22,10 @@ const workPlaceAddTxt = document.querySelector("#workPlace-add-txt");
 const workprosentAddTxt = document.querySelector("#workprosent-add-txt");
 const startDateAddTxt = document.querySelector("#startDate-add-txt");
 const employeeIDAddTxt = document.querySelector("#employeeID-add-txt");
-
 const inputAddEmployee = document.querySelector("#input-add-employee");
-
 const employeeIDInputTxt = document.querySelector("#employee-id-input-txt");
 const inputDelteEmployee = document.querySelector("#input-delete-employee");
+
 
 const sortByAllBtn = document.querySelector("#sort-by-all-btn");
 //Input verdier
@@ -254,11 +253,7 @@ const sortByMajorstuen = () => {
     employeeSection.innerHTML = htmlTxt;
 }
 
-/**
- * Array testing
- */
-
-
+//Sorterings knapper og søkeknapper
 
 showAll();
 searchLastnameBtn.addEventListener("click", searchByLastname);
