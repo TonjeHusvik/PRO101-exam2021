@@ -19,7 +19,7 @@
           <h1 class="logo-name">Gyldne</h1>
       </div>
       <div class="inline-block logo-div">
-          <img id="pizza-man-img" src="../images/pizza-man.png" width="85px">
+          <img id="pizza-man-img" src="../images/pizza-man.png" width="85px" alt="Pizza Mann">
       </div>
       <div id="logo-name-pizza" class="inline-block logo-div">
           <h1 class="logo-name">Pizza</h1>
@@ -29,7 +29,7 @@
     <!--Navigation-->    
         <nav class="navbar is-dark mt-0 container" role="navigation" aria-label="main navigation">
             <div id="navbarBasicExample" class="navbar-menu">
-              <div class="navbar-start">
+              <div class="navbar-start ">
                 <a href="../html/mainPage.html" class="navbar-item">
                   Forside
                 </a>
@@ -105,7 +105,7 @@
             </div>
           </div>
 
-          <!--Valgte å ha scriptet her for bedre oversikt over koden. Husk å legg denne koden inn i generate-->
+          <!--Valgte å ha scriptet her for bedre oversikt over koden.-->
           <script>
             const dropdown =
                   document.querySelector('.dropdown');
@@ -121,17 +121,11 @@
               this.classList.toggle('is-active');
             });
 
-            /**
-             * 
-             * Array testing
-             * 
-             * **/
-
-
-             
           </script>
 
           <!--Søke meny-->
+
+            <!--Søk etter ansatt-->
           <div class="level-item">
             <label class="label">Søk etter ansatt</label>
           </div>
@@ -139,7 +133,7 @@
               <input id="search-txt" class="input is-small" type="text" placeholder="Etternavn">
               <button id="search-lastname-btn" class="button is-small">Søk</button>
           </div>
-
+            <!--Søk etter ansatt id-->
           <div class="level-item">
             <label class="label">Søk etter ansatt_ID</label>
           </div>

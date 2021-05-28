@@ -15,7 +15,7 @@ MainModule.getAllMains().forEach( main => {
                     <h3">${main.title}</h3>
                 </section>
                 <section class=" image is-3by2 card-image">
-                    <img src="../images/${main.image}" >
+                    <img src="../images/${main.image}" alt="${main.title}" >
                 </section>
             </div> 
         </article>
