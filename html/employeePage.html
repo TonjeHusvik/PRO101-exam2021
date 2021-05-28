@@ -19,7 +19,7 @@
           <h1 class="logo-name">Gyldne</h1>
       </div>
       <div class="inline-block logo-div">
-          <img id="pizza-man-img" src="../images/pizza-man.png" width="85px">
+          <img id="pizza-man-img" src="../images/pizza-man.png" width="85px" alt="Pizza Mann">
       </div>
       <div id="logo-name-pizza" class="inline-block logo-div">
           <h1 class="logo-name">Pizza</h1>
@@ -29,7 +29,7 @@
     <!--Navigation-->    
         <nav class="navbar is-dark mt-0 container" role="navigation" aria-label="main navigation">
             <div id="navbarBasicExample" class="navbar-menu">
-              <div class="navbar-start">
+              <div class="navbar-start ">
                 <a href="../html/mainPage.html" class="navbar-item">
                   Forside
                 </a>
@@ -105,7 +105,7 @@
             </div>
           </div>
 
-          <!--Valgte å ha scriptet her for bedre oversikt over koden. Husk å legg denne koden inn i generate-->
+          <!--Valgte å ha scriptet her for bedre oversikt over koden.-->
           <script>
             const dropdown =
                   document.querySelector('.dropdown');
@@ -121,17 +121,11 @@
               this.classList.toggle('is-active');
             });
 
-            /**
-             * 
-             * Array testing
-             * 
-             * **/
-
-
-             
           </script>
 
           <!--Søke meny-->
+
+            <!--Søk etter ansatt-->
           <div class="level-item">
             <label class="label">Søk etter ansatt</label>
           </div>
@@ -139,7 +133,7 @@
               <input id="search-txt" class="input is-small" type="text" placeholder="Etternavn">
               <button id="search-lastname-btn" class="button is-small">Søk</button>
           </div>
-
+            <!--Søk etter ansatt id-->
           <div class="level-item">
             <label class="label">Søk etter ansatt_ID</label>
           </div>
@@ -188,6 +182,7 @@
               <div class="modal-card">
                 <header class="modal-card-head">
                   <p class="modal-card-title">SLETT ANSATT</p>
+                  <button id="delete-employee-x-1" class="delete" aria-label="close"></button>
                 </header>
 
                 <section class="modal-card-body">
@@ -220,6 +215,7 @@
 
                 <header class="modal-card-head">
                   <p class="modal-card-title">SLETT ANSATT</p>
+                  <button id="delete-employee-x-2" class="delete" aria-label="close"></button>
                 </header>
 
                 <section class="modal-card-body">
@@ -248,6 +244,7 @@
               <div class="modal-card">
                 <header class="modal-card-head">
                   <h3 class="modal-card-title"> SLETT ANSATT</h3>
+                  <button id="delete-employee-x-3" class="delete" aria-label="close"></button>
                 </header>
                   
                 <section class="modal-card-body">
@@ -274,6 +271,7 @@
 
               <header class="modal-card-head">
                 <p class="modal-card-title">REDIGER ANSATT</p>
+                <button id="delete-employee-x-4" class="delete" aria-label="close"></button>
               </header>
 
               <section class="modal-card-body">
@@ -305,6 +303,7 @@
             <div class="modal-card">
               <header class="modal-card-head">
                 <h3 class="modal-card-title"> REDIGER ANSATT</h3>
+                <button id="delete-employee-x-5" class="delete" aria-label="close"></button>
               </header>
 
               <section class="modal-card-body">
@@ -414,7 +413,8 @@
             <div class="modal-background"></div>
             <div class="modal-card">
               <header class="modal-card-head">
-                <h3 class="title"> REDIGER ANSATT</h3>
+                <p class="modal-card-title"> REDIGER ANSATT</p>
+                <button id="delete-employee-x-6" class="delete" aria-label="close"></button>
               </header>
 
               <section class="modal-card-body">
@@ -441,8 +441,10 @@
           <div class="modal" id="edit-modal-information-confirmation">
             <div class="modal-background"></div>
             <div class="modal-card">
+
               <header class="modal-card-head">
                 <p class="modal-card-title"> REDIGER ANSATT</p>
+                <button id="delete-employee-x-7" class="delete" aria-label="close"></button>
               </header>
 
               <section class="modal-card-body">
@@ -464,6 +466,7 @@
             <div class="modal-card">
               <header class="modal-card-head">
                 <p class="modal-card-title">LEGG TIL ANSATT</p>
+                <button id="delete-employee-x-8" class="delete" aria-label="close"></button>
               </header>
 
               <section class="modal-card-body">
@@ -558,6 +561,7 @@
             <div class="modal-card">
               <header class="modal-card-head">
                 <p class="modal-card-title"> LEGG TIL ANSATT</p>
+                <button id="delete-employee-x-9" class="delete" aria-label="close"></button>
               </header>
 
               <section class="modal-card-body">
@@ -583,6 +587,7 @@
             <div class="modal-card">
               <header class="modal-card-head">
                 <p class="modal-card-title">LEGGE TIL ANSATT</p>
+                <button id="delete-employee-x-10" class="delete" aria-label="close"></button>
               </header>
 
               <section class="modal-card-body">

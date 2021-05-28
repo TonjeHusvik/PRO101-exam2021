@@ -12,6 +12,7 @@ const searchEmployeeIdBtn = document.querySelector("#search-employee-id-btn");
 const deleteEmployeeBtnModal = document.querySelector("#delete-employee-btn-modal");
 const deleteModalInformation = document.querySelector("#delete-modal-information");
 
+//Text input
 const firstNameAddTxt = document.querySelector("#firstName-add-txt");
 const lastNameAddTxt = document.querySelector("#lastName-add-txt");
 const phoneAddTxt = document.querySelector("#phone-add-txt");
@@ -21,11 +22,10 @@ const workPlaceAddTxt = document.querySelector("#workPlace-add-txt");
 const workprosentAddTxt = document.querySelector("#workprosent-add-txt");
 const startDateAddTxt = document.querySelector("#startDate-add-txt");
 const employeeIDAddTxt = document.querySelector("#employeeID-add-txt");
-
 const inputAddEmployee = document.querySelector("#input-add-employee");
-
 const employeeIDInputTxt = document.querySelector("#employee-id-input-txt");
 const inputDelteEmployee = document.querySelector("#input-delete-employee");
+
 
 const sortByAllBtn = document.querySelector("#sort-by-all-btn");
 //Input verdier
@@ -253,11 +253,7 @@ const sortByMajorstuen = () => {
     employeeSection.innerHTML = htmlTxt;
 }
 
-/**
- * Array testing
- */
-
-
+//Sorterings knapper og søkeknapper
 
 showAll();
 searchLastnameBtn.addEventListener("click", searchByLastname);
@@ -281,27 +277,40 @@ const deleteEmployeeBtnModalApprov = document.querySelector("#delete-employee-bt
 const stopDeleteEmployeeBtnModalStop = document.querySelector("#stop-delete-employee-btn-modal-stop");
 const deleteModalInformationConfirmation = document.querySelector("#delete-modal-information-confirmation");
 const deleteModalFinish = document.querySelector("#delete-modal-finish");
+const deleteEmployeeX1 = document.querySelector("#delete-employee-x-1");
+const deleteEmployeeX2 = document.querySelector("#delete-employee-x-2");
+const deleteEmployeeX3 = document.querySelector("#delete-employee-x-3");
 
+//Gå videre knapper
 deleteBtn.addEventListener('click', () =>{
     deleteModal.classList.add('is-active');
-
     })
 
-
-stopDelteEmployeeBtn.addEventListener('click', () =>{
-    deleteModal.classList.remove('is-active');
-})
-
-
 deleteEmployeeBtnModal.addEventListener('click', () =>{
-    deleteModal.classList.remove('is-active');
-    deleteEmployee();
-    deleteModalInformation.classList.add('is-active');
-})
+        deleteModal.classList.remove('is-active');
+        deleteEmployee();
+        deleteModalInformation.classList.add('is-active');
+    })
 
 deleteEmployeeBtnModalApprov.addEventListener('click', () =>{
+        deleteModalInformation.classList.remove('is-active');
+        deleteModalInformationConfirmation.classList.add('is-active');
+    })
+//Alle X knapper
+deleteEmployeeX1.addEventListener('click', () =>{
+    deleteModal.classList.remove('is-active');
+})
+
+deleteEmployeeX2.addEventListener('click', () =>{
     deleteModalInformation.classList.remove('is-active');
-    deleteModalInformationConfirmation.classList.add('is-active');
+})
+
+deleteEmployeeX3.addEventListener('click', () =>{
+    deleteModalInformationConfirmation.classList.remove('is-active');
+})
+//Avbryt knapper og OK
+stopDelteEmployeeBtn.addEventListener('click', () =>{
+    deleteModal.classList.remove('is-active');
 })
 
 deleteModalFinish.addEventListener('click', () =>{
@@ -327,14 +336,14 @@ const editEmployeeBtnModalApprov = document.querySelector("#edit-employee-btn-mo
 const editModalInformationConfirmation = document.querySelector("#edit-modal-information-confirmation");
 const stopEditEmployeeBtnModalStop = document.querySelector("#stop-edit-employee-btn-modal-stop");
 const editModalFinish = document.querySelector("#edit-modal-finish");
+const deleteEmployeeX4 = document.querySelector("#delete-employee-x-4");
+const deleteEmployeeX5 = document.querySelector("#delete-employee-x-5");
+const deleteEmployeeX6 = document.querySelector("#delete-employee-x-6");
+const deleteEmployeeX7 = document.querySelector("#delete-employee-x-7");
 
-
+// Gå videre knapper
 editEmployeeBtn.addEventListener('click', () =>{
     editModal.classList.add('is-active')
-})
-
-stopEditEmployeeBtnModal.addEventListener('click', () =>{
-    editModal.classList.remove('is-active');
 })
 
 editEmployeeBtnModal.addEventListener('click', () =>{
@@ -347,13 +356,35 @@ editEmployeeBtnModalEdit.addEventListener('click', () =>{
     editModalApprov.classList.add('is-active');
 })
 
-stopEditEmployeeBtnModalEdit.addEventListener('click', () =>{
-    editModalEdit.classList.remove('is-active');
-})
-
 editEmployeeBtnModalApprov.addEventListener('click', () =>{
     editModalApprov.classList.remove('is-active');
     editModalInformationConfirmation.classList.add('is-active');
+})
+
+// Alle X knappene 
+deleteEmployeeX4.addEventListener('click', () =>{
+    editModal.classList.remove('is-active');
+})
+
+deleteEmployeeX5.addEventListener('click', () =>{
+    editModalEdit.classList.remove('is-active');
+})
+
+deleteEmployeeX6.addEventListener('click', () =>{
+    editModalApprov.classList.remove('is-active');
+})
+
+deleteEmployeeX7.addEventListener('click', () =>{
+    editModalInformationConfirmation.classList.remove('is-active');
+})
+
+//Avbryt knapper og OK
+stopEditEmployeeBtnModal.addEventListener('click', () =>{
+    editModal.classList.remove('is-active');
+})
+
+stopEditEmployeeBtnModalEdit.addEventListener('click', () =>{
+    editModalEdit.classList.remove('is-active');
 })
 
 stopEditEmployeeBtnModalStop.addEventListener('click', () =>{
@@ -363,6 +394,8 @@ stopEditEmployeeBtnModalStop.addEventListener('click', () =>{
 editModalFinish.addEventListener('click', () =>{
     editModalInformationConfirmation.classList.remove('is-active');
 })
+
+
 /** Legge til ansatt knapp */
 
 const addEmployeeBtn = document.querySelector("#add-employee-btn");
@@ -374,8 +407,12 @@ const addEmployeeBtnModalApprov = document.querySelector("#add-employee-btn-moda
 const addModalInformationConfirmation = document.querySelector("#add-modal-information-confirmation");
 const stopAddEmployeeBtnModalStop = document.querySelector("#stop-add-employee-btn-modal-stop");
 const addModalFinish = document.querySelector("#add-modal-finish");
+const deleteEmployeeX8 = document.querySelector ("#delete-employee-x-8");
+const deleteEmployeeX9 = document.querySelector("#delete-employee-x-9");
+const deleteEmployeeX10 = document.querySelector("#delete-employee-x-10");
 
 
+//Gå videre knapper
 addEmployeeBtn.addEventListener('click', () =>{
     addModal.classList.add('is-active');
 })
@@ -386,14 +423,29 @@ addEmployeeBtnModal.addEventListener('click', () =>{
     addModalApprov.classList.add('is-active');
 })
 
-stopAddEmployeeBtnModal.addEventListener('click', () =>{
-    addModal.classList.remove('is-active');
-})
-
 addEmployeeBtnModalApprov.addEventListener('click', () =>{
     addModalApprov.classList.remove('is-active');
     addModalInformationConfirmation.classList.add('is-active');
 })
+
+//Alle X knapper
+deleteEmployeeX8.addEventListener('click', () =>{
+    addModal.classList.remove('is-active');
+})
+
+deleteEmployeeX9.addEventListener('click', () =>{
+    addModalApprov.classList.remove('is-active');
+})
+
+deleteEmployeeX10.addEventListener('click', () =>{
+    addModalInformationConfirmation.classList.remove('is-active'); 
+})
+//Avbryt knapper og OK
+
+stopAddEmployeeBtnModal.addEventListener('click', () =>{
+    addModal.classList.remove('is-active');
+})
+
 
 stopAddEmployeeBtnModalStop.addEventListener('click', () =>{
     addModalApprov.classList.remove('is-active');

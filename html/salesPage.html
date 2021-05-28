@@ -12,15 +12,15 @@
 </head>
 <body>
     <!-- HEADER-->
-    <div id="logo" class="p-5 container has-text-centered"> 
-        <div class="inline-block">
-            <img src="../images/pizza-transparent3.png" width="50px">
+    <div id="logo" class="mb-1 container">
+        <div class="inline-block logo-div">
+            <h1 class="logo-name">Gyldne</h1>
         </div>
-        <div class="inline-block text-align-center">
-            <h1 id="logo-name">Gyldne Pizza</h1>
+        <div class="inline-block logo-div">
+            <img id="pizza-man-img" src="../images/pizza-man.png" width="85px">
         </div>
-        <div class="inline-block">
-            <img src="../images/pizza-transparent3.png" width="50px">
+        <div id="logo-name-pizza" class="inline-block logo-div">
+            <h1 class="logo-name">Pizza</h1>
         </div>
     </div>
     
@@ -62,8 +62,8 @@
         <!-- OMSETNINGDELEN STARTER HER -->
         <div id="sale-details">
             <div class="has-text-right">
-                <button class="button is-small" id="add-sale-btn">Legg til omsetning</button>
                 <button class="button is-small" id="edit-sale-btn">Rediger omsetning</button>
+                <button class="button is-small is-warning" id="add-sale-btn">Legg til omsetning</button>
             </div>
             <!-- INPUTFELT -->
             <div class="container">
@@ -93,6 +93,10 @@
                 </main>
             </div>
         </div>
+
+
+
+        
         <!-- OMSETNING AV RETTER STARTER HER -->
         <div id="sale-dishes-details">
             
@@ -286,382 +290,311 @@
                             </div>
                         </div>
                     </div>
-                    
                     <!-- MODAL - LEGG TIL OMSETNING -->
                     <div class="modal" id="modal-add-sale">
-                        <div class="modal-background"></div>
-                        <div class="modal-card">
-                            <header class="modal-card-head">
-                                <p class="modal-card-title">LEGG TIL OMSETNING</p>
-                                <button class="delete" aria-label="close"></button>
-                            </header>
-                            <section class="modal-card-body">
-                                <label>Restaurant:</label>
-                                <input id="add-restaurant-sale-firstpage-txt" type="text" placeholder="restaurant">
-                                <br><br>
-                                <label>År: </label>
-                                <input id="add-year-sale-firstpage-txt" type="text" placeholder="årstall">
-                                <br><br>
-                                <label>Måned: </label>
-                                <input id="add-month-sale-firstpage-txt" type="text" placeholder="month">
-                                <br><br>
-                                <label>Brutto: </label>
-                                <input id="add-brutto-sale-firstpage-txt" type="text" placeholder="brutto">
-                                <br><br>
-                                <label>Netto: </label>
-                                <input id="add-netto-sale-firstpage-txt" type="text" placeholder="netto">
-                                <br><br>
-                            </section>
-                            <footer class="modal-card-foot">
-                                <button class="button" id="modal-add-sale-approve-btn">Lagre</button>
-                                <button class="button" id="modal-add-sale-cancel-btn">Avbryt</button>
-                            </footer>
-                        </div>
+                            <div class="modal-background"></div>
+                            <div class="modal-card">
+                                <header class="modal-card-head">
+                                    <p class="modal-card-title">LEGG TIL OMSETNING</p>
+                                    <button class="delete" aria-label="close"></button>
+                                </header>
+                                <section class="modal-card-body">
+                                    <label>Restaurant:</label>
+                                    <input id="add-restaurant-sale-firstpage-txt" type="text" placeholder="restaurant">
+                                    <label>År: </label>
+                                    <input id="add-year-sale-firstpage-txt" type="text" placeholder="årstall">
+                                    <label>Måned: </label>
+                                    <input id="add-month-sale-firstpage-txt" type="text" placeholder="month">
+                                    <label>Brutto: </label>
+                                    <input id="add-brutto-sale-firstpage-txt" type="text" placeholder="brutto">
+                                    <label>Netto: </label>
+                                    <input id="add-netto-sale-firstpage-txt" type="text" placeholder="netto">
+                                </section>
+                                <footer class="modal-card-foot">
+                                    <button class="button" id="modal-add-sale-approve-btn">Lagre</button>
+                                    <button class="button" id="modal-add-sale-cancel-btn">Avbryt</button>
+                                </footer>
+                            </div>
                     </div>
                     <!-- MODAL - BEKREFT -->
                     <div class="modal" id="modal-validate-add-sale" >
-                        <div class="modal-background"></div>
-                        <div class="modal-card">
-                            <header class="modal-card-head">
-                                <p class="modal-card-title">BEKREFT</p>
-                                <button class="delete" aria-label="close"></button>
-                            </header>
-                            <section class="modal-card-body">
-                                <p id="input-add-sale"></p>
-                                <br>
-                                <p>Er du sikker på at du vil gjøre denne endringen? </p>
-                            </section>
-                            <footer class="modal-card-foot">
-                                <button class="button" id="modal-validate-add-sale-approve-btn">Godkjenn</button>
-                                <button class="button" id="modal-validate-add-sale-cancel-btn">Avbryt</button>
-                            </footer>
-                        </div>
+                            <div class="modal-background"></div>
+                            <div class="modal-card">
+                                <header class="modal-card-head">
+                                    <p class="modal-card-title">BEKREFT</p>
+                                    <button class="delete" aria-label="close"></button>
+                                </header>
+                                <section class="modal-card-body">
+                                    <p id="input-add-sale"></p>
+                                    <br>
+                                    <p>Er du sikker på at du vil gjøre denne endringen? </p>
+                                </section>
+                                <footer class="modal-card-foot">
+                                    <button class="button" id="modal-validate-add-sale-approve-btn">Godkjenn</button>
+                                    <button class="button" id="modal-validate-add-sale-cancel-btn">Avbryt</button>
+                                </footer>
+                            </div>
                     </div>
                     <!-- MODAL - BEKREFTELSE -->
                     <div class="modal" id="modal-add-sale-validation" >
-                        <div class="modal-background"></div>
-                        <div class="modal-card">
-                            <header class="modal-card-head">
-                                <p class="modal-card-title">HANDLING BEKREFTET</p>
-                                <button class="delete" aria-label="close"></button>
-                            </header>
-                            <section class="modal-card-body">
-                                <p>Ett nytt salg er nå lagt inn</p>
-                            </section>
-                            <footer class="modal-card-foot">
-                                <button class="button" id="modal-add-sale-validation-approve-btn">OK</button>
-                            </footer>
-                        </div>
+                            <div class="modal-background"></div>
+                            <div class="modal-card">
+                                <header class="modal-card-head">
+                                    <p class="modal-card-title">HANDLING BEKREFTET</p>
+                                    <button class="delete" aria-label="close"></button>
+                                </header>
+                                <section class="modal-card-body">
+                                    <p>Ett nytt salg er nå lagt inn</p>
+                                </section>
+                                <footer class="modal-card-foot">
+                                    <button class="button" id="modal-add-sale-validation-approve-btn">OK</button>
+                                </footer>
+                            </div>
                     </div>
                     <!-- MODAL REDIGER -->
                     <div class="modal" id="modal-edit-sale" >
-                        <div class="modal-background"></div>
-                        <div class="modal-card">
-                            <header class="modal-card-head">
-                                <p class="modal-card-title">REDIGER OMSETNING</p>
-                                <p>Legge inn</p>
-                                <button class="delete" aria-label="close"></button>
-                            </header>
-                            <section class="modal-card-body">
-                                <label>Restaurant:</label>
-                                <input id="add-restaurant-sale-secondpage-txt" type="text" placeholder="restaurant">
-                                <br><br>
-                                <label>År: </label>
-                                <input id="add-restaurant-sale-secondpage-txt" type="text" placeholder="årstall">
-                                <br><br>
-                                <label>Måned: </label>
-                                <input id="add-restaurant-sale-secondpage-txt" type="text" placeholder="month">
-                                <br><br>
-                            </section>
-                            <footer class="modal-card-foot">
-                                <button class="button" id="modal-edit-sale-approve-btn">Videre</button>
-                                <button class="button" id="modal-edit-sale-cancel-btn">Avbryt</button>
-                            </footer>
-                        </div>
+                            <div class="modal-background"></div>
+                            <div class="modal-card">
+                                <header class="modal-card-head">
+                                    <p class="modal-card-title">REDIGER OMSETNING</p>
+                                    <p>Legge inn</p>
+                                    <button class="delete" aria-label="close"></button>
+                                </header>
+                                <section class="modal-card-body">
+                                    <label>Restaurant:</label>
+                                    <input id="add-restaurant-sale-secondpage-txt" type="text" placeholder="restaurant">
+                                    <label>År: </label>
+                                    <input id="add-restaurant-sale-secondpage-txt" type="text" placeholder="årstall">
+                                    <label>Måned: </label>
+                                    <input id="add-restaurant-sale-secondpage-txt" type="text" placeholder="month">
+                                </section>
+                                <footer class="modal-card-foot">
+                                    <button class="button" id="modal-edit-sale-approve-btn">Videre</button>
+                                    <button class="button" id="modal-edit-sale-cancel-btn">Avbryt</button>
+                                </footer>
+                            </div>
                     </div>
                     <!-- MODAL REDIGER - HVA SKAL REDIGERES -->
                     <div class="modal" id="modal-edit-sale-details" >
-                        <div class="modal-background"></div>
-                        <div class="modal-card">
-                            <header class="modal-card-head">
-                                <p class="modal-card-title">HVA SKAL ENDRES?</p>
-                                <p>Informasjon</p>
-                                <button class="delete" aria-label="close"></button>
-                            </header>
-                            <section class="modal-card-body">
-                                <label>Netto:</label>
-                                <input id="add-restaurant-sale-secondpage-txt" type="text" placeholder="netto">
-                                <br><br>
-                                <label>Brutto: </label>
-                                <input id="add-restaurant-sale-secondpage-txt" type="text" placeholder="brutto">
-                                <br><br>
-                            </section>
-                            <footer class="modal-card-foot">
-                                <button class="button" id="modal-edit-sale-details-approve-btn">Godkjenn</button>
-                                <button class="button" id="modal-edit-sale-details-cancel-btn">Avbryt</button>
-                            </footer>
-                        </div>
+                            <div class="modal-background"></div>
+                            <div class="modal-card">
+                                <header class="modal-card-head">
+                                    <p class="modal-card-title">HVA SKAL ENDRES?</p>
+                                    <p>Informasjon</p>
+                                    <button class="delete" aria-label="close"></button>
+                                </header>
+                                <section class="modal-card-body">
+                                    <label>Netto:</label>
+                                    <input id="add-restaurant-sale-secondpage-txt" type="text" placeholder="netto">
+                                    <label>Brutto: </label>
+                                    <input id="add-restaurant-sale-secondpage-txt" type="text" placeholder="brutto">
+                                </section>
+                                <footer class="modal-card-foot">
+                                    <button class="button" id="modal-edit-sale-details-approve-btn">Godkjenn</button>
+                                    <button class="button" id="modal-edit-sale-details-cancel-btn">Avbryt</button>
+                                </footer>
+                            </div>
                     </div>
                     <!-- MODAL REDIGER BEKREFT-->
                     <div class="modal" id="modal-edit-sale-validate" >
-                        <div class="modal-background"></div>
-                        <div class="modal-card">
-                            <header class="modal-card-head">
-                                <p class="modal-card-title">ER DU SIKKER</p>
-                                <button class="delete" aria-label="close"></button>
-                            </header>
-                            <section class="modal-card-body">
-                                <p>Er du sikker på at du vil gjennomføre denne endringen?</p>
-                            </section>
-                            <footer class="modal-card-foot">
-                                <button class="button" id="modal-edit-sale-validate-approve-btn">Godkjenn</button>
-                                <button class="button" id="modal-edit-sale-validate-cancel-btn">Avbryt</button>
-                            </footer>
-                        </div>
+                            <div class="modal-background"></div>
+                            <div class="modal-card">
+                                <header class="modal-card-head">
+                                    <p class="modal-card-title">ER DU SIKKER</p>
+                                    <button class="delete" aria-label="close"></button>
+                                </header>
+                                <section class="modal-card-body">
+                                    <p>Er du sikker på at du vil gjennomføre denne endringen?</p>
+                                </section>
+                                <footer class="modal-card-foot">
+                                    <button class="button" id="modal-edit-sale-validate-approve-btn">Godkjenn</button>
+                                    <button class="button" id="modal-edit-sale-validate-cancel-btn">Avbryt</button>
+                                </footer>
+                            </div>
                     </div>
                     <!-- MODAL BEKREFTELSE -->
                     <div class="modal" id="modal-edit-sale-validation" >
-                        <div class="modal-background"></div>
-                        <div class="modal-card">
-                            <header class="modal-card-head">
-                                <p class="modal-card-title">HANDLING BEKREFTET</p>
-                                <button class="delete" aria-label="close"></button>
-                            </header>
-                            <section class="modal-card-body">
-                                <p>Endringer har nå blitt gjort</p>
-                            </section>
-                            <footer class="modal-card-foot">
-                                <button class="button" id="modal-edit-sale-validation-approve-btn">OK</button>
-                            </footer>
-                        </div>
+                            <div class="modal-background"></div>
+                            <div class="modal-card">
+                                <header class="modal-card-head">
+                                    <p class="modal-card-title">HANDLING BEKREFTET</p>
+                                    <button class="delete" aria-label="close"></button>
+                                </header>
+                                <section class="modal-card-body">
+                                    <p>Endringer har nå blitt gjort</p>
+                                </section>
+                                <footer class="modal-card-foot">
+                                    <button class="button" id="modal-edit-sale-validation-approve-btn">OK</button>
+                                </footer>
+                            </div>
                     </div>
+                </div>
+                <!-- OMSETNING - SALG-->
+                <div class="has-text-right">
+                    <button class="button is-small" id="edit-dish-btn">Rediger omsetning</button>
+                    <button class="button is-small is-warning" id="add-dish-btn">Legg til omsetning</button>
+                </div>
+                <!-- TABELL-->
+                <table class="table is-bordered has-text-left ">
+                    <thead>
+                        <th>Arbeidssted</th>
+                        <th>Rett/drikke</th>
+                        <th>Antall solgte</th>
+                        <th>Pris pr. enhet</th>
+                        <th>Kategori</th>
+                        <th>Pris til sammen</th>
+                    </thead>
+                    <tbody id="dishes-input-array">
 
-
-                    <!--Valgte å ha scriptet her for bedre oversikt over koden. Husk å legg denne koden inn i generate-->
-                    <script>
-                        //OSLO S
-                      const dropdownOsloS =
-                            document.querySelector('#dp-oslos');
-                      const activeOsloS =
-                            document.querySelector('.is-active')
-                      document.body.addEventListener('click', function () {
-                        if (activeOsloS) {
-                          dropdownOsloS.classList.remove('is-active')
-                        }
-                      })
-                      dropdownOsloS.addEventListener('click', function (event) {
-                        event.stopPropagation();
-                        this.classList.toggle('is-active');
-                      });
-                      //MAJORSTUEN
-                      const dropdownMajo =
-                            document.querySelector('#dp-majo');
-                      const activeMajo =
-                            document.querySelector('.is-active')
-                      document.body.addEventListener('click', function () {
-                        if (activeMajo) {
-                          dropdownMajo.classList.remove('is-active')
-                        }
-                      })
-                      dropdownMajo.addEventListener('click', function (event) {
-                        event.stopPropagation();
-                        this.classList.toggle('is-active');
-                      });
-                      //MAJORSTUEN
-                      const dropdownKarlJohan =
-                            document.querySelector('#dp-karljohan');
-                      const activeKarl =
-                            document.querySelector('.is-active')
-                      document.body.addEventListener('click', function () {
-                        if (activeKarl) {
-                          dropdownKarlJohan.classList.remove('is-active')
-                        }
-                      })
-                      dropdownKarlJohan.addEventListener('click', function (event) {
-                        event.stopPropagation();
-                        this.classList.toggle('is-active');
-                      });
-                      //TORSHOV
-                      const dropdownTorshov =
-                            document.querySelector('#dp-torshov');
-                      const activeTorshov =
-                            document.querySelector('.is-active')
-                      document.body.addEventListener('click', function () {
-                        if (activeTorshov) {
-                          dropdownTorshov.classList.remove('is-active')
-                        }
-                      })
-                      dropdownTorshov.addEventListener('click', function (event) {
-                        event.stopPropagation();
-                        this.classList.toggle('is-active');
-                      });
-                    </script>
-            </div>
-            <div class="has-text-right">
-                <button class="button is-small" id="add-dish-btn">Legg til omsetning</button>
-                <button class="button is-small" id="edit-dish-btn">Rediger omsetning</button>
-            </div>
-            <!-- TABELL-->
-            <table class="table is-bordered has-text-left ">
-                <thead>
-                    <th>Arbeidssted</th>
-                    <th>Rett/drikke</th>
-                    <th>Antall solgte</th>
-                    <th>Pris pr. enhet</th>
-                    <th>Kategori</th>
-                    <th>Pris til sammen</th>
-                </thead>
-                <tbody id="dishes-input-array">
-
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <th>Sum</th>
-                        <td id=""></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td id="total-sale"></td>
-                    </tr>
-                </tfoot>
-            </table>
-            <!-- MODAL - LEGG TIL SALG -RETTER -->
-            <div class="modal" id="modal-add-dish">
-                <div class="modal-background"></div>
-                <div class="modal-card">
-                    <header class="modal-card-head">
-                        <p class="modal-card-title">LEGG TIL OMSETNING</p>
-                        <button class="delete" aria-label="close"></button>
-                    </header>
-                    <section class="modal-card-body">
-                        <label>Restaurant:</label>
-                        <input id="add-restaurant-dish-firstpage-txt">
-                        <br><br>
-                        <label>Kategori: </label>
-                        <input id="add-category-dish-firstpage-txt">
-                        <br><br>
-                        <label>Navn: </label>
-                        <input id="add-name-dish-firstpage-txt">
-                        <br><br>
-                        <label>Pris: </label>
-                        <input id="add-price-dish-firstpage-txt">
-                        <br><br>
-                        <label>Antall: </label>
-                        <input id="add-amount-dish-firstpage-txt">                            <br><br>
-                    </section>
-                    <footer class="modal-card-foot">
-                        <button class="button" id="modal-add-dish-approve-btn">Lagre</button>
-                        <button class="button" id="modal-add-dish-cancel-btn">Avbryt</button>
-                    </footer>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Sum</th>
+                            <td id=""></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td id="total-sale"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <!-- MODAL - LEGG TIL SALG -RETTER -->
+                <div class="modal" id="modal-add-dish">
+                    <div class="modal-background"></div>
+                    <div class="modal-card">
+                        <header class="modal-card-head">
+                            <p class="modal-card-title">LEGG TIL OMSETNING</p>
+                            <button class="delete" aria-label="close"></button>
+                        </header>
+                        <section class="modal-card-body">
+                            <label>Restaurant:</label>
+                            <input id="add-restaurant-dish-firstpage-txt">
+                            <br><br>
+                            <label>Kategori: </label>
+                            <input id="add-category-dish-firstpage-txt">
+                            <br><br>
+                            <label>Navn: </label>
+                            <input id="add-name-dish-firstpage-txt">
+                            <br><br>
+                            <label>Pris: </label>
+                            <input id="add-price-dish-firstpage-txt">
+                            <br><br>
+                            <label>Antall: </label>
+                            <input id="add-amount-dish-firstpage-txt">                            <br><br>
+                        </section>
+                        <footer class="modal-card-foot">
+                            <button class="button" id="modal-add-dish-approve-btn">Lagre</button>
+                            <button class="button" id="modal-add-dish-cancel-btn">Avbryt</button>
+                        </footer>
+                    </div>
                 </div>
-            </div>
-            <!-- MODAL - BEKREFT -->
-            <div class="modal" id="modal-validate-add-dish" >
-                <div class="modal-background"></div>
-                <div class="modal-card">
-                    <header class="modal-card-head">
-                        <p class="modal-card-title">BEKREFT</p>
-                        <button class="delete" aria-label="close"></button>
-                    </header>
-                    <section class="modal-card-body">
-                        <p id="input-add-dish"></p>
-                        <p>Er du sikker på at du vil gjøre denne endringen? </p>
-                    </section>
-                    <footer class="modal-card-foot">
-                        <button class="button" id="modal-validate-add-dish-approve-btn">Godkjenn</button>
-                        <button class="button" id="modal-validate-add-dish-cancel-btn">Avbryt</button>
-                    </footer>
+                <!-- MODAL - BEKREFT -->
+                <div class="modal" id="modal-validate-add-dish" >
+                    <div class="modal-background"></div>
+                    <div class="modal-card">
+                        <header class="modal-card-head">
+                            <p class="modal-card-title">BEKREFT</p>
+                            <button class="delete" aria-label="close"></button>
+                        </header>
+                        <section class="modal-card-body">
+                            <p id="input-add-dish"></p>
+                            <p>Er du sikker på at du vil gjøre denne endringen? </p>
+                        </section>
+                        <footer class="modal-card-foot">
+                            <button class="button" id="modal-validate-add-dish-approve-btn">Godkjenn</button>
+                            <button class="button" id="modal-validate-add-dish-cancel-btn">Avbryt</button>
+                        </footer>
+                    </div>
                 </div>
-            </div>
-            <!-- MODAL - BEKREFTELSE -->
-            <div class="modal" id="modal-add-dish-validation" >
-                <div class="modal-background"></div>
-                <div class="modal-card">
-                    <header class="modal-card-head">
-                        <p class="modal-card-title">HANDLING BEKREFTET</p>
-                        <button class="delete" aria-label="close"></button>
-                    </header>
-                    <section class="modal-card-body">
-                        <p>Ett nytt salg er nå lagt inn</p>
-                    </section>
-                    <footer class="modal-card-foot">
-                        <button class="button" id="modal-add-dish-validation-approve-btn">OK</button>
-                    </footer>
+                <!-- MODAL - BEKREFTELSE -->
+                <div class="modal" id="modal-add-dish-validation" >
+                    <div class="modal-background"></div>
+                    <div class="modal-card">
+                        <header class="modal-card-head">
+                            <p class="modal-card-title">HANDLING BEKREFTET</p>
+                            <button class="delete" aria-label="close"></button>
+                        </header>
+                        <section class="modal-card-body">
+                            <p>Ett nytt salg er nå lagt inn</p>
+                        </section>
+                        <footer class="modal-card-foot">
+                            <button class="button" id="modal-add-dish-validation-approve-btn">OK</button>
+                        </footer>
+                    </div>
                 </div>
-            </div>
-            <!-- MODAL REDIGER -->
-            <div class="modal" id="modal-edit-dish" >
-                <div class="modal-background"></div>
-                <div class="modal-card">
-                    <header class="modal-card-head">
-                        <p class="modal-card-title">REDIGER OMSETNING</p>
-                        <p>Legge inn</p>
-                        <button class="delete" aria-label="close"></button>
-                    </header>
-                    <section class="modal-card-body">
-                        <label>Restaurant:</label><input><br><br>
-                        <label>År: </label><input><br><br>
-                        <label>Måned: </label><input><br><br>
-                    </section>
-                    <footer class="modal-card-foot">
-                        <button class="button" id="modal-edit-dish-approve-btn">Videre</button>
-                        <button class="button" id="modal-edit-dish-cancel-btn">Avbryt</button>
-                    </footer>
+                <!-- MODAL REDIGER -->
+                <div class="modal" id="modal-edit-dish" >
+                    <div class="modal-background"></div>
+                    <div class="modal-card">
+                        <header class="modal-card-head">
+                            <p class="modal-card-title">REDIGER OMSETNING</p>
+                            <p>Legge inn</p>
+                            <button class="delete" aria-label="close"></button>
+                        </header>
+                        <section class="modal-card-body">
+                            <label>Restaurant:</label><input><br><br>
+                            <label>År: </label><input><br><br>
+                            <label>Måned: </label><input><br><br>
+                        </section>
+                        <footer class="modal-card-foot">
+                            <button class="button" id="modal-edit-dish-approve-btn">Videre</button>
+                            <button class="button" id="modal-edit-dish-cancel-btn">Avbryt</button>
+                        </footer>
+                    </div>
                 </div>
-            </div>
-            <!-- MODAL REDIGER - HVA SKAL REDIGERES -->
-            <div class="modal" id="modal-edit-dish-details" >
-                <div class="modal-background"></div>
-                <div class="modal-card">
-                    <header class="modal-card-head">
-                        <p class="modal-card-title">HVA SKAL ENDRES?</p>
-                        <p>Informasjon</p>
-                        <button class="delete" aria-label="close"></button>
-                    </header>
-                    <section class="modal-card-body">
-                        <label>Netto:</label><input><br><br>
-                        <label>Brutto: </label><input><br><br>
-                    </section>
-                    <footer class="modal-card-foot">
-                        <button class="button" id="modal-edit-dish-details-approve-btn">Godkjenn</button>
-                        <button class="button" id="modal-edit-dish-details-cancel-btn">Avbryt</button>
-                    </footer>
+                <!-- MODAL REDIGER - HVA SKAL REDIGERES -->
+                <div class="modal" id="modal-edit-dish-details" >
+                    <div class="modal-background"></div>
+                    <div class="modal-card">
+                        <header class="modal-card-head">
+                            <p class="modal-card-title">HVA SKAL ENDRES?</p>
+                            <p>Informasjon</p>
+                            <button class="delete" aria-label="close"></button>
+                        </header>
+                        <section class="modal-card-body">
+                            <label>Netto:</label><input><br><br>
+                            <label>Brutto: </label><input><br><br>
+                        </section>
+                        <footer class="modal-card-foot">
+                            <button class="button" id="modal-edit-dish-details-approve-btn">Godkjenn</button>
+                            <button class="button" id="modal-edit-dish-details-cancel-btn">Avbryt</button>
+                        </footer>
+                    </div>
                 </div>
-            </div>
-            <!-- MODAL REDIGER BEKREFT-->
-            <div class="modal" id="modal-edit-dish-validate" >
-                <div class="modal-background"></div>
-                <div class="modal-card">
-                    <header class="modal-card-head">
-                        <p class="modal-card-title">ER DU SIKKER</p>
-                        <button class="delete" aria-label="close"></button>
-                    </header>
-                    <section class="modal-card-body">
-                        <p>Er du sikker på at du vil gjennomføre denne endringen?</p>
-                    </section>
-                    <footer class="modal-card-foot">
-                        <button class="button" id="modal-edit-dish-validate-approve-btn">Godkjenn</button>
-                        <button class="button" id="modal-edit-dish-validate-cancel-btn">Avbryt</button>
-                    </footer>
+                <!-- MODAL REDIGER BEKREFT-->
+                <div class="modal" id="modal-edit-dish-validate" >
+                    <div class="modal-background"></div>
+                    <div class="modal-card">
+                        <header class="modal-card-head">
+                            <p class="modal-card-title">ER DU SIKKER</p>
+                            <button class="delete" aria-label="close"></button>
+                        </header>
+                        <section class="modal-card-body">
+                            <p>Er du sikker på at du vil gjennomføre denne endringen?</p>
+                        </section>
+                        <footer class="modal-card-foot">
+                            <button class="button" id="modal-edit-dish-validate-approve-btn">Godkjenn</button>
+                            <button class="button" id="modal-edit-dish-validate-cancel-btn">Avbryt</button>
+                        </footer>
+                    </div>
                 </div>
-            </div>
-            <!-- MODAL BEKREFTELSE -->
-            <div class="modal" id="modal-edit-dish-validation" >
-                <div class="modal-background"></div>
-                <div class="modal-card">
-                    <header class="modal-card-head">
-                        <p class="modal-card-title">HANDLING BEKREFTET</p>
-                        <button class="delete" aria-label="close"></button>
-                    </header>
-                    <section class="modal-card-body">
-                        <p>Endringer har nå blitt gjort</p>
-                    </section>
-                    <footer class="modal-card-foot">
-                        <button class="button" id="modal-edit-dish-validation-approve-btn">OK</button>
-                    </footer>
+                <!-- MODAL BEKREFTELSE -->
+                <div class="modal" id="modal-edit-dish-validation" >
+                    <div class="modal-background"></div>
+                    <div class="modal-card">
+                        <header class="modal-card-head">
+                            <p class="modal-card-title">HANDLING BEKREFTET</p>
+                            <button class="delete" aria-label="close"></button>
+                        </header>
+                        <section class="modal-card-body">
+                            <p>Endringer har nå blitt gjort</p>
+                        </section>
+                        <footer class="modal-card-foot">
+                            <button class="button" id="modal-edit-dish-validation-approve-btn">OK</button>
+                        </footer>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</body>
+    </body>
 </html>

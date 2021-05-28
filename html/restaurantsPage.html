@@ -8,13 +8,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <script defer type="module" src="../javaScript/RestaurantPage/restaurants-generate.js"></script>
-    <script defer type="module" src="../javaScript/RestaurantPage/restaurants-scripts.js"></script>
     <title>Restauranter</title>
 </head>
 <body>
-
-    
-
     <!-- HEADER -->
     <div id="logo" class="mb-1 container">
         <div class="inline-block logo-div">
@@ -54,20 +50,20 @@
     <!-- EDIT/ADD/REMOVE MENU -->  
      <nav class="navbar container is-light" role="navigation" aria-label="main navigation">
         <div id="navbarBasicExample" class="navbar-menu">
-            <p class="confirmation-message"></p>
+            <p id="confirmation-message"></p>
             <div class="navbar-end">
                 <div class="navbar-item mr-1">
                     <div class="buttons">
 
                         <!-- remove-button -->
-                        <a class="button is-light is-small popup-btn">Fjern</a>
+                        <a id="remove-restaurant-popup-btn" class="button is-light is-small">Fjern</a>
                         <!-- modal popup for remove-button -->
-                        <div class="modal">
+                        <div id="remove-restaurant-modal" class="modal">
                             <div class="modal-background"></div>
                             <div class="modal-card">
                                 <header class="modal-card-head">
                                     <p class="modal-card-title">FJERN RESTAURANT</p>
-                                    <button class="delete" aria-label="close"></button>
+                                    <button id="remove-restaurant-cancel-btn" class="delete" aria-label="close"></button>
                                 </header>
 
                                 <section class="modal-card-body">
@@ -78,22 +74,22 @@
                                 </section>
 
                                 <footer class="modal-card-foot">
-                                        <button class="button modal-cancel-btn delete-restaurant-btn">Slett</button>
+                                        <button id="delete-restaurant-btn" class="button">Slett</button>
                                 </footer>
                             </div>
                         </div>
+                        <!-- modal popup -->
 
                         <!-- add-button -->
-                        <a class="button is-warning is-small popup-btn"><strong>Legg til</strong></a>
+                        <a id="add-restaurant-popup-btn" class="button is-warning is-small"><strong>Legg til</strong></a>
                         <!-- modal popup for add-button -->
-                        <div class="modal">
+                        <div id="add-restaurant-modal" class="modal">
                             <div class="modal-background"></div>
                             <div class="modal-card">
                                 <header class="modal-card-head">
                                     <p class="modal-card-title">LEGG TIL RESTAURANT</p>
-                                    <button class="delete" aria-label="close"></button>
+                                    <button id="add-restaurant-modal-cancel-btn" class="delete" aria-label="close"></button>
                                 </header>
-
                                 <form>
                                     <section class="modal-card-body">
                                         <div class="columns">
@@ -111,11 +107,9 @@
                                             </div>
                                         </div>
                                     </section>
-                                
-
                                     <footer class="modal-card-foot">
                                             <button type="button" id="add-restaurant-btn" class="button is-warning">Legg til restaurant</button>
-                                            <button type="button" class="button modal-cancel-btn">Avslutt</button>
+                                            <button type="button" id="add-restaurant-modal-cancel-btn2" class="button">Avslutt</button>
                                             <p class="add-restaurant-confirmation-msg"></p>
                                     </footer>
                                 </form>
@@ -137,16 +131,5 @@
         </main>
     </div>
 
-
-
-        
-
-    <!-- SCRIPT -->
-    <script type="text/javascript">
-        
-    </script>
-
 </body>
 </html>
-
-

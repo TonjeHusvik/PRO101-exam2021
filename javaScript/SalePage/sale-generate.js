@@ -939,7 +939,7 @@ editDishApproveBtn.addEventListener('click', () =>{
 })
 
 editDishCancelBtn.addEventListener('click', () =>{
-    modalEditSale.classList.remove('is-active'); //går ut fra popup
+    modalEditDish.classList.remove('is-active'); //går ut fra popup
 })
 
 editDishDetailsApproveBtn.addEventListener('click', () =>{
