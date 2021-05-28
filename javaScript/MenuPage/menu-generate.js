@@ -4,9 +4,9 @@ const pizzaSection = document.querySelector("#pizza-section");
 
 const showMenu = () => {
 
-let htmlTxt= "";
+    let htmlTxt= "";
 
-PizzaModule.getAllPizzas().forEach( pizzamenu => {
+    PizzaModule.getAllPizzas().forEach( pizzamenu => {
     htmlTxt += `
     <article>
         <div class="card">
@@ -21,11 +21,11 @@ PizzaModule.getAllPizzas().forEach( pizzamenu => {
 });
 
 
-const maindishSection = document.querySelector("#maindish-section");
+    const maindishSection = document.querySelector("#maindish-section");
 
-let mainhtmlTxt = "";
+    let mainhtmlTxt = "";
 
-PizzaModule.getAllMaindishes().forEach( maindishes => {
+    PizzaModule.getAllMaindishes().forEach( maindishes => {
     mainhtmlTxt += `
     <article>
         <div class="card">
@@ -37,13 +37,13 @@ PizzaModule.getAllMaindishes().forEach( maindishes => {
     `;
 
     maindishSection.innerHTML = mainhtmlTxt;
-}); 
+    }); 
 
-const drinksSection = document.querySelector("#drinks-section");
+    const drinksSection = document.querySelector("#drinks-section");
 
-let drinkshtmlTxt= "";
+    let drinkshtmlTxt= "";
 
-PizzaModule.getAllDrinks().forEach( drinksmenu => {
+    PizzaModule.getAllDrinks().forEach( drinksmenu => {
     drinkshtmlTxt += `
     <article>
         <div class="card">
@@ -54,13 +54,13 @@ PizzaModule.getAllDrinks().forEach( drinksmenu => {
     </article>
     `;
     drinksSection.innerHTML = drinkshtmlTxt;
-});
+    });
 
-const sidesSection = document.querySelector("#sides-section");
+    const sidesSection = document.querySelector("#sides-section");
 
-let sideshtmlTxt= "";
+    let sideshtmlTxt= "";
 
-PizzaModule.getAllSides().forEach( sidesmenu => {
+    PizzaModule.getAllSides().forEach( sidesmenu => {
     sideshtmlTxt += `
     <article>
         <div class="card">
@@ -71,13 +71,13 @@ PizzaModule.getAllSides().forEach( sidesmenu => {
     </article>
     `;
     sidesSection.innerHTML = sideshtmlTxt;
-});
+    });
 
-const dessertSection = document.querySelector("#dessert-section");
+    const dessertSection = document.querySelector("#dessert-section");
 
-let desserthtmlTxt= "";
+    let desserthtmlTxt= "";
 
-PizzaModule.getAllDessert().forEach( dessertmenu => {
+    PizzaModule.getAllDessert().forEach( dessertmenu => {
     desserthtmlTxt += `
     <article>
         <div class="card">
@@ -88,15 +88,56 @@ PizzaModule.getAllDessert().forEach( dessertmenu => {
     </article>
     `;
     dessertSection.innerHTML = desserthtmlTxt;
-});
+    });
 
 }
 
 showMenu();
 
- // Modaler
+ //Legge til produkt
+const categoryAddTxt = document.querySelector('#category-add-text');
+const titleAddTxt = document.querySelector('#title-add-txt');
+const priceAddTxt = document.querySelector('#price-add-txt');
+const idAddTxt = document.querySelector('#id-add-txt');
+const inputAddMenu = document.querySelector('#input-add-menu');
 
-//Legg til produkt modal 1
+const addMenu = () =>{
+
+    const tester2 ={
+        category: categoryAddTxt.value,
+        title: titleAddTxt.value,
+        pris: priceAddTxt.value,
+        id: idAddTxt.value
+    };
+    
+    PizzaModule.addNewMenu(tester2);
+
+    const htmlTxt= `
+        <p>Navn på rett: ${tester2.title}</p>
+        <p>Pris: ${tester2.pris}</p>
+        <p>ID: ${tester2.id}</p>
+    `;
+    inputAddMenu.innerHTML = htmlTxt;
+};
+
+//Slette produkt
+const menuIdInputTxt = document.querySelector('#menu-id-input-txt');
+const inputDeleteMenu = document.querySelector('#input-delete-menu');
+
+const deleteMenu = () =>{
+    let htmlTxt = "";
+
+    PizzaModule.deleteMenu(menuIdInputTxt.value).forEach(menu =>{
+        htmlTxt +=`
+            <p>${menu.title}</p>
+        `;
+
+        console.log(menuIdInputTxt);
+    });
+    inputDeleteMenu.innerHTML = htmlTxt;
+};
+// Modaler
+//Modal 1a for å begynne å legge til nytt produkt
 const addMenuBtn = document.querySelector('#add-menu-item-btn');
 const modal1a = document.querySelector('#modal-1a');
 const cancelAddBtn = document.querySelector('#cancel-add-btn');
@@ -118,7 +159,7 @@ addItemBtn.addEventListener('click', () => {
     modal1b.classList.add('is-active');
 })
 
-// Modal 1b som ber om konfirmasjon om å legge til produkt
+// Modal 1b forsikrer om å legge til dette produktet
 const modal1b = document.querySelector('#modal-1b');
 const cancelAddBtn1b = document.querySelector('#cancel-add-btn-1b');
 const cancelAddBtn1b2 = document.querySelector('#cancel-add-btn-1b-2');
@@ -170,7 +211,7 @@ confirmEditBtn.addEventListener('click', () => {
     modal2b.classList.add('is-active');
 })
 
-// Modal 2b
+// Modal 2b for å skrive inn endringene til et produkt
 const modal2b = document.querySelector('#modal-2b');
 const confirmEditBtn2b = document.querySelector('#confirm-edit-btn-2b');
 const cancelEditBtn2b = document.querySelector('#cancel-edit-btn-2b');
@@ -187,7 +228,7 @@ confirmEditBtn2b.addEventListener('click', () => {
     modal2c.classList.add('is-active');
 })
 
-//Modal 2c
+//Modal 2c ber om forsikring om at produktet ønskes redigert
 const modal2c = document.querySelector('#modal-2c');
 const confirmEditBtn2c = document.querySelector('#confirm-edit-btn-2c');
 const cancelEditBtn2c = document.querySelector('#cancel-edit-btn-2c');
@@ -204,7 +245,7 @@ confirmEditBtn2c.addEventListener('click', () => {
     modal2d.classList.add('is-active');
 })
 
-//Modal 2d
+//Modal 2d gir en melding om at produktet har blitt endret
 const modal2d = document.querySelector('#modal-2d');
 const confirmEditBtn2d = document.querySelector('#confirm-edit-btn-2d');
 const cancelEditBtn2d = document.querySelector('#cancel-edit-btn-2d');
@@ -216,8 +257,8 @@ confirmEditBtn2d.addEventListener('click', () => {
     modal2d.classList.remove('is-active');
 })
 
-//Modal 3
-//Modal 3a
+//Modal 3 Slette produkt
+//Modal 3a ber om hvilket produkt du ønsker slettet
 const removeItemBtn = document.querySelector('#remove-menu-item-btn');
 const modal3a = document.querySelector('#modal-3a');
 const cancelRemoveBtn3a = document.querySelector('#cancel-remove-btn-3a');
@@ -239,7 +280,7 @@ confirmremoveBtn.addEventListener('click', () => {
     modal3b.classList.add('is-active');
 })
 
-//Modal 3b
+//Modal 3b for å forsikre at det er dette produktet som vil slettes
 const modal3b = document.querySelector('#modal-3b');
 const cancelRemoveBtn3b = document.querySelector('#cancel-remove-btn-3b');
 const cancelRemoveBtn3b2 = document.querySelector('#cancel-remove-btn-3b-2');
@@ -256,7 +297,7 @@ confirmremoveBtn3b.addEventListener('click', () => {
     modal3c.classList.add('is-active');
 })
 
-//Modal 3c
+//Modal 3c bekrefter at produktet har blitt slettet
 const modal3c = document.querySelector('#modal-3c');
 const cancelRemoveBtn3c = document.querySelector('#cancel-remove-btn-3c');
 const confirmremoveBtn3c = document.querySelector('#confirm-remove-btn-3c');
@@ -266,50 +307,6 @@ cancelRemoveBtn3c.addEventListener('click', () => {
 })
 confirmremoveBtn3c.addEventListener('click', () => {
     modal3c.classList.remove('is-active');
+    showMenu();
 })
 
-const categoryAddTxt = document.querySelector('#category-add-text');
-const titleAddTxt = document.querySelector('#title-add-txt');
-const priceAddTxt = document.querySelector('#price-add-txt');
-const idAddTxt = document.querySelector('#id-add-txt');
-const inputAddMenu = document.querySelector('#input-add-menu');
-
-
-const addMenu = () =>{
-
-    const tester2 ={
-        category: categoryAddTxt.value,
-        title: titleAddTxt.value,
-        pris: priceAddTxt.value,
-        id: idAddTxt.value
-    };
-    
-    PizzaModule.addNewMenu(tester2);
-
-  
-    
-    const htmlTxt= `
-        <p>Navn på rett: ${tester2.title}</p>
-        <p>Pris: ${tester2.pris}</p>
-        <p>ID: ${tester2.id}</p>
-    `;
-
-    inputAddMenu.innerHTML = htmlTxt;
-};
-
-const menuIdInputTxt = document.querySelector('#menu-id-input-txt');
-const inputDeleteMenu = document.querySelector('#input-delete-menu');
-
-const deleteMenu = () =>{
-    let htmlTxt = "";
-
-    PizzaModule.deleteMenu(menuIdInputTxt.value).forEach(pizzamenu =>{
-        htmlTxt +=`
-            <p>${pizzamenu.title}</p>
-        `;
-
-        
-    });
-
-    inputDeleteMenu.innerHTML = htmlTxt;
-};
