@@ -62,15 +62,13 @@
                             <div class="modal-background"></div>
                             <div class="modal-card">
                                 <header class="modal-card-head">
-                                    <p class="modal-card-title">FJERN RESTAURANT</p>
+                                    <p class="modal-card-title">SLETT RESTAURANT</p>
                                     <button id="remove-restaurant-cancel-btn" class="delete" aria-label="close"></button>
                                 </header>
 
                                 <section class="modal-card-body">
                                     <p>Hvilken restaurant vil du slette?</p><br>
-                                    <div id="delete-restaurants-modal">
-
-                                    </div>
+                                        <input id="restaurant-id-input-txt" type="text" placeholder="Restaurant-ID">
                                 </section>
 
                                 <footer class="modal-card-foot">
@@ -78,7 +76,35 @@
                                 </footer>
                             </div>
                         </div>
-                        <!-- modal popup -->
+                        <!-- modal popup for å bekrefte slett -->
+                        <div class="modal" id="delete-modal-information">
+                            <div class="modal-background"></div>
+                            <div class="modal-card">
+            
+                            <header class="modal-card-head">
+                                <p class="modal-card-title">SLETT RESTAURANT</p>
+                                <button id="delete-restaurant-modal-x" class="delete" aria-label="close"></button>
+                            </header>
+            
+                            <section class="modal-card-body">
+                                <div class="level-center">
+                                    <div class="level-item">
+                                        <p id="input-delete-restaurant"></p>
+                                    </div>
+                                </div>
+                            </section>
+            
+                            <footer class="modal-card-foot">
+                                <button id="delete-restaurant-btn-modal-approve" class="button is-warning is-small modal-button" data-target="modal-ter">
+                                Godkjenn
+                                </button>
+                                <button id="cancel-delete-restaurant-btn-modal" class="button is-link-light is-small modal-button" data-target="modal-ter">
+                                Avbryt
+                                </button>
+                            </footer>
+            
+                            </div>
+                        </div>
 
                         <!-- legg til-knapp -->
                         <a id="add-restaurant-popup-btn" class="button is-warning is-small"><strong>Legg til</strong></a>

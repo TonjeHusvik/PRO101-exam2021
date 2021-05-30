@@ -2,9 +2,7 @@ import {RestaurantsModule} from './restaurantsModule.js'
 
 // får tak i html-elementer
 const restaurantsSection = document.querySelector("#restaurants-section");
-const deleteRestaurantsModal = document.querySelector("#delete-restaurants-modal");
 const addRestaurantBtn = document.querySelector("#add-restaurant-btn");
-const deleteRestaurantBtn = document.querySelector("#delete-restaurant-btn");
 
 // funksjon for å pushe brukerinput til restaurants-array, og legge til ny restaurant
 let pushData = (ev) => {
@@ -32,16 +30,6 @@ let pushData = (ev) => {
         document.querySelector('form').reset(); // reset form after submitting
 
         console.log(RestaurantsModule.restaurants);
-    }
-}
-
-// bekreftelsesmelding før man sletter restaurant, etterfulgt av alert på at restauranten er slettet
-let editRestaurantOK = () => {
-    var result = confirm("Vil du virkelig slette denne restauranten?"); // popup for å bekrefte før man sletter
-    var deleteOK = alert("Restauranten er slettet!") // popup for å bekrefte at restauranten er slettet
-    if (result) {
-        deleteOK;
-        removeRestaurantModal.classList.remove('is-active');
     }
 }
 
@@ -129,24 +117,26 @@ let restaurantCardTxt = "";
 }
 showAll();
 
-// printer ut alle restaurantnavn, så du kan velge hvem som skal slettes
-let deleteRestaurantsModalTxt = "";
+// 
+const restaurantIdInputTxt = document.querySelector('#restaurant-id-input-txt');
+const inputDeleteRestaurant = document.querySelector('#input-delete-restaurant');
 
-RestaurantsModule.getAllRestaurants().forEach(restaurants => {
-    deleteRestaurantsModalTxt += `
-        <label class="restaurant${restaurants.id}" class="radio">
-            <input id="delete-restaurant-id-value" type="radio" name="restaurant" value="class="${restaurants.id}"">
-            ${restaurants.restaurant}
-        </label><br>
-    `;
-});
-deleteRestaurantsModal.innerHTML = deleteRestaurantsModalTxt;
+const deleteRestaurant = () =>{
+    let htmlTxt = "";
+
+    RestaurantsModule.deleteRestaurant(restaurantIdInputTxt.value).forEach(restaurant =>{
+        htmlTxt +=`
+            <p>Vil du virkelig slette <b>${restaurant.restaurant}</b>?</p>
+        `;
+    })
+    inputDeleteRestaurant.innerHTML = htmlTxt;
+}
 
 // kjører funksjoner når tilhørende knapper blir trykket på
 // forsikrer seg om at sokumentet er lastet før funksjonene kjøres
 document.addEventListener('DOMContentLoaded', () => {
     addRestaurantBtn.addEventListener('click', pushData);
-    deleteRestaurantBtn.addEventListener('click', editRestaurantOK);
+    // deleteRestaurantBtn.addEventListener('click', deleteRestaurantOK);
 });
 
 // MODAL POPUP ÅPNE/LUKKE
@@ -229,4 +219,33 @@ removeRestaurantPopupBtn.addEventListener('click', () => {
 // lukker slett-restaurant-popup
 removeRestaurantCancelBtn.addEventListener('click', () => {
     removeRestaurantModal.classList.remove('is-active');
+})
+
+const deleteModalInformation = document.querySelector('#delete-modal-information');
+const deleteRestaurantBtnModalApprove = document.querySelector('#delete-restaurant-btn-modal-approve');
+const cancelDeleteRestaurantBtnModal = document.querySelector('#cancel-delete-restaurant-btn-modal');
+const deleteRestaurantModalX = document.querySelector('#delete-restaurant-modal-x');
+const deleteRestaurantBtn = document.querySelector('#delete-restaurant-btn');
+
+// åpner bekreft-slett-restaurant-popup
+deleteRestaurantBtn.addEventListener('click', () => {
+    deleteModalInformation.classList.add('is-active');
+    deleteRestaurant();
+})
+
+// lukker bekreft-slett-restaurant-popup
+cancelDeleteRestaurantBtnModal.addEventListener('click', () => {
+    deleteModalInformation.classList.remove('is-active');
+});
+
+
+deleteRestaurantBtnModalApprove.addEventListener('click', () => {
+    alert("Restauranten er slettet!");
+    deleteModalInformation.classList.remove('is-active');
+    removeRestaurantModal.classList.remove('is-active');
+    showAll();
+})
+
+deleteRestaurantModalX.addEventListener('click', () => {
+    deleteModalInformation.classList.remove('is-active');
 })
