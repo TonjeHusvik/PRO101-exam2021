@@ -46,6 +46,10 @@
     float: left;
 }
 
+.menu-link{
+    color: #fff;
+}
+
 /* RESTAURANT-CARDS */
 .restaurant-card-name {
     font-weight: 700;
