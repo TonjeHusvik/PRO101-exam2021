@@ -2,11 +2,11 @@ import {RestaurantsModule} from './restaurantsModule.js'
 
 // får tak i html-elementer
 const restaurantsSection = document.querySelector("#restaurants-section");
-const addRestaurantBtn = document.querySelector("#add-restaurant-btn");
+const restaurantIdInputTxt = document.querySelector('#restaurant-id-input-txt');
+const inputDeleteRestaurant = document.querySelector('#input-delete-restaurant');
 
 // funksjon for å pushe brukerinput til restaurants-array, og legge til ny restaurant
-let pushData = (ev) => {
-   ev.preventDefault(); // for at skjemaet ikke skal submitte 
+let pushData = () => {
     var result = confirm("Legg til restaurant?"); // popup for å bekrefte før man submitter
     var addOK = alert("Restauranten er lagt til!"); 
 
@@ -15,7 +15,7 @@ let pushData = (ev) => {
         const input = {        
             restaurant: document.getElementById('name-input').value,
             image: "default.png",
-            id: 5,
+            id: "5",
             address: document.getElementById('address-input').value,
             leader: document.getElementById('leader-input').value,
             phone: document.getElementById('phone-input').value,
@@ -117,10 +117,7 @@ let restaurantCardTxt = "";
 }
 showAll();
 
-// 
-const restaurantIdInputTxt = document.querySelector('#restaurant-id-input-txt');
-const inputDeleteRestaurant = document.querySelector('#input-delete-restaurant');
-
+// søker igjennom restaurants-arrayet for å matche ID fra brukerinput med riktig restaurant i arrayet, og sletter det
 const deleteRestaurant = () =>{
     let htmlTxt = "";
 
@@ -132,14 +129,10 @@ const deleteRestaurant = () =>{
     inputDeleteRestaurant.innerHTML = htmlTxt;
 }
 
-// kjører funksjoner når tilhørende knapper blir trykket på
-// forsikrer seg om at sokumentet er lastet før funksjonene kjøres
-document.addEventListener('DOMContentLoaded', () => {
-    addRestaurantBtn.addEventListener('click', pushData);
-    // deleteRestaurantBtn.addEventListener('click', deleteRestaurantOK);
-});
+        /*
+MODAL POPUP ÅPNE/LUKKE
+        */
 
-// MODAL POPUP ÅPNE/LUKKE
 // henter html-elementene for restaurant-card-popups
 const popupViews = document.querySelectorAll('.restaurant-card-modal');
 const popuppBtns = document.querySelectorAll('.restaurant-popup-btn');
@@ -148,6 +141,7 @@ const modalBg = document.querySelectorAll('.restaurant-modal-bg');
 
 // henter html-elementer for legg til restaurant-knapp og slett restaurant-knapp
 // legg til restaurant
+const addRestaurantBtn = document.querySelector("#add-restaurant-btn");
 const addRestaurantPopupBtn = document.querySelector('#add-restaurant-popup-btn');
 const addRestaurantsModalCancelBtn = document.querySelector('#add-restaurant-modal-cancel-btn');
 const addRestaurantsModalCancelBtn2 = document.querySelector('#add-restaurant-modal-cancel-btn2');
@@ -156,8 +150,14 @@ const addRestaurantModal = document.querySelector('#add-restaurant-modal');
 const removeRestaurantPopupBtn = document.querySelector('#remove-restaurant-popup-btn');
 const removeRestaurantCancelBtn = document.querySelector('#remove-restaurant-cancel-btn');
 const removeRestaurantModal = document.querySelector('#remove-restaurant-modal');
+// bekreft slett restaurant
+const deleteModalInformation = document.querySelector('#delete-modal-information');
+const deleteRestaurantBtnModalApprove = document.querySelector('#delete-restaurant-btn-modal-approve');
+const cancelDeleteRestaurantBtnModal = document.querySelector('#cancel-delete-restaurant-btn-modal');
+const deleteRestaurantModalX = document.querySelector('#delete-restaurant-modal-x');
+const deleteRestaurantBtn = document.querySelector('#delete-restaurant-btn');
 
-
+// RESTAURANT CARDS
 // felles funksjon for å åpne restaurant-card-popups
 var popup = function(popupClick){
     popupViews[popupClick].classList.add('is-active');
@@ -188,29 +188,31 @@ modalBg.forEach((modalB) => {
     });
 });
 
+// LEGG TIL RESTAURANT
+// kjører pushData og legger til restaurantene
+addRestaurantBtn.addEventListener('click', () => {
+    pushData();
+    document.querySelector('form').reset();
+    addRestaurantModal.classList.remove('is-active');
+    showAll();
+})
+
 // åpner legg-til-restaurant-popup
 addRestaurantPopupBtn.addEventListener('click', () => {
     addRestaurantModal.classList.add('is-active');
 })
 
-// lukker legg-til-restaurant-popup og viser den nye restauranten, hvis noen, når man trykker på "Legg til restaurant"
+// lukker legg-til-restaurant-popup når man trykker på X i hjørnet
 addRestaurantsModalCancelBtn.addEventListener('click', () => {
     addRestaurantModal.classList.remove('is-active');
-
-    if(RestaurantsModule.restaurants.length >= 5){
-        showAll();
-    }
 })
 
 // lukker legg-til-restaurant-popup når man trykker på "Avslutt"
 addRestaurantsModalCancelBtn2.addEventListener('click', () => {
     addRestaurantModal.classList.remove('is-active');
-
-    if(RestaurantsModule.restaurants.length >= 5){
-        showAll();
-    }
 })
 
+// SLETT RESTAURANT
 // åpner slett-restaurant-popup
 removeRestaurantPopupBtn.addEventListener('click', () => {
     removeRestaurantModal.classList.add('is-active');
@@ -221,31 +223,26 @@ removeRestaurantCancelBtn.addEventListener('click', () => {
     removeRestaurantModal.classList.remove('is-active');
 })
 
-const deleteModalInformation = document.querySelector('#delete-modal-information');
-const deleteRestaurantBtnModalApprove = document.querySelector('#delete-restaurant-btn-modal-approve');
-const cancelDeleteRestaurantBtnModal = document.querySelector('#cancel-delete-restaurant-btn-modal');
-const deleteRestaurantModalX = document.querySelector('#delete-restaurant-modal-x');
-const deleteRestaurantBtn = document.querySelector('#delete-restaurant-btn');
-
 // åpner bekreft-slett-restaurant-popup
 deleteRestaurantBtn.addEventListener('click', () => {
     deleteModalInformation.classList.add('is-active');
     deleteRestaurant();
 })
 
-// lukker bekreft-slett-restaurant-popup
+// lukker bekreft-slett-restaurant-popup på "Avslutt"
 cancelDeleteRestaurantBtnModal.addEventListener('click', () => {
     deleteModalInformation.classList.remove('is-active');
 });
 
+// lukker bekreft-slett-restaurant-popup på X i hjørnet
+deleteRestaurantModalX.addEventListener('click', () => {
+    deleteModalInformation.classList.remove('is-active');
+})
 
+// bekrefter at restauranten er slettet, og oppdaterer restaurant-cardsene
 deleteRestaurantBtnModalApprove.addEventListener('click', () => {
     alert("Restauranten er slettet!");
     deleteModalInformation.classList.remove('is-active');
     removeRestaurantModal.classList.remove('is-active');
     showAll();
-})
-
-deleteRestaurantModalX.addEventListener('click', () => {
-    deleteModalInformation.classList.remove('is-active');
 })

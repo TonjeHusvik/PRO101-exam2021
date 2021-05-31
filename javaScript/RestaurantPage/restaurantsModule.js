@@ -14,7 +14,7 @@ export const RestaurantsModule = (function(){
     // funksjon for å pushe info til array fra brukerinput
     let addNewRestaurant = (adding) => restaurants.push(adding);
 
-    // funksjon for å slette en restaurant fra arrayet
+    // funksjon for å slette en restaurant fra arrayet ved bruk av brukerinput
     const deleteRestaurant = (restaurantID) => restaurants.filter(restaurant =>
         restaurant.id === restaurantID && restaurants.splice(restaurantID, 1)
      );
@@ -25,9 +25,7 @@ export const RestaurantsModule = (function(){
         deleteRestaurant,
         restaurants
     }
-
-
-}()); // end of RestaurantsModule
+}());
 
         
  
