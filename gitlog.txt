@@ -1,0 +1,856 @@
+commit 9d466f6a2b95b609b2de9d7815dcd80d5a134b8f
+Author: cathrinejakobsen <72168843+cathrinejakobsen@users.noreply.github.com>
+Date:   Mon May 31 10:28:14 2021 +0200
+
+    Menybar
+
+commit d872dd95aa1a228963fcd9ab0c6d57754e653509
+Author: cathrinejakobsen <72168843+cathrinejakobsen@users.noreply.github.com>
+Date:   Mon May 31 10:15:36 2021 +0200
+
+    Restaurant
+    
+    Få navbar til å synes på mindre skjerm
+
+commit 56ed9ce41045286d41ecc17f80f59739efcf90ee
+Author: cathrinejakobsen <72168843+cathrinejakobsen@users.noreply.github.com>
+Date:   Mon May 31 10:09:48 2021 +0200
+
+    Restaurants
+    
+    Opprydding og finpuss
+
+commit 55ae212fd1e87ca31d56185766caacc46a5e2c3c
+Author: mari-glitch <70209000+mari-glitch@users.noreply.github.com>
+Date:   Mon May 31 09:40:38 2021 +0200
+
+    button change
+
+commit 5c865770b6d266ce40cfec7e69fe5caec43b18ae
+Merge: 21ee4eb cdb6d5e
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Mon May 31 08:59:38 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit 21ee4eb519be37b78cee5dd0510a88fe6c265bd9
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Mon May 31 08:59:30 2021 +0200
+
+    Update menuPage.html
+
+commit cdb6d5e0b5e92087992899b6b67d8852d8f58c08
+Author: cathrinejakobsen <72168843+cathrinejakobsen@users.noreply.github.com>
+Date:   Sun May 30 23:57:39 2021 +0200
+
+    Slette restaurant
+
+commit 123fb5901d131f3d64842029ed4aee50d6c7d0b7
+Merge: 8a92f15 d068b89
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Fri May 28 13:14:24 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit 8a92f1563c7940362343c198bc2aab45ea36ede9
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Fri May 28 13:14:18 2021 +0200
+
+    Update mainPage.html
+
+commit d068b8905a8de7b3e817038b671c1bec41e058ff
+Author: mari-glitch <70209000+mari-glitch@users.noreply.github.com>
+Date:   Fri May 28 13:14:06 2021 +0200
+
+    sdgsf
+
+commit 627341c68cd52ffeccd4ba8f84ac37b4ea959550
+Author: cathrinejakobsen <72168843+cathrinejakobsen@users.noreply.github.com>
+Date:   Fri May 28 13:10:18 2021 +0200
+
+    Restaurants
+    
+    Norske kommentarer, alt-bildetekst
+
+commit 933086f7cb285ab539015fa3a0e7aa5910a82ef6
+Merge: 8f0c603 8000a73
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Fri May 28 12:58:27 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit 8f0c603cfc814138854e49191b3a597dc1a3a807
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Fri May 28 12:58:21 2021 +0200
+
+    DropDownSalg
+
+commit 8000a731a05699f96439f8e5482aac9c0070f200
+Merge: 0d9db04 4acfb23
+Author: mari-glitch <70209000+mari-glitch@users.noreply.github.com>
+Date:   Fri May 28 12:42:04 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit 4acfb23039fbc6bba2f7a7ac4ffd6d53ed008d4d
+Merge: 4ee3ec6 33746f7
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Fri May 28 12:39:55 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit 4ee3ec634361fd4f217f559b49d75f546ad8c7c6
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Fri May 28 12:39:47 2021 +0200
+
+    Update sale-generate.js
+
+commit 33746f73c1d0828522556a49c0fc306a81ea5120
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Fri May 28 12:38:07 2021 +0200
+
+    updated header
+    
+    salg-side
+
+commit 004ce87c41518615a3de34458dfb3c0f2bccd113
+Merge: 4a942b8 4a0e7da
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Fri May 28 11:51:30 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit 4a942b8a4da3cb6a1ec0cb28aeb37f77d9098c59
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Fri May 28 11:51:18 2021 +0200
+
+    fikser knapper
+
+commit 4a0e7da20c3b79567d51da97578aadae4c779790
+Merge: 7117d3d 787cc56
+Author: cathrinejakobsen <72168843+cathrinejakobsen@users.noreply.github.com>
+Date:   Fri May 28 11:42:38 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit 7117d3d9faeff12d70206d151ba6b23dc6b6ee96
+Author: cathrinejakobsen <72168843+cathrinejakobsen@users.noreply.github.com>
+Date:   Fri May 28 11:42:15 2021 +0200
+
+    Fiksa header background
+
+commit 787cc5684549a70e99a6ddeb12706673d4f77102
+Merge: 9e204b4 a8ceba5
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Fri May 28 11:41:34 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit 9e204b4fe55faadd6197ba5523651ad920974952
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Fri May 28 11:41:30 2021 +0200
+
+    en
+
+commit a8ceba51747de83af0709d7eb50845aa5d0753e2
+Author: cathrinejakobsen <72168843+cathrinejakobsen@users.noreply.github.com>
+Date:   Fri May 28 11:33:13 2021 +0200
+
+    Restaurants DONE
+
+commit d1aa1c46e8ed1ba1c3cbbae14507b8eac3567675
+Merge: 8e8cd70 0afdb0b
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Fri May 28 11:20:29 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit 8e8cd70cf1d37d7753c9f6486e8ea080c0d3e085
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Fri May 28 11:20:26 2021 +0200
+
+    finished with buttons and modals
+    
+    salgsside
+
+commit 0d9db04edbf9f3d033a2ed99ba634481eba90a5a
+Merge: bd5ab12 928f5c7
+Author: mari-glitch <70209000+mari-glitch@users.noreply.github.com>
+Date:   Fri May 28 10:28:04 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit 0afdb0bfa0635a413d3d46525f16621b0ac7f725
+Merge: 0f0c32d 928f5c7
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Fri May 28 10:28:04 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit 0f0c32d05f32a4a4f70b11894278c1fa05367988
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Fri May 28 10:28:02 2021 +0200
+
+    dfg
+
+commit 928f5c7850a111072e83db58b2e1fa815536291f
+Merge: 497ca02 5fd4232
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Fri May 28 10:27:23 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit 497ca02b11a476c3d2e215399e78ccedc13c6dec
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Fri May 28 10:27:19 2021 +0200
+
+    legg til retter-knapper ferdig
+    
+    salgs-side
+
+commit bd5ab12f073f1cb68a27d006661d337a550adc40
+Author: mari-glitch <70209000+mari-glitch@users.noreply.github.com>
+Date:   Fri May 28 09:27:05 2021 +0200
+
+    buttons2
+
+commit 5fd4232e7427ac7a29d01468739c6610830b9792
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Fri May 28 09:22:53 2021 +0200
+
+    Main side ferdig
+
+commit 1049ddcb189d3918d3bf13a25190b00eb3ae8c15
+Author: mari-glitch <70209000+mari-glitch@users.noreply.github.com>
+Date:   Fri May 28 09:16:14 2021 +0200
+
+    button
+
+commit bd2ab8bee9d47f128286597994fd46e1ca58b48d
+Merge: d184b35 ef756d2
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Fri May 28 09:05:03 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit d184b35ad7c5a8661a77509e18eb5eeac651701c
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Fri May 28 09:05:01 2021 +0200
+
+    testing input
+    
+    sale-page
+
+commit ef756d2befe7db422439d19b646f2a9c1b1e8de2
+Merge: c5730a2 90d3a4e
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Fri May 28 00:25:14 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit c5730a23c6389470c38e57325e457b536a8a1900
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Fri May 28 00:25:11 2021 +0200
+
+    ModalFinishEmployee
+
+commit 90d3a4e315ac71cb0839217aa65595ddf58f8b56
+Author: mari-glitch <70209000+mari-glitch@users.noreply.github.com>
+Date:   Fri May 28 00:13:53 2021 +0200
+
+    nav edit
+
+commit 7bf0d3e7c6c9834fbf49514701d4726396d50fc7
+Author: mari-glitch <70209000+mari-glitch@users.noreply.github.com>
+Date:   Fri May 28 00:00:21 2021 +0200
+
+    finpuss
+
+commit 3559887a0efe3aa8d1d11f8ff332be2d18e2571d
+Merge: d5c0e80 bfabae3
+Author: mari-glitch <70209000+mari-glitch@users.noreply.github.com>
+Date:   Thu May 27 23:40:56 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit d5c0e803c92ec91436cfafe19b5ae23e6ae1313c
+Author: mari-glitch <70209000+mari-glitch@users.noreply.github.com>
+Date:   Thu May 27 23:40:53 2021 +0200
+
+    pynting
+
+commit bfabae33a073c7a5a3aad88e902b4e574d17e24a
+Merge: d02fa01 0eb10e7
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Thu May 27 23:23:41 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit d02fa01258fce5a6f23f1d193c1d66fb36236546
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Thu May 27 23:23:38 2021 +0200
+
+    endrer modals
+    
+    salgs-side
+
+commit 0eb10e7af3bea81639b54d7538ce8cf1cdd3a9d6
+Merge: 7ec422a ace108d
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Thu May 27 23:12:41 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit 7ec422aaec644581afa12508e54131f39d6bb26e
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Thu May 27 23:12:38 2021 +0200
+
+    Update employeePage.html
+
+commit ace108dfb37880eb7353dcfa68150677d3f69e58
+Author: mari-glitch <70209000+mari-glitch@users.noreply.github.com>
+Date:   Thu May 27 22:56:21 2021 +0200
+
+    asfdaf
+
+commit 3172129901ab1bc1eb3ab6e166e41fa603e25d46
+Author: mari-glitch <70209000+mari-glitch@users.noreply.github.com>
+Date:   Thu May 27 22:47:11 2021 +0200
+
+    image to png
+
+commit bd06e365d649fd27b31939b4bebd54c5ec6000f3
+Author: mari-glitch <70209000+mari-glitch@users.noreply.github.com>
+Date:   Thu May 27 22:26:08 2021 +0200
+
+    ymse2
+
+commit bfbc3634be46a280690bcc97f83b88b0b0d8b364
+Author: mari-glitch <70209000+mari-glitch@users.noreply.github.com>
+Date:   Thu May 27 22:21:58 2021 +0200
+
+    addmenu
+
+commit 84434ecd08bda3fa596f8312bea0048ef02c92ed
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Thu May 27 22:07:29 2021 +0200
+
+    Putting arrays together, menu
+
+commit e5a7eef1d9a84bb08a9257028e98db840c91f890
+Merge: 4f3f20d ab7eb27
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Thu May 27 21:58:18 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit 4f3f20d840b9f2e56b320819a31efc893dc19052
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Thu May 27 21:58:12 2021 +0200
+
+    Update employee-generate.js
+
+commit ab7eb2734fd7c302620da227eb92a22c7c6fa741
+Merge: 16b9099 8f6a14f
+Author: mari-glitch <70209000+mari-glitch@users.noreply.github.com>
+Date:   Thu May 27 21:57:59 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit 16b9099f67251e89198ad29679c8f3a96510ddf7
+Author: mari-glitch <70209000+mari-glitch@users.noreply.github.com>
+Date:   Thu May 27 21:57:56 2021 +0200
+
+    dfgsdf
+
+commit 8f6a14f790983110b0258271567147d6c28be950
+Merge: 5163052 a95d5e7
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Thu May 27 21:14:26 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit 51630528a91f3c485fdb5eb90ee5e933c06fda89
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Thu May 27 21:14:22 2021 +0200
+
+    Tester ut ting
+
+commit a95d5e732797ca05b8a8a800fe0d5a23205a1b11
+Author: cathrinejakobsen <72168843+cathrinejakobsen@users.noreply.github.com>
+Date:   Thu May 27 21:00:50 2021 +0200
+
+    Add To Restaurant
+
+commit 30e4f652439e64125d613ecba9c150ad92e7b674
+Author: mari-glitch <70209000+mari-glitch@users.noreply.github.com>
+Date:   Thu May 27 20:51:22 2021 +0200
+
+    ymse
+
+commit ddc5fda4811bb786bd7ad6c5463ee1f88ce24ab5
+Merge: 173e00a 87ec0cc
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Thu May 27 19:45:53 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit 173e00a0222d341645aae12f4eb3f4e7054d2e11
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Thu May 27 19:45:37 2021 +0200
+
+    DeleteObject
+
+commit 87ec0cc43163517c970c5b1866ec72f8b051788a
+Merge: df814b8 fe9b152
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Thu May 27 19:40:16 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit df814b8495373da43b7a72752d62d51e8a1c920b
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Thu May 27 19:40:12 2021 +0200
+
+    tester modals
+    
+    salg-side
+
+commit fe9b1522b2809aaa8529248ff196d98ceb62d12a
+Merge: 2d70a33 00cac5d
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Thu May 27 15:17:36 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit 2d70a3382fe53d5c82ae2e5e42bb4fef53821529
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Thu May 27 15:17:34 2021 +0200
+
+    Legge til array
+
+commit 00cac5d9739fa92f5fb28f1ad036d9c13eb14fc2
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Thu May 27 11:09:40 2021 +0200
+
+    la til flere drop-down menyer
+    
+    dropdown på omsetning og retter ferdig.
+
+commit 41e2e16747e8a8f4527a46067378ad7d11266a51
+Author: cathrinejakobsen <72168843+cathrinejakobsen@users.noreply.github.com>
+Date:   Thu May 27 00:15:18 2021 +0200
+
+    Restaurant CSS
+    
+    Rydde i cssen
+
+commit d7e5aff0caaf1b103efa37fe23f44043585ac6b7
+Author: cathrinejakobsen <72168843+cathrinejakobsen@users.noreply.github.com>
+Date:   Thu May 27 00:09:45 2021 +0200
+
+    Restaurants
+
+commit 4056afb0e34c7b4feeda48c9b652a45d0137dc72
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Wed May 26 16:20:25 2021 +0200
+
+    FinishOsloSDishesSal
+
+commit 50a509a11745f4c7cc903e7749a12d59a84e116a
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Wed May 26 15:32:40 2021 +0200
+
+    SalgretterOsloS
+
+commit 64b9336732f9763fdf4b8bffaeba30934129b179
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Wed May 26 08:42:49 2021 +0200
+
+    push
+
+commit 697afc3374ea478f0a857bb540cb2ff2d0ab02d2
+Merge: dd31798 61fc3cb
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Tue May 25 15:51:21 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit dd31798fdefedafe8b09bbef5a209e16ad1512f1
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Tue May 25 15:51:19 2021 +0200
+
+    test
+
+commit 61fc3cbd1f5d8d9449077741f6e109b4154dd856
+Merge: 2dfef8f 24e6e16
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Tue May 25 15:43:41 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit 2dfef8f850f0559d0542d339d0f995e79ed20455
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Tue May 25 15:43:38 2021 +0200
+
+    Lager modals
+    
+    salgs-side
+
+commit 24e6e16859a985179d8fa324dbd981c1676dbb01
+Author: mari-glitch <70209000+mari-glitch@users.noreply.github.com>
+Date:   Tue May 25 14:26:34 2021 +0200
+
+    Modals
+
+commit 8611e882a81dc24ff5288ea9c2a681146e9e629a
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Tue May 25 14:24:59 2021 +0200
+
+    fikset litt
+
+commit b8144ec63d7c5d79118c8eb7aa73a5d75b96bc51
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Tue May 25 13:52:11 2021 +0200
+
+    Fikset kommentering på HTML
+
+commit b34ebfc06abb0829362897d1d5bbe923008c761b
+Merge: d29bc5f b0ee9da
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Tue May 25 13:47:22 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit d29bc5f5e090925ecca0708d27a2ad899a886f0b
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Tue May 25 13:46:41 2021 +0200
+
+    Fikset knapper, søk og input
+    
+    Knapper fungerer. Input-felt fungerer. Søking fungerer.
+
+commit b0ee9da3cdf0b0ef53e2319c249627426f1e2afd
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Tue May 25 13:21:19 2021 +0200
+
+    knapper ferdig
+
+commit afada8c40a5d1cec566ce89b1c2a3b48691e6765
+Merge: 7e033c2 1dd2fa4
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Tue May 25 10:55:39 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit 1dd2fa4ff8ae064c73bff065ea1eaddb2624aaaa
+Merge: d1ba597 674abe3
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Tue May 25 10:55:32 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit 7e033c293f0c13e23591955ed2eda925e1d7ae62
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Tue May 25 10:55:30 2021 +0200
+
+    Modal New Modal
+
+commit d1ba5972e31f06a5f7cb7e66cc8e4b2ce872f830
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Tue May 25 10:55:28 2021 +0200
+
+    plages
+
+commit 674abe33dec8746bd555fb23c416d225911ea6b6
+Author: cathrinejakobsen <72168843+cathrinejakobsen@users.noreply.github.com>
+Date:   Tue May 25 10:45:46 2021 +0200
+
+    Restaurants
+    
+    liten update
+
+commit 85aba71f38c328c6b42b58328f0d70a01c48d134
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Tue May 25 09:00:36 2021 +0200
+
+    heiii
+
+commit 344b83f8259d2fbcab3550d66ed596be39e2f3b6
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Mon May 24 23:10:52 2021 +0200
+
+    fiksing sales
+
+commit 5facd30cbea9b5af6697c0e6e73e095812eff931
+Merge: eb25af4 13ea02f
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Mon May 24 12:34:46 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit eb25af461e823a350a20b18f8d9ef875cf750ed2
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Mon May 24 12:34:41 2021 +0200
+
+    ansatt4
+
+commit 13ea02ff49734753253126f4547370e6c98c7b90
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Mon May 24 11:53:21 2021 +0200
+
+    fikser array
+
+commit f6c5fb87b6f151adfa38b3714a0d2e6c1f0f0b02
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Mon May 24 10:12:15 2021 +0200
+
+    Fikset cards
+
+commit 706f7ad1f94a761b40ef9687d6b06e1ea8ae12f0
+Merge: 7bc5a9a 024bcf8
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Mon May 24 09:01:04 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit 7bc5a9aef02bc5eca7c7570a4c5d38f6085486a0
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Mon May 24 09:01:00 2021 +0200
+
+    fikset drop-down og knapper
+
+commit 024bcf81422f70246c3cc64f0f41c1a328187222
+Merge: ccdfa2a 6bde556
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Mon May 24 09:00:49 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit ccdfa2a7c004f8a3260888b16bdc9f52e657f44f
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Mon May 24 09:00:44 2021 +0200
+
+    Update employeePage.html
+
+commit 6bde5568461f9974b2092c7126449b59156e241e
+Author: cathrinejakobsen <72168843+cathrinejakobsen@users.noreply.github.com>
+Date:   Mon May 24 00:25:23 2021 +0200
+
+    restaurantsPage
+
+commit aec2dd97ee9fbc3b2ec8f0205ed79012674822c7
+Merge: ab75a9f 0eb753a
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Fri May 21 15:03:51 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit ab75a9f18f43b9783eaf587c6b473b2cd9e623cb
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Fri May 21 15:03:48 2021 +0200
+
+    ansatt3
+
+commit 0eb753ae77118b37a5f172fc682c10cd1a616f48
+Author: mari-glitch <70209000+mari-glitch@users.noreply.github.com>
+Date:   Fri May 21 13:42:20 2021 +0200
+
+    menu-page
+
+commit c410714d5b69b7f397cebbd8d3279ef71280688d
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Fri May 21 00:15:14 2021 +0200
+
+    plages
+    
+    hqwføkbsjl!!!
+
+commit a6317bc1079e32f0ceb469740ba88b2809779b36
+Merge: 17ceb71 a4ab1a6
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Thu May 20 21:06:39 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit 17ceb71b562a0dff7dbda51b9a5635a0222350de
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Thu May 20 21:06:35 2021 +0200
+
+    fikser knapper
+
+commit a4ab1a6ecf96b226387bc0277a456fd141e38c7a
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Thu May 20 14:59:38 2021 +0200
+
+    Update restaurantsPage.html
+
+commit 6dcdc599ba2dc866d8c2a776dc21cbe6a3287e52
+Merge: 5d34fee 132be65
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Thu May 20 14:53:06 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit 5d34fee0485230abeeec49b2aa8efb23e13a5bc9
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Thu May 20 14:53:02 2021 +0200
+
+    ansatt2
+
+commit 132be65236138a55d1bf6805c013db55036230b1
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Thu May 20 14:44:42 2021 +0200
+
+    if else
+
+commit 570d7d0aa4237b015e1220433ccf73d47d48f219
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Thu May 20 14:42:44 2021 +0200
+
+    redigerer knapper
+
+commit 809f17f237c5305a2ae3d5618107fb16dff2dcf1
+Merge: 1fd14f6 4228596
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Thu May 20 13:35:49 2021 +0200
+
+    Merge branch 'main' of https://github.com/TonjeHusvik/webprosjekt into main
+
+commit 1fd14f66ff4db9a14326e6c08325847955f5eb4d
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Thu May 20 13:35:06 2021 +0200
+
+    fikset ting i vsc
+
+commit 4228596c2eabca5d3ac7ece6b848becc39fcb6fe
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Thu May 20 13:33:44 2021 +0200
+
+    ansatte
+
+commit 79661c5759ed4d1b1b314929886da1f536bc98ef
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Thu May 20 13:19:15 2021 +0200
+
+    fikset endringer
+
+commit b275529a182262c3bb66285b4b269face2ff8bb0
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Thu May 20 13:03:28 2021 +0200
+
+    navbar
+    
+    siste fiks
+
+commit 1734935dcdff3f9bb6b494409fe575d17c48f444
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Thu May 20 13:02:45 2021 +0200
+
+    laget og fikset nav-bar
+
+commit ed09520ea8f0dc13c544ab07e4b9f757e515b302
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Thu May 20 11:10:58 2021 +0200
+
+    oppdaterer salg-delen
+    
+    legger inn scripting
+
+commit ca09ade5101d98ef2480fdd5e10db02ff12b8db4
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Thu May 20 11:01:24 2021 +0200
+
+    main3
+
+commit c8322041a3065c3f9c56000dbcd6fae55f0b17e0
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Thu May 20 09:13:56 2021 +0200
+
+    Nye mapper
+
+commit 7b95e24bc3266a2f82cbe22a40a9cffd4b9f9226
+Author: cathrinejakobsen <72168843+cathrinejakobsen@users.noreply.github.com>
+Date:   Wed May 19 23:03:01 2021 +0200
+
+    Restaurants
+    
+    Litt basic ting
+
+commit 6f3674e4b29f95d4c13b1911dd296ff65cd93c19
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Wed May 19 13:21:03 2021 +0200
+
+    Update main-generate.js
+
+commit 3f99f27d43d4f42ef45088d2a1965eb513477516
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Wed May 19 13:03:17 2021 +0200
+
+    utkast2
+
+commit 21035d9706d30a71a3818f181fc27e7f29f446a7
+Author: mari-glitch <70209000+mari-glitch@users.noreply.github.com>
+Date:   Wed May 19 12:20:08 2021 +0200
+
+    menu-png
+
+commit 9145516e42a01a93819f37a2e9973480f4857c3c
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Wed May 19 12:19:07 2021 +0200
+
+    første utkast av main
+
+commit e273c6df00c7f7cef3781e877a2ebb56591c5aa9
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Wed May 19 09:44:51 2021 +0200
+
+    Filer
+
+commit 905a9cf028943df037b419c5fd57b741fd728f34
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Wed May 19 09:40:29 2021 +0200
+
+    Create mainPage.html
+
+commit 199982a7e21635b22d3bdc64d3ecfecdeef044fd
+Author: mari-glitch <70209000+mari-glitch@users.noreply.github.com>
+Date:   Thu May 13 13:37:01 2021 +0200
+
+    asfas
+
+commit 085c55a61563dceaa9663bc1bfb69d5c71bdeba2
+Author: cathrinejakobsen <72168843+cathrinejakobsen@users.noreply.github.com>
+Date:   Thu May 13 13:35:52 2021 +0200
+
+    Update Webprosjekt.html
+
+commit 3ccaca0d4008b36251b2e954d189239e93460ad0
+Author: cathrinejakobsen <72168843+cathrinejakobsen@users.noreply.github.com>
+Date:   Thu May 13 13:35:29 2021 +0200
+
+    Okidoki
+    
+    okikik
+
+commit 50e3c0a8b9341e750a139f3e22497d83393fb537
+Author: mgrinaker <77102703+mgrinaker@users.noreply.github.com>
+Date:   Thu May 13 13:30:28 2021 +0200
+
+    Update Webprosjekt.html
+
+commit 963a36ef1525ada458d4929a3ed2d76eaf979dd1
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Thu May 13 13:29:09 2021 +0200
+
+    dfghjkl
+    
+    ddd
+
+commit 6c6668bdb1b4038868c4ed2e1c73de14ee4af3bd
+Author: TonjeHusvik <tonje.husvik@hotmail.com>
+Date:   Thu May 13 13:27:08 2021 +0200
+
+    eofjefef
+    
+    fff
